@@ -1,16 +1,19 @@
 $white                : #ffffff;
-$black                : #16181F;
-$red                  : #EF002B;
+$black                : #131315;
+$red                  : #f14634;
 
-$grey                 : #ADADAD;
-$dark-grey            : #1D1F26;
+$light-100            : #f8f3e9;
+$light-200            : #d8cbbc;
+$light-300            : #bab7a4;
 
-$border-color         : #464851;
-$body-color           : $white;
-$body-bg              : #242732;
-$bg-secondary         : #2D3039;
+$grey                 : $light-300;
+$dark-grey            : #595758;
 
-$link-color           : $grey !default;
+$border-color         : $light-200;
+$body-color           : $black;
+$body-bg              : $white;
+
+$link-color           : $black !default;
 $link-hover-color     : $red !default;
 $link-decoration      : none !default;
 $link-hover-decoration: underline !default;
@@ -22,23 +25,24 @@ $grid-breakpoints: (
   xs: 576px,
   sm: 768px,
   md: 992px,
-  lg: 1400px,
-  xl: 1600px
+  lg: 1200px,
+  xl: 1480px
 ) !default;
 
 $container-max-widths: (
   sm: 540px,
   md: 740px,
   lg: 960px,
-  xl: 1340px,
+  xl: 1120px,
+  hd: 1400px,
 ) !default;
 
 $font-size-base       : 1rem;
-$font-weight-base     : 200;
+$font-weight-base     : 400;
 $line-height-base     : 1.4;
 
-$font-family-heading  : 'Oswald', sans-serif;
-$font-family-base     : "Lato",    "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-serif    : "Noto Serif", sans-serif;
+$font-family-base     : "Raleway",    "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation Mono",   "Courier New",    monospace !default;
 
 $font-size: (
@@ -46,18 +50,18 @@ $font-size: (
   sm: 14px,
   md: 14px,
   lg: 16px,
-  xl: 16px
+  xl: 16px,
 ) !default;
 
-$font-weight-heading: 700;
 
 $font-weight-light  : 300;
 $font-weight        : 400;
-$font-weight-bolder : 600;
+$font-weight-bolder : 700;
 $font-weight-bold   : 800;
 
 $line-height        : 1.6;
 $line-height-heading: 1.1;
+
 
 $dt-font-weight: $font-weight-bold !default;
 

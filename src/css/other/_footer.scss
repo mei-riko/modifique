@@ -1,0 +1,52 @@
+.footer{
+    // padding: map-get($map: $spacers, $key: 5) 0 map-get($map: $spacers, $key: 2);
+    font-size: 13px;
+    color: $light-300;
+    background-color: $black;
+
+    &__title{
+        font-size: 13px;
+        font-weight: 700;
+        color: $white;
+    }
+    &__address{
+        font-size: 13px;
+    }
+    &__contact{
+        color: $white;
+        margin-bottom: 6px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    &__info{
+        font-size: 12px;
+        color: $dark-grey;
+        padding-bottom: $spacer/2;
+    }
+    &__policy{ color: $dark-grey; padding-left: $spacer/2;padding-right: $spacer/2;}
+    &__develop-link{ color: $dark-grey; }
+
+    &__subinfo{
+        margin: $spacer/2 0 0;
+        padding: $spacer 0 0;
+        border-top: 1px solid $dark-grey;
+        color: $dark-grey;
+
+        font-size: 12px;
+        line-height: $line-height-heading;
+    }
+
+    &__col{
+        padding-right: map-get($map: $spacers, $key: 4);
+        &--first{
+            flex: 0 0 420px;
+            max-width: 50%;
+        }
+        &--last{
+            padding-right: map-get($map: $spacers, $key: 1);
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.preview{
+    position: relative;
+    padding-left: 120px;
+
+    &__image{
+        width: 90px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    &__label{
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        z-index: 2;
+    }
+    &__title{
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bolder;
+        margin-bottom: $spacer/5;
+    }
+}

@@ -1,6 +1,6 @@
 html,body {
     font-size: map-get($font-size, 'xl');
-    font-weight: $font-weight-light;
+    font-weight: $font-weight-base;
     line-height: $line-height;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
@@ -13,21 +13,21 @@ html,body {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{
-    font-family: $font-family-heading;
-    font-weight: $font-weight-heading;
+    font-family: $font-family-serif;
+    font-weight: $font-weight-bold;
     line-height: $line-height-heading;
-    margin-bottom: map-get($spacers, 2);
+    margin-bottom: map-get($spacers, 1);
 }
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
-    margin-top: map-get($spacers, 1);
+    margin-top: map-get($spacers, 2);
 }
-.h1,h1{font-size: 64px;}
-.h2,h2{font-size: 46px;}
-.h3,h3{font-size: 36px;}
-.h4,h4{font-size: 24px;}
-.h5,h5{font-size: 18px;}
-.h6,h6{font-size: 1rem;}
+.h1,h1{font-size: 52px;}
+.h2,h2{font-size: 42px;}
+.h3,h3{font-size: 34px;}
+.h4,h4{font-size: 28px;}
+.h5,h5{font-size: 24px;}
+.h6,h6{font-size: 18px;}
 
 p {
     font-size: 1rem;
@@ -38,8 +38,24 @@ p {
     }
 }
 ol, ul{
+    line-height: $line-height;
     padding: 0;
     margin-bottom: map-get($spacers, 1);
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+table{
+    font-size: 1rem;
+    line-height: $line-height;
+    margin-bottom: map-get($spacers, 1);
+    &:last-child{
+        margin-bottom: 0;
+    }
+    th, td{
+        padding: 8px 15px;
+        border: 1px solid $light-200;
+    }
 }
 a{
     display: inline-block;
@@ -57,6 +73,9 @@ table{
     td{
         padding: 8px 15px;
     }
+}
+.link-underline{
+    text-decoration: underline;
 }
 .link-inverse{
     color: $link-hover-color;
@@ -82,10 +101,12 @@ table{
 .text-black{color: $black;}
 .text-grey{color: $grey;}
 
+.text-serif{font-family: $font-family-serif;}
+
 .text-uppercase{text-transform: uppercase;}
 .text-bold,strong,b{font-weight: 700;}
 
-.text-small,small,.small{font-size: 0.9rem;}
+.text-small,small,.small{font-size: 0.8rem;}
 .text-lead,.lead{font-size: 1.2rem;}
 
 .text{
@@ -108,6 +129,8 @@ table{
 
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    html,body {font-size: map-get($font-size, 'xl');}
+
     .d-xl{
         &-flex{display: flex;}
         &-none{display: none;}

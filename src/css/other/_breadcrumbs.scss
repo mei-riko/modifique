@@ -1,0 +1,36 @@
+.breadcrumbs{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    line-height: 16px;
+
+    list-style: none;
+
+    &__item{
+        position: relative;
+        padding-left: 0;
+        padding-right: 10px;
+        margin-right: 10px;
+
+        &:after{
+            display: block;
+            content:'';
+            width: 20px;
+            height: 16px;
+            background: url("../icon/arrow-right.svg") no-repeat center / 13px;
+
+            position: absolute;
+            top: 0;
+            right: -10px;
+        }
+        &--active{
+            padding-right: 0px;
+            margin-right: 0px;
+            color: $light-300;
+            
+            &:after{
+                display: none;
+            }
+        }
+    }
+}

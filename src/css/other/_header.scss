@@ -1,0 +1,75 @@
+.header{
+    padding: 25px 0;
+
+    &__logo{
+        display: block;
+        width: 270px;
+        height: 50px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        transform: translateY(5px);
+        background: url("../icon/logo.svg") no-repeat center / contain;
+    }
+    &__name{
+        font-size: 12px;
+        color: $light-300;
+        text-transform: uppercase;
+    }
+    &__phone{
+        font-size: 14px;
+        margin-right: map-get($spacers, 2);
+    }
+    &__networks{
+        display: flex;
+        flex-wrap: nowrap;
+
+        &-item{
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin: 0 4px;
+            transition: .4s;
+
+            &_vk{
+                background: url("../icon/vk.svg") no-repeat center / contain;
+            }
+            &_inst{
+                background: url("../icon/instagram.svg") no-repeat center / contain;
+            }
+            &_tlg{
+                background: url("../icon/telegram.svg") no-repeat center / contain;
+            }
+
+            &:hover, &:focus{
+                filter: grayscale(.5);
+            }
+        }
+    }
+    &__intro{
+        position: relative;
+
+        font-family: $font-family-serif;
+        font-style: italic;
+        text-align: center;
+        
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: .5px;
+        margin: map-get($map: $spacers, $key: 1) 0 0;
+
+        &:before, &:after{
+            content: '';
+            display: block;
+            width: calc(50% - 120px);
+            height: 1px;
+            background-color: $light-200;
+            position: absolute;
+            top: 10px;
+        }
+        &:before{left:0;}
+        &:after{right:0;}
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){}

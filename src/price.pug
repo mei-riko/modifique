@@ -1,0 +1,124 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Pricelist
+
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        include chunks/mixin.pug
+        section.container.pt-2.pb-3
+            .row
+                +preview('free', 'Бесплатная консультация', 'Консультация косметолога клиники для всех новых клиентов')(src="../demo/sale-1.png")
+                +preview('хит', 'Мезотерапия головы', 'Одна из самых популярных услуг клиники, направленая на увеличение объема волос')(src="../demo/sale-2.png")
+                +preview('news', 'Открытие клиники', 'Ура, карантин позади и мы готовы принимать посетителей с 1 сентября!')(src="../demo/sale-3.png")
+            .row.price.pt-3
+                .col.price__nav
+                    p.price__nav-title.text-bold Выберите категорию
+                    // Category 1
+                    .price__nav-item
+                        a.price__nav-link(href="#" data-trigger="click" data-nav="nav1") Для лица и шеи
+                        .price__nav-content.price__nav-content--active#nav1
+                            // Subcategory 1
+                            a.price__nav-link.price__nav-link--active(href="#" data-trigger="click" data-nav="subnav1") Инъекционная косметология
+                            .price__nav-subcontent.price__nav-subcontent--active#subnav1
+                                a.price__nav-link.price__nav-toggle(href="#category1") Биоревитализация
+                                a.price__nav-link.price__nav-toggle(href="#category2") Ботулонотерапия
+                                a.price__nav-link.price__nav-toggle(href="#category3") Ботулонотерапия ботокс
+                                a.price__nav-link.price__nav-toggle(href="#category4") Ботулонотерапия диспорт
+                                a.price__nav-link.price__nav-toggle(href="#category5") PRP-плазмотерапия
+                                a.price__nav-link.price__nav-toggle(href="#category6") Мезотерапия
+                                a.price__nav-link.price__nav-toggle(href="#category7") Плазмотерапия/плазмолифтинг
+                                a.price__nav-link.price__nav-toggle(href="#category8") Контурная и объемная пластика
+                            // Subcategory 2
+                            a.price__nav-link(href="#" data-trigger="click" data-nav="subnav2") Уходовые процедуры
+                            .price__nav-subcontent#subnav2
+                                a.price__nav-link.price__nav-toggle(href="#category1") Биоревитализация
+                                a.price__nav-link.price__nav-toggle(href="#category2") Ботулонотерапия
+                                a.price__nav-link.price__nav-toggle(href="#category3") Ботулонотерапия ботокс
+                                a.price__nav-link.price__nav-toggle(href="#category4") Ботулонотерапия диспорт
+                    // Category 2
+                    .price__nav-item
+                        a.price__nav-link(href="#" data-trigger="click" data-nav="nav2") Для тела
+                        .price__nav-content#nav2
+                            a.price__nav-link.price__nav-toggle(href="#") Инъекционная косметология
+                            a.price__nav-link.price__nav-toggle(href="#") Уходовые процедуры
+                    // Category 3
+                    .price__nav-item
+                        a.price__nav-link(href="#" data-trigger="click" data-nav="nav3") Для интимных зон
+                        .price__nav-content#nav3
+                            a.price__nav-link.price__nav-toggle(href="#") Инъекционная косметология
+                            a.price__nav-link.price__nav-toggle(href="#") Уходовые процедуры
+                .col.price__content
+                    h1.h2.mb-3 Прайс-лист
+                    .toggle-item.toggle-item--active#category1
+                        p.toggle-item__title.toggle-item__title--active Биоревитализация
+                        .toggle-item__content(style="display:block;")
+                            .table-responsive
+                                table.table
+                                    thead.table__head
+                                        tr
+                                            th.table__title наименование инъекционной процедуры
+                                            th.table__title услуга
+                                            th.table__title цена, руб.
+                                    tbody.table__content
+                                        tr
+                                            td.table__item Значение 1
+                                            td.table__item 
+                                                a.link-underline.text-small(href="#") Мезотерапия головы
+                                            td.table__item Значение 3
+                                        tr
+                                            td.table__item Значение 4
+                                            td.table__item 
+                                                a.link-underline.text-small(href="#") Мезотерапия головы
+                                            td.table__item Значение 6
+                                        tr
+                                            td.table__item Значение 1
+                                            td.table__item 
+                                                a.link-underline.text-small(href="#") Мезотерапия головы
+                                            td.table__item Значение 3
+                                        tr
+                                            td.table__item Значение 4
+                                            td.table__item 
+                                                a.link-underline.text-small(href="#") Мезотерапия головы
+                                            td.table__item Значение 6
+                    .toggle-item#category2
+                        p.toggle-item__title Ботулонотерапия
+                        .toggle-item__content
+                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+                    .toggle-item#category3
+                        p.toggle-item__title Ботулонотерапия ботокс
+                        .toggle-item__content
+                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+                    .toggle-item#category4
+                        p.toggle-item__title Ботулонотерапия диспорт
+                        .toggle-item__content
+                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+                    .toggle-item#category5
+                        p.toggle-item__title PRP-плазмотерапия
+                        .toggle-item__content
+                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+                    .toggle-item#category6
+                        p.toggle-item__title Мезотерапия
+                        .toggle-item__content
+                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+                    .toggle-item#category7
+                        p.toggle-item__title Плазмотерапия/плазмолифтинг
+                        .toggle-item__content
+                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+                    .toggle-item#category8
+                        p.toggle-item__title Контурная и объемная пластика
+                        .toggle-item__content
+                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+        include chunks/footer.pug
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/app.min.js")

@@ -1,0 +1,11 @@
+.label{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    font-family: $font-family-serif;
+    font-weight: $font-weight-bolder;
+    font-style: italic;
+    background-color: $black;
+    color: $white;
+    padding: 8px 15px 10px;
+}
