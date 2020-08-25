@@ -3,19 +3,27 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    // &__input{
-    //     flex: 0 0 calc(100% - 230px);
-    //     max-width: calc(100% - 230px);
-    //     margin-bottom: 0;
-    //     height: 48px;
-    // }
-    // &__btn{
-    //     flex: 0 0 220px;
-    //     max-width: 220px;
-    //     height: 48px;
-    // }
-    // &__agree{
-    //     flex: 0 0 100%;
-    //     max-width: 100%;
-    // }
+
+    width: 540px;
+    max-width: 100%;
+
+    &__group{
+        flex: 0 0 calc(100% - 200px);
+        max-width: calc(100% - 200px);
+        margin-bottom: 0;
+        height: 52px;
+    }
+    &__input{
+        margin: 0;
+        height: 100%;
+    }
+    &__btn{
+        flex: 0 0 190px;
+        max-width: 190px;
+        height: 52px;
+    }
+    &__agree{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }

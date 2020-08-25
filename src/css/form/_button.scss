@@ -3,9 +3,11 @@
     outline: none;
     box-shadow: none;
 
+    font-size: 13px;
+    font-weight: $font-weight-bolder;
     letter-spacing: 1px;
-    font-family: $font-family-serif;
-    padding: 8px 36px 10px;
+
+    padding: $spacer/2 $spacer;
     
     transition: all .4s;
 
@@ -13,21 +15,62 @@
         text-decoration: none;
     }
 
-    &_secondary{
-        // background: $bg-secondary;
-        // color: $white;
-        // &:hover, &:focus{
-        //     background: lighten($color: $bg-secondary, $amount: 4);
-        //     color: $white;
-        // }
+    &_default{
+        background: $black;
+        color: $white;
+        text-transform: uppercase;
+
+        &:hover, &:focus{
+            background: lighten($color: $black, $amount: 4);
+            color: $white;
+        }
     }
-    &_action{
-        // background: $red;
-        // color: $white;
-        // &:hover, &:focus{
-        //     background: darken($color: $red, $amount: 8);
-        //     color: $white;
-        // }
+    &_link{
+        position: relative;
+        text-transform: uppercase;
+
+        padding-left: map-get($map: $spacers, $key: 3);
+        padding-right: 0;
+
+        &:before{
+            content:'';
+            display: block;
+            width: 0;
+            height: 34px;
+            background: url("../icon/arrow-right-light.svg") no-repeat center / 20px;
+            border-bottom: 4px solid $border-color;
+
+            position: absolute;
+            right: 0;
+            top: calc(50% - 15px);
+            transition: all .2s;
+        }
+        &:after{
+            content:'';
+            display: block;
+            width: map-get($map: $spacers, $key: 3);
+            height: 34px;
+            background: url("../icon/arrow-right-light.svg") no-repeat center / 20px;
+            border-bottom: 4px solid $border-color;
+
+            position: absolute;
+            left: 0;
+            top: calc(50% - 15px);
+            transition: all .2s;
+        }
+        &:hover, &:focus{
+            color: $black;
+
+            padding-left: 0;
+            padding-right: map-get($map: $spacers, $key: 3);
+    
+            &:before{
+                width: map-get($map: $spacers, $key: 3);
+            }
+            &:after{
+                width: 0;
+            }
+        }
     }
 
     &--full{

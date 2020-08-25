@@ -7,9 +7,21 @@ mixin preview(label, title, content)
             .preview__content
                 a.preview__title(href="#")= title
                 p.text-grey.text-small= content
-//- mixin product(name, id)
-//-     .col-3.col-lg-4.col-sm-3.mb-1
-//-         a.product-item(data-fancybox data-src=id href="javascript;")
-//-             .product-item__image(style!=attributes.style)
-//-             p.product-item__title= name
-//-             p.product-item__link Больше о продукции —
+mixin link-col(title)
+    .col-4.mb-1
+        a.link-item(href!=attributes.href)= title
+mixin link-col-label(title, label)
+    .col-4.mb-1
+        a.link-item(href!=attributes.href)= title
+            span.label.link-item__label= label
+mixin link-col-small(title)
+    .col-3.mb-1
+        a.link-item(href!=attributes.href)= title
+mixin link-col-small-label(title, label)
+    .col-3.mb-1
+        a.link-item(href!=attributes.href)= title
+            span.label.link-item__label= label
+mixin preview-content(title, content)
+    .preview-content
+        .preview-content__title= title
+        .preview-content__content= content

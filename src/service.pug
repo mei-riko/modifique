@@ -1,0 +1,100 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Service
+
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        include chunks/mixin.pug
+        section.container#top
+            .row.align-items-center.pb-4
+                .col-5.pt-2.pb-2
+                    h1.h1-lead Услуги 
+                        span.text-italic клиники
+                    p Доверь нам свою красоту: в клинике работают опытные специалисты своих областей. Перед процедурой проводим бесплатную консультацию.
+                .col-7
+                    .row
+                        .col-4
+                            img.img-fluid(src="../demo/service-1.png" alt="" title="")
+                        .col-4
+                            img.img-fluid(src="../demo/service-2.png" alt="" title="")
+                        .col-4
+                            img.img-fluid(src="../demo/service-3.png" alt="" title="")
+        nav.container
+            .tabs-nav.justify-content-between
+                a.tabs-nav__item.tabs-nav__item--active(href="service-category.html") Для тела и шеи
+                a.tabs-nav__item(href="service-category.html") Для тела
+                a.tabs-nav__item(href="service-category.html") Для интимных зон
+                a.tabs-nav__item(href="service-category.html") Консультации
+            .tabs-nav-content
+                ul.tab-js#contentTabs
+                    li.tab-js__item.tab-js__item_icon.active
+                        a.tab-js__link(href="#type1" data-toggle="tab") Инъекционная косметология
+                            img.tab-js__icon(src="../icon/eyeliner.svg")
+                    li.tab-js__item.tab-js__item_icon
+                        a.tab-js__link(href="#type2" data-toggle="tab") Уходовые процедуры
+                            img.tab-js__icon(src="../icon/skin.svg")
+                    li.tab-js__item.tab-js__item_icon
+                        a.tab-js__link(href="#type3" data-toggle="tab") Тип решаемой проблемы
+                            img.tab-js__icon(src="../icon/help.svg")
+                .tab-content
+                    .tab-pane.active.fade.in#type1 
+                        .row.pt-3.pb-2
+                            +link-col('Биоревитализация')(href="#")
+                            +link-col-label('Ботулонотерапия', 'new')(href="#")
+                            +link-col('Ботулонотерапия ботокс')(href="#")
+                            +link-col('Ботулонотерапия диспорт')(href="#")
+                            +link-col('PRP-плазмотерапия')(href="#")
+                            +link-col-label('Плацентарная терапия «лаеннек»', 'best')(href="#")
+                    .tab-pane.fade#type2 
+                        .row.pt-3.pb-2
+                            +link-col('Биоревитализация')(href="#")
+                            +link-col-label('Ботулонотерапия', 'new')(href="#")
+                            +link-col('Ботулонотерапия ботокс')(href="#")
+                            +link-col('Ботулонотерапия диспорт')(href="#")
+                    .tab-pane.fade#type3
+                        .row.pt-3.pb-2
+                            +link-col('Биоревитализация')(href="#")
+                            +link-col-label('Ботулонотерапия', 'new')(href="#")
+                            +link-col('Ботулонотерапия ботокс')(href="#")
+                            +link-col-label('Плацентарная терапия «лаеннек»', 'best')(href="#")                       
+        section.container.pt-2.pb-2
+            .row
+                +preview('free', 'Бесплатная консультация', 'Консультация косметолога клиники для всех новых клиентов')(src="../demo/sale-1.png")
+                +preview('хит', 'Мезотерапия головы', 'Одна из самых популярных услуг клиники, направленая на увеличение объема волос')(src="../demo/sale-2.png")
+                +preview('news', 'Открытие клиники', 'Ура, карантин позади и мы готовы принимать посетителей с 1 сентября!')(src="../demo/sale-3.png")
+        section.cta.container.pt-3.pb-5
+            .row
+                .col-2
+                    a.cta__arrow.scroll(href="#top")
+                .col-10
+                    p.h1-lead.mb-3 Получите бесплатную 
+                        span.text-italic консультацию 
+                        | от специалиста нашей клиники.
+                    form.form.form_inline(action="")
+                        .p-relative.form_inline__group
+                            span.form-validation.error Укажите номер телефона
+                            input.form_inline__input.form__input.form__input--full.error.phone(type="tel" placeholder="Телефон* ")
+                        button.form_inline__btn.btn.btn_default(type="") Записаться
+                        .form_inline__agree.form__agree.form__agree_inverse.checkbox
+                            input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+                            label.checkbox__label(for="agreeInline") согласен с обработкой 
+                                a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+        include chunks/footer.pug
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+
+        // Tabs
+        script(src="./js/bootstrap-transition.js")
+        script(src="./js/bootstrap-tab.js")
+
+        script(src="./js/app.min.js")

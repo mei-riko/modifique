@@ -1,0 +1,174 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Service Category
+
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        include chunks/mixin.pug
+        section.container
+            //- Title
+            .row.align-items-center
+                .col-5.pt-2.pb-2
+                    h1.h1-lead Инъекционная  
+                        span.text-italic косметология
+                    p Доверь нам свою красоту: в клинике работают опытные специалисты своих областей. Перед процедурой проводим бесплатную консультацию.
+                .col-7
+                    .row
+                        .col-4
+                            img.img-fluid(src="../demo/service-1.png" alt="" title="")
+                        .col-4
+                            img.img-fluid(src="../demo/service-2.png" alt="" title="")
+                        .col-4
+                            img.img-fluid(src="../demo/service-3.png" alt="" title="")
+            //- Nav
+            .row.pt-2
+                +link-col-small('Биоревитализация')(href="#")
+                +link-col-small-label('Ботулонотерапия', 'new')(href="#")
+                +link-col-small('Ботулонотерапия ботокс')(href="#")
+                +link-col-small('Ботулонотерапия диспорт')(href="#")
+                +link-col-small-label('Плацентарная терапия «лаеннек»', 'best')(href="#")
+                +link-col-small('PRP-плазмотерапия')(href="#")
+        //- Form
+        section.cta.container.pt-4.pb-4
+            .row
+                .col-2
+                    a.cta__arrow.scroll(href="#top")
+                .col-10
+                    p.h1.mb-3 Узнайте самый эффективный метод решения проблемы  
+                        span.text-italic бесплатно.
+                    form.form.form_inline(action="")
+                        .p-relative.form_inline__group
+                            //- span.form-validation.error Укажите номер телефона
+                            input.form_inline__input.form__input.form__input--full.phone(type="tel" placeholder="Телефон* ")
+                        button.form_inline__btn.btn.btn_default(type="") Записаться
+                        .form_inline__agree.form__agree.form__agree_inverse.checkbox
+                            input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+                            label.checkbox__label(for="agreeInline") согласен с обработкой 
+                                a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+        //- Content
+        section.container
+            .row.justify-content-between.align-items-center
+                .col-6
+                    img.img-fluid(src="../demo/img.png")
+                .col-6.content-inside
+                    h2.h1 Инъекционная косметология
+                    p — эффективные и малоинвазивные методы омоложения и коррекции различных эстетических недостатков кожи лица и тела, которые также называют «уколами красоты». Процедуры позволяют за минимальный срок избавиться даже от самых глубоких морщин, возрастной «сетки» на коже, улучшить структуру кожных покровов, нормализовать кровообращение и многое другое.
+            .row.justify-content-center.pt-5.pb-5.p-relative
+                a.arrow.scroll(href="#bottom")
+                .col-6
+                    p.lead.text-center Особую эффективность показывает сочетание нескольких процедур. Это позволяет добиться быстрых, стойких и заметных результатов всего за несколько сеансов.
+        //- Tabs
+        section.container.pb-5
+            ul.tabs-nav.tabs-nav_list.justify-content-between#contentTabs
+                li.tabs-nav__item.active
+                    a.tabs-nav__link(href="#type1" data-toggle="tab") Эффект от «уколов красоты»
+                li.tabs-nav__item
+                    a.tabs-nav__link(href="#type2" data-toggle="tab") Преимущества инъекций
+                li.tabs-nav__item
+                    a.tabs-nav__link(href="#type3" data-toggle="tab") Основные методики
+            .tab-content
+                .tab-pane.active.fade.in#type1
+                    ul.list.list_inline.list_advantage
+                        li.list_advantage__item.list_inline__item Омоложение кожи
+                        li.list_advantage__item.list_inline__item Глубокое увлажнение и питание
+                        li.list_advantage__item.list_inline__item Устранение птоза
+                        li.list_advantage__item.list_inline__item Удаление и коррекция морщин
+                        li.list_advantage__item.list_inline__item Избавление от целлюлита
+                        li.list_advantage__item.list_inline__item Устранение носогубных складок
+                        li.list_advantage__item.list_inline__item Исправление формы и объема губ
+                        li.list_advantage__item.list_inline__item Избавление от растяжек
+                .tab-pane.fade#type2
+                    ul.list.list_inline.list_advantage
+                        li.list_advantage__item.list_inline__item Омоложение кожи
+                        li.list_advantage__item.list_inline__item Глубокое увлажнение и питание
+                        li.list_advantage__item.list_inline__item Устранение птоза
+                        li.list_advantage__item.list_inline__item Удаление и коррекция морщин
+                        li.list_advantage__item.list_inline__item Избавление от целлюлита
+                .tab-pane.fade#type3
+                    .row
+                        .col-6.mt-1
+                            +preview-content('Ботулонотерапия', 'Представляет собой инъекции ботулотоксина типа А - очищенного и разбавленного белка, способного временно блокировать нервно-мышечную передачу импульсов. Уколы направлены на устранение морщин, а также лечение ряда заболеваний, таких как гипергидроз, блефароспазм, мигрень, бруксизм. В ботулинотерапии применяются следующие препараты: Botox, Dyspot, Xeomin.')
+                        .col-6.mt-1
+                            +preview-content('Контурная пластика','Здесь используются специальные гелеобразные филлеры на основе гиалуроновой кислоты, которые могут быть различной плотности. Гели эффективно заполняют возрастные и мимические морщины изнутри, способны восполнить недостающий объем скул, губ или подбородка, позволяют скорректировать контур лица.')
+        //- Pricelist
+        section.container.pb-5
+            .row
+                .col-7
+                    h3.h2 Стоимость услуг 
+                        span.text-italic инъекционной 
+                        |  косметологии
+            .toggle-item
+                p.toggle-item__title Биоревитализация
+                .toggle-item__content
+                    .table-responsive
+                        table.table
+                            thead.table__head
+                                tr
+                                    th.table__title наименование инъекционной процедуры
+                                    th.table__title услуга
+                                    th.table__title цена, руб.
+                            tbody.table__content
+                                tr
+                                    td.table__item Значение 1
+                                    td.table__item 
+                                        a.link-underline.text-small(href="#") Мезотерапия головы
+                                    td.table__item Значение 3
+                                tr
+                                    td.table__item Значение 4
+                                    td.table__item 
+                                        a.link-underline.text-small(href="#") Мезотерапия головы
+                                    td.table__item Значение 6
+                                tr
+                                    td.table__item Значение 1
+                                    td.table__item 
+                                        a.link-underline.text-small(href="#") Мезотерапия головы
+                                    td.table__item Значение 3
+                                tr
+                                    td.table__item Значение 4
+                                    td.table__item 
+                                        a.link-underline.text-small(href="#") Мезотерапия головы
+                                    td.table__item Значение 6
+            .toggle-item
+                p.toggle-item__title Ботулонотерапия
+                .toggle-item__content
+                    p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+        //- Doctors
+        section.container.pb-5
+            .row.align-items-center
+                .col-5
+                    h4.h1.mb-2 Cпециалисты 
+                        span.text-italic центра
+                    p Все врачи клиники Modifique косметологи-дерматологи и имеют высшее медицинкое образование. Cредний опыт работы специалистов 12 лет.
+                    p Несколько раз в год ежегодно проходят курсы повышения квалификации и в соврешенстве владеют всеми методиками.
+                    a.btn.btn_link(href="review.html") Отзывы о клинике
+                .col-7
+                    .content-inside
+                        .row
+                            .col-4
+                                img.img-fluid(src="../demo/service-1.png" alt="" title="")
+                            .col-4
+                                img.img-fluid(src="../demo/service-2.png" alt="" title="")
+                            .col-4
+                                img.img-fluid(src="../demo/service-3.png" alt="" title="")
+                            .col-4.mt-2
+                                img.img-fluid(src="../demo/service-1.png" alt="" title="")
+                            .col-4.mt-2
+                                img.img-fluid(src="../demo/service-2.png" alt="" title="")
+        include chunks/footer.pug
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        // Tabs
+        script(src="./js/bootstrap-transition.js")
+        script(src="./js/bootstrap-tab.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/app.min.js")

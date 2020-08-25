@@ -73,6 +73,14 @@ $(document).ready(() =>{
       toggle.find(".toggle-item__content").slideUp();
     }
   });
+  // Переключаемые табы, инициализация
+  if( $('.tab-js').length > 0 ){
+    $('#contentTabs a').click(function (e) {
+      e.preventDefault();
+      console.log('1');
+      $(this).tab('show');
+    })
+  }
   // Слайдер
 	if( $('.slider').length > 0 ){
     // Review Block Col

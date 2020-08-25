@@ -9,14 +9,14 @@
         &:checked + .checkbox__label:after {
             content: '';
             display: block;
-            background-color: $red;
+            background: url("../icon/checkmark.svg") no-repeat center / contain;
 
-            width: 5px;
-            height: 5px;
+            width: 7px;
+            height: 7px;
 
             position: absolute;
-            left: 4px;
-            top: 4px;
+            left: 3px;
+            top: 3px;
         }
     }
     &__label{

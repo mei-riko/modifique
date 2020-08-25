@@ -17,7 +17,6 @@
 
 @import "other/footer";
 @import "other/header";
-@import "other/label";
 @import "other/modal";
 @import "other/breadcrumbs";
 @import "other/pagination";
@@ -26,8 +25,21 @@
 @import "navbar/navbar-inside";
 
 @import "preview/preview";
+@import "preview/preview-content";
+
+@import "element/label";
+@import "element/link-item";
 @import "element/toggle-item";
 
+@import "tabs/tab-js";
+@import "tabs/tab-content";
+@import "tabs/tabs-nav";
+
+@import "list/list";
+@import "list/list_inline";
+@import "list/list_advantage";
+
 @import "content/content";
+@import "content/content-inside";
 @import "content/price";
 @import "content/table";

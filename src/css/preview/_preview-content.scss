@@ -1,0 +1,23 @@
+.preview-content{
+    padding: $spacer;
+    border: 1px solid $border-color;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    height: 100%;
+
+    &__title{
+        flex: 0 0 35%;
+        max-width: 35%;
+
+        font-weight: $font-weight-bolder;
+    }
+    &__content{
+        flex: 0 0 65%;
+        max-width: 65%;
+
+        font-size: map-get($map: $font-size, $key: 'sm');
+    }
+}

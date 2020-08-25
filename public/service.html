@@ -4,7 +4,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Basic Page</title>
+    <title>Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&amp;family=Raleway:wght@300;400;700;800&amp;display=swap" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
@@ -55,6 +56,105 @@
         </div>
       </div>
     </header>
+    <section class="container" id="top">
+      <div class="row align-items-center pb-4">
+        <div class="col-5 pt-2 pb-2">
+          <h1 class="h1-lead">Услуги <span class="text-italic">клиники</span></h1>
+          <p>Доверь нам свою красоту: в клинике работают опытные специалисты своих областей. Перед процедурой проводим бесплатную консультацию.</p>
+        </div>
+        <div class="col-7">
+          <div class="row">
+            <div class="col-4"><img class="img-fluid" src="../demo/service-1.png" alt="" title=""/></div>
+            <div class="col-4"><img class="img-fluid" src="../demo/service-2.png" alt="" title=""/></div>
+            <div class="col-4"><img class="img-fluid" src="../demo/service-3.png" alt="" title=""/></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <nav class="container">
+      <div class="tabs-nav justify-content-between"><a class="tabs-nav__item tabs-nav__item--active" href="service-category.html">Для тела и шеи</a><a class="tabs-nav__item" href="service-category.html">Для тела</a><a class="tabs-nav__item" href="service-category.html">Для интимных зон</a><a class="tabs-nav__item" href="service-category.html">Консультации</a></div>
+      <div class="tabs-nav-content">
+        <ul class="tab-js" id="contentTabs">
+          <li class="tab-js__item tab-js__item_icon active"><a class="tab-js__link" href="#type1" data-toggle="tab">Инъекционная косметология<img class="tab-js__icon" src="../icon/eyeliner.svg"/></a></li>
+          <li class="tab-js__item tab-js__item_icon"><a class="tab-js__link" href="#type2" data-toggle="tab">Уходовые процедуры<img class="tab-js__icon" src="../icon/skin.svg"/></a></li>
+          <li class="tab-js__item tab-js__item_icon"><a class="tab-js__link" href="#type3" data-toggle="tab">Тип решаемой проблемы<img class="tab-js__icon" src="../icon/help.svg"/></a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active fade in" id="type1"> 
+            <div class="row pt-3 pb-2">
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Биоревитализация</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия<span class="label link-item__label">new</span></a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия ботокс</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия диспорт</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">PRP-плазмотерапия</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Плацентарная терапия «лаеннек»<span class="label link-item__label">best</span></a></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="type2"> 
+            <div class="row pt-3 pb-2">
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Биоревитализация</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия<span class="label link-item__label">new</span></a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия ботокс</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия диспорт</a></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="type3">
+            <div class="row pt-3 pb-2">
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Биоревитализация</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия<span class="label link-item__label">new</span></a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия ботокс</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Плацентарная терапия «лаеннек»<span class="label link-item__label">best</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container pt-2 pb-2">
+      <div class="row">
+            <div class="col-4 col-xs-12 pb-1">
+              <div class="preview">
+                <div class="preview__image"><span class="label preview__label">free</span><img class="img-fluid" src="../demo/sale-1.png"/></div>
+                <div class="preview__content"><a class="preview__title" href="#">Бесплатная консультация</a>
+                  <p class="text-grey text-small">Консультация косметолога клиники для всех новых клиентов</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-xs-12 pb-1">
+              <div class="preview">
+                <div class="preview__image"><span class="label preview__label">хит</span><img class="img-fluid" src="../demo/sale-2.png"/></div>
+                <div class="preview__content"><a class="preview__title" href="#">Мезотерапия головы</a>
+                  <p class="text-grey text-small">Одна из самых популярных услуг клиники, направленая на увеличение объема волос</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-xs-12 pb-1">
+              <div class="preview">
+                <div class="preview__image"><span class="label preview__label">news</span><img class="img-fluid" src="../demo/sale-3.png"/></div>
+                <div class="preview__content"><a class="preview__title" href="#">Открытие клиники</a>
+                  <p class="text-grey text-small">Ура, карантин позади и мы готовы принимать посетителей с 1 сентября!</p>
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+    <section class="cta container pt-3 pb-5">
+      <div class="row">
+        <div class="col-2"><a class="cta__arrow scroll" href="#top"></a></div>
+        <div class="col-10">
+          <p class="h1-lead mb-3">Получите бесплатную <span class="text-italic">консультацию </span>от специалиста нашей клиники.</p>
+          <form class="form form_inline" action="">
+            <div class="p-relative form_inline__group"><span class="form-validation error">Укажите номер телефона</span>
+              <input class="form_inline__input form__input form__input--full error phone" type="tel" placeholder="Телефон* "/>
+            </div>
+            <button class="form_inline__btn btn btn_default" type="">Записаться</button>
+            <div class="form_inline__agree form__agree form__agree_inverse checkbox">
+              <input class="checkbox__input" id="agreeInline" type="checkbox" name="agreeInline" checked="checked" required="required"/>
+              <label class="checkbox__label" for="agreeInline">согласен с обработкой <a class="form__link-inverse" href="/policy.pdf" target="_blank">персональных данных</a></label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <footer class="footer pt-5 pb-2">
       <div class="container">
         <div class="row pb-5">
@@ -87,7 +187,12 @@
         <p class="footer__subinfo">Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации.  Для получения подробной информации о наличии и актуальной стоимости указанных на сайте услуг обращайтесь, пожалуйста, по телефонам клиник. Приём пациентов в клиниках осуществляется с 18-ти лет.</p>
       </div>
     </footer>
-    <script src="./js/jquery.inputmask.js"></script>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/jquery.inputmask.min.js"></script>
+    <!-- Tabs-->
+    <script src="./js/bootstrap-transition.js"></script>
+    <script src="./js/bootstrap-tab.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>
