@@ -19,3 +19,20 @@
         text-decoration: none;
     }
 }
+.link-item_modal{
+    position: relative;
+    padding: 12px 32px 12px 16px;
+
+    &:after{
+        content:'';
+        display: block;
+        width: 20px;
+        height: 20px;
+
+        position: absolute;
+        right: 6px;
+        top: calc(50% - 10px);
+
+        background: url("../icon/open-modal.svg") no-repeat center / contain;
+    }
+}

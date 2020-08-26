@@ -87,6 +87,19 @@ table{
 
 .bg-black{background-color: $black;}
 .bg-white{background-color: $white;}
+.bg-light{background-color: $light-100;}
+.bg-company{
+    background: url("../icon/modifique.svg") no-repeat top right;
+    background-size: 7%;
+}
+.bg-result{
+    background: url("../icon/result.svg") no-repeat top right;
+    background-size: 7%;
+}
+.bg-sales{
+    background: url("../icon/sale.svg") no-repeat top left;
+    background-size: 7%;
+}
 
 .p-relative{position: relative;}
 .p-sticky{position: sticky; top: 0; left: 0; z-index: 101;}

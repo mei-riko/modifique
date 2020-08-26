@@ -1,0 +1,35 @@
+.navbar_header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    width: 770px;
+    max-width: 100%;
+
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+
+    &__item{
+        position: relative;
+
+        &:after{
+            content:'';
+            display: block;
+            width: 0;
+            height: 3px;
+            background-color: $black;
+
+            transition: .3s;
+            transform: translateX( -$spacer/2 ) translateY(3px);
+        }
+
+        &--active, &:hover{
+            &:after{
+                width: 40px;
+                max-width: 100%;
+            }
+        }
+    }
+}

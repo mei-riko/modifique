@@ -22,10 +22,14 @@
 @import "other/pagination";
 
 @import "navbar/navbar";
+@import "navbar/navbar_header";
+@import "navbar/navbar_footer";
 @import "navbar/navbar-inside";
 
 @import "preview/preview";
 @import "preview/preview-content";
+@import "preview/preview-doctor";
+@import "preview/preview-sale";
 
 @import "element/label";
 @import "element/link-item";
@@ -38,8 +42,10 @@
 @import "list/list";
 @import "list/list_inline";
 @import "list/list_advantage";
+@import "list/list_information";
 
 @import "content/content";
 @import "content/content-inside";
 @import "content/price";
 @import "content/table";
+@import "content/cta";

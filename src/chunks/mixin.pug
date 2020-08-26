@@ -21,7 +21,32 @@ mixin link-col-small-label(title, label)
     .col-3.mb-1
         a.link-item(href!=attributes.href)= title
             span.label.link-item__label= label
+mixin link-modal-col(title)
+    .col-2.mt-1
+        a.link-item.link-item_modal(href!=attributes.href)= title
 mixin preview-content(title, content)
     .preview-content
         .preview-content__title= title
         .preview-content__content= content
+mixin preview-doctor(name, surname, type)
+    .preview-doctor(class!=attributes.class)
+        .preview-doctor__photo
+            img.img-fluid(src!=attributes.src)
+        .preview-doctor__content
+            p.preview-doctor__name= name 
+            p.preview-doctor__surname= surname
+            p.preview-doctor__type= type
+            if block
+                block
+            else
+                ul.list.preview-doctor__intro
+                    li.list__item 
+                        span.text-grey Образование: 
+                        | высшее медицинское
+                    li.list__item 
+                        span.text-grey Повышение квалификации: 
+                        | 12 программ
+                    li.list__item 
+                        span.text-grey Опыт работы: 
+                        | 5 лет
+            a.btn.btn_link(href="#") Подробнее

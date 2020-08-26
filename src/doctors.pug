@@ -1,0 +1,89 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Doctors
+
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        include chunks/mixin.pug
+        section.container
+            //- Title
+            .row.align-items-center.pt-2.pb-2
+                .col-5.content-left
+                    h1.h1-lead Врачи клиники
+                    p Главная ценность нашей компании – слаженный коллектив высококвалифицированных специалистов, которым удается совершать настоящие чудеса в области косметологии.
+                .col-7
+                    .row
+                        .col-4
+                            img.img-fluid(src="../demo/service-1.png" alt="" title="")
+                        .col-4
+                            img.img-fluid(src="../demo/service-2.png" alt="" title="")
+                        .col-4
+                            img.img-fluid(src="../demo/service-3.png" alt="" title="")
+        //- Tabs
+        section.container.pt-2.pb-5
+            ul.tabs-nav.tabs-nav_list.justify-content-between#contentTabs
+                li.tabs-nav__item.active
+                    a.tabs-nav__link(href="#type1" data-toggle="tab") Врачи клиники
+                li.tabs-nav__item
+                    a.tabs-nav__link(href="#type2" data-toggle="tab") Эстетисты
+                li.tabs-nav__item
+                    a.tabs-nav__link(href="#type3" data-toggle="tab") Медсестры и ассистенты
+                li.tabs-nav__item
+                    a.tabs-nav__link(href="#type4" data-toggle="tab") Административный персонал
+            .tab-content
+                .tab-pane.fade.tab-pane_scroll.active.fade.in#type1   
+                    .tab-pane__row
+                        .tab-pane__col-full
+                            .preview-doctor
+                                .preview-doctor__photo.preview-doctor__photo--full
+                                    img.img-fluid(src="../demo/person-prev-big.png")
+                                .preview-doctor__content.preview-doctor__content--full
+                                    p.preview-doctor__name.preview-doctor__name--full Круглова 
+                                    p.preview-doctor__surname.preview-doctor__surname--full Анна Сергеевна
+                                    p.preview-doctor__type главврач / дерматолог
+                                    ul.list
+                                        li.list__item 
+                                            span.text-grey Образование: 
+                                            | высшее медицинское
+                                        li.list__item 
+                                            span.text-grey Повышение квалификации: 
+                                            | 12 программ
+                                        li.list__item 
+                                            span.text-grey Опыт работы: 
+                                            | 5 лет
+                                    a.btn.btn_link(href="#") Подробнее
+                        .tab-pane__col
+                            +preview-doctor('Гринченко','Мария Владимировна','дерматолог-косметолог')(src="../demo/no-img.png" class="mb-2")
+                            +preview-doctor('Кросковицкая','Алёна Ивановна','дерматолог-косметолог')(src="../demo/person-prev-1.png" class="mb-2")
+                        .tab-pane__col
+                            +preview-doctor('Кросковицкая','Алёна Ивановна','дерматолог-косметолог')(src="../demo/person-prev-1.png" class="mb-2")
+                .tab-pane.fade#type2   
+                .tab-pane.fade#type3
+                .tab-pane.tab-pane_scroll.fade#type4
+                    .tab-pane__row
+                        .tab-pane__col
+                            +preview-doctor('Гринченко','Мария Владимировна','дерматолог-косметолог')(src="../demo/no-img.png" class="mb-2")
+                            +preview-doctor('Кросковицкая','Алёна Ивановна','дерматолог-косметолог')(src="../demo/person-prev-1.png" class="mb-2")
+                        .tab-pane__col
+                            +preview-doctor('Кросковицкая','Алёна Ивановна','дерматолог-косметолог')(src="../demo/person-prev-1.png" class="mb-2")
+                            +preview-doctor('Гринченко','Мария Владимировна','дерматолог-косметолог')(src="../demo/person-prev-2.png" class="mb-2")
+                        .tab-pane__col
+                            +preview-doctor('Гринченко','Мария Владимировна','дерматолог-косметолог')(src="../demo/no-img.png" class="mb-2")
+        include chunks/footer.pug
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        //- Tabs
+        script(src="./js/bootstrap-transition.js")
+        script(src="./js/bootstrap-tab.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/app.min.js")

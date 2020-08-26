@@ -4,7 +4,7 @@
     &__logo{
         display: block;
         width: 270px;
-        height: 50px;
+        height: 34px;
         max-width: 100%;
         margin: 0 auto;
 
@@ -12,7 +12,9 @@
         background: url("../icon/logo.svg") no-repeat center / contain;
     }
     &__name{
-        font-size: 12px;
+        font-size: 10px;
+        letter-spacing: 1px;
+        font-weight: 500;
         color: $light-300;
         text-transform: uppercase;
     }
@@ -53,9 +55,9 @@
         font-style: italic;
         text-align: center;
         
-        font-size: 13px;
+        font-size: 12px;
         line-height: 16px;
-        letter-spacing: .5px;
+        letter-spacing: 1px;
         margin: map-get($map: $spacers, $key: 1) 0 0;
 
         &:before, &:after{

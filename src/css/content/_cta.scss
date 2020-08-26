@@ -1,0 +1,16 @@
+.cta{
+    position: relative;
+    padding: $spacer*4 0;
+
+    &-arrow, &__arrow{
+        width: 120px;
+        height: 120px;
+        background: url("../icon/scroll-element-down.png") no-repeat center / contain;
+
+        &_right{
+            position: absolute;
+            top: $spacer*2;
+            right: 0;
+        }
+    }
+}

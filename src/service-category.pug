@@ -14,8 +14,8 @@ html(lang="ru")
         include chunks/mixin.pug
         section.container
             //- Title
-            .row.align-items-center
-                .col-5.pt-2.pb-2
+            .row.align-items-center.pt-2.pb-2
+                .col-5
                     h1.h1-lead Инъекционная  
                         span.text-italic косметология
                     p Доверь нам свою красоту: в клинике работают опытные специалисты своих областей. Перед процедурой проводим бесплатную консультацию.
@@ -29,18 +29,18 @@ html(lang="ru")
                             img.img-fluid(src="../demo/service-3.png" alt="" title="")
             //- Nav
             .row.pt-2
-                +link-col-small('Биоревитализация')(href="#")
-                +link-col-small-label('Ботулонотерапия', 'new')(href="#")
-                +link-col-small('Ботулонотерапия ботокс')(href="#")
-                +link-col-small('Ботулонотерапия диспорт')(href="#")
-                +link-col-small-label('Плацентарная терапия «лаеннек»', 'best')(href="#")
-                +link-col-small('PRP-плазмотерапия')(href="#")
+                +link-col-small('Биоревитализация')(href="service-page.html")
+                +link-col-small-label('Ботулонотерапия', 'new')(href="service-page.html")
+                +link-col-small('Ботулонотерапия ботокс')(href="service-page.html")
+                +link-col-small('Ботулонотерапия диспорт')(href="service-page.html")
+                +link-col-small-label('Плацентарная терапия «лаеннек»', 'best')(href="service-page.html")
+                +link-col-small('PRP-плазмотерапия')(href="service-page.html")
         //- Form
-        section.cta.container.pt-4.pb-4
+        section.cta.container
             .row
-                .col-2
+                .col-3
                     a.cta__arrow.scroll(href="#top")
-                .col-10
+                .col-8
                     p.h1.mb-3 Узнайте самый эффективный метод решения проблемы  
                         span.text-italic бесплатно.
                     form.form.form_inline(action="")
@@ -57,11 +57,11 @@ html(lang="ru")
             .row.justify-content-between.align-items-center
                 .col-6
                     img.img-fluid(src="../demo/img.png")
-                .col-6.content-inside
+                .col-6.content-right
                     h2.h1 Инъекционная косметология
                     p — эффективные и малоинвазивные методы омоложения и коррекции различных эстетических недостатков кожи лица и тела, которые также называют «уколами красоты». Процедуры позволяют за минимальный срок избавиться даже от самых глубоких морщин, возрастной «сетки» на коже, улучшить структуру кожных покровов, нормализовать кровообращение и многое другое.
-            .row.justify-content-center.pt-5.pb-5.p-relative
-                a.arrow.scroll(href="#bottom")
+            .row.justify-content-center.cta
+                a.cta__arrow.cta__arrow_right.scroll(href="#bottom")
                 .col-6
                     p.lead.text-center Особую эффективность показывает сочетание нескольких процедур. Это позволяет добиться быстрых, стойких и заметных результатов всего за несколько сеансов.
         //- Tabs
@@ -97,59 +97,17 @@ html(lang="ru")
                             +preview-content('Ботулонотерапия', 'Представляет собой инъекции ботулотоксина типа А - очищенного и разбавленного белка, способного временно блокировать нервно-мышечную передачу импульсов. Уколы направлены на устранение морщин, а также лечение ряда заболеваний, таких как гипергидроз, блефароспазм, мигрень, бруксизм. В ботулинотерапии применяются следующие препараты: Botox, Dyspot, Xeomin.')
                         .col-6.mt-1
                             +preview-content('Контурная пластика','Здесь используются специальные гелеобразные филлеры на основе гиалуроновой кислоты, которые могут быть различной плотности. Гели эффективно заполняют возрастные и мимические морщины изнутри, способны восполнить недостающий объем скул, губ или подбородка, позволяют скорректировать контур лица.')
-        //- Pricelist
-        section.container.pb-5
-            .row
-                .col-7
-                    h3.h2 Стоимость услуг 
-                        span.text-italic инъекционной 
-                        |  косметологии
-            .toggle-item
-                p.toggle-item__title Биоревитализация
-                .toggle-item__content
-                    .table-responsive
-                        table.table
-                            thead.table__head
-                                tr
-                                    th.table__title наименование инъекционной процедуры
-                                    th.table__title услуга
-                                    th.table__title цена, руб.
-                            tbody.table__content
-                                tr
-                                    td.table__item Значение 1
-                                    td.table__item 
-                                        a.link-underline.text-small(href="#") Мезотерапия головы
-                                    td.table__item Значение 3
-                                tr
-                                    td.table__item Значение 4
-                                    td.table__item 
-                                        a.link-underline.text-small(href="#") Мезотерапия головы
-                                    td.table__item Значение 6
-                                tr
-                                    td.table__item Значение 1
-                                    td.table__item 
-                                        a.link-underline.text-small(href="#") Мезотерапия головы
-                                    td.table__item Значение 3
-                                tr
-                                    td.table__item Значение 4
-                                    td.table__item 
-                                        a.link-underline.text-small(href="#") Мезотерапия головы
-                                    td.table__item Значение 6
-            .toggle-item
-                p.toggle-item__title Ботулонотерапия
-                .toggle-item__content
-                    p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
         //- Doctors
-        section.container.pb-5
+        section.container.pb-5.bg-company
             .row.align-items-center
-                .col-5
+                .col-4
                     h4.h1.mb-2 Cпециалисты 
                         span.text-italic центра
                     p Все врачи клиники Modifique косметологи-дерматологи и имеют высшее медицинкое образование. Cредний опыт работы специалистов 12 лет.
                     p Несколько раз в год ежегодно проходят курсы повышения квалификации и в соврешенстве владеют всеми методиками.
                     a.btn.btn_link(href="review.html") Отзывы о клинике
                 .col-7
-                    .content-inside
+                    .content-right
                         .row
                             .col-4
                                 img.img-fluid(src="../demo/service-1.png" alt="" title="")
@@ -161,6 +119,55 @@ html(lang="ru")
                                 img.img-fluid(src="../demo/service-1.png" alt="" title="")
                             .col-4.mt-2
                                 img.img-fluid(src="../demo/service-2.png" alt="" title="")
+        //- Pricelist
+        section.bg-light.pt-3.pb-3
+            .container
+                h3 Стоимость услуг
+                .toggle-item
+                    p.toggle-item__title Биоревитализация
+                    .toggle-item__content
+                        .table-responsive
+                            table.table
+                                thead.table__head
+                                    tr
+                                        th.table__title наименование инъекционной процедуры
+                                        th.table__title услуга
+                                        th.table__title цена, руб.
+                                tbody.table__content
+                                    tr
+                                        td.table__item Значение 1
+                                        td.table__item 
+                                            a.link-underline.text-small(href="#") Мезотерапия головы
+                                        td.table__item Значение 3
+                                    tr
+                                        td.table__item Значение 4
+                                        td.table__item 
+                                            a.link-underline.text-small(href="#") Мезотерапия головы
+                                        td.table__item Значение 6
+                                    tr
+                                        td.table__item Значение 1
+                                        td.table__item 
+                                            a.link-underline.text-small(href="#") Мезотерапия головы
+                                        td.table__item Значение 3
+                                    tr
+                                        td.table__item Значение 4
+                                        td.table__item 
+                                            a.link-underline.text-small(href="#") Мезотерапия головы
+                                        td.table__item Значение 6
+                .toggle-item
+                    p.toggle-item__title Ботулонотерапия
+                    .toggle-item__content
+                        p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+                            .toggle-item
+                .toggle-item
+                    p.toggle-item__title Ботулонотерапия ботокс
+                    .toggle-item__content
+                        p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+                            .toggle-item
+                .toggle-item
+                    p.toggle-item__title Ботулонотерапия диспорт
+                    .toggle-item__content
+                        p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
         include chunks/footer.pug
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')

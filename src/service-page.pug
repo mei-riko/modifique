@@ -3,7 +3,7 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Text Page
+        title Service Page
 
         link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet")
         link(href='./css/style.css', rel='stylesheet')
@@ -11,11 +11,181 @@ html(lang="ru")
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-        
+        include chunks/mixin.pug
+        //- Header Block
+        section.container
+            .row.align-items-center.pt-2.pb-1
+                //- Promo photo
+                .col-7
+                    .content-left
+                        img.img-fluid(src="../demo/page.png" alt="" title="")
+                //- Title
+                .col-5
+                    h1 Мезотерапия
+                    ul.list.list_information
+                        li.list_information__item
+                            span.list_information__category Стоимость
+                            span.list_information__value от 1500 руб.
+                        li.list_information__item
+                            span.list_information__category Продолжительность процедуры
+                            span.list_information__value 30-40 минут
+                        li.list_information__item
+                            span.list_information__category Среднее количество процедур
+                            span.list_information__value 4-10 штук
+                        li.list_information__item
+                            span.list_information__category Восстановительный период
+                            span.list_information__value до 2 дней
+                    .btn-group.mt-2
+                        .btn-group__item
+                            a.btn.btn_secondary(href="#") Консультация
+                        .btn-group__item
+                            a.btn.btn_default(href="#") Записаться на процедуру
+                //- Content
+                .col-9.pt-3
+                    p Один из самых современных и эффективных методов замедлить процесс старения и вернуть коже былую свежесть. Это процедура введения в мезодерму (средний слой клеток) инъекций витаминов, антиоксидантов, аминокислот, ферментов и других хорошо усваиваемых активных веществ. Мезококтейли также могут содержать гиалуроновую кислоту в пределах 2%.
+            .row
+                +link-modal-col('Подготовка')(href="#")
+                +link-modal-col('Проведение процедуры')(href="#")
+                +link-modal-col('Восстановление')(href="#")
+                +link-modal-col('Противопоказания')(href="#")
+                +link-modal-col('Препараты')(href="#")
+        //- Преимущества
+        section.pt-4.pb-4.container
+            .row
+                .col-3
+                    a.cta-arrow.scroll(href="#top")
+                .col-8
+                    h2.h1 Проблемы, которые решает 
+                        span.text-italic мезотерапия
+                    p Быстрый омолаживающий и терапевтический эффект со стойким результатом является выбором многих врачей для решения разного рода задач. улучшение состояния кожи, запуск обменных и регенерационных процессов, обеспечение полноценного питания и поступления полезных веществ незаменимы для таких проблем как:
+                    ul.list.list_inline.list_advantage
+                        li.list_advantage__item.list_inline__item Омоложение кожи
+                        li.list_advantage__item.list_inline__item Глубокое увлажнение и питание
+                        li.list_advantage__item.list_inline__item Устранение птоза
+                        li.list_advantage__item.list_inline__item Удаление и коррекция морщин
+                        li.list_advantage__item.list_inline__item Избавление от целлюлита
+                        li.list_advantage__item.list_inline__item Устранение носогубных складок
+                        li.list_advantage__item.list_inline__item Исправление формы и объема губ
+                        li.list_advantage__item.list_inline__item Избавление от растяжек
+        //- Результаты
+        section.container.bg-result
+            .row
+                .col-11
+                    //- До и после
+                    .row
+                        .col-4
+                            .item(data-fancybox="images" href="../demo/collage-1.png")
+                                img.img-fluid(src="../demo/collage-1.png" alt="" title="")
+                        .col-4
+                            .item(data-fancybox="images" href="../demo/collage-2.png")
+                                img.img-fluid(src="../demo/collage-2.png" alt="" title="")
+                        .col-4
+                            .item(data-fancybox="images" href="../demo/collage-3.png")
+                                img.img-fluid(src="../demo/collage-3.png" alt="" title="")
+                    //- Описание результатов
+                    .row
+                        .col-6.mt-2
+                            +preview-content('Ботулонотерапия', 'Представляет собой инъекции ботулотоксина типа А - очищенного и разбавленного белка, способного временно блокировать нервно-мышечную передачу импульсов. Уколы направлены на устранение морщин, а также лечение ряда заболеваний, таких как гипергидроз, блефароспазм, мигрень, бруксизм. В ботулинотерапии применяются следующие препараты: Botox, Dyspot, Xeomin.')
+                        .col-6.mt-2
+                            +preview-content('Контурная пластика','Здесь используются специальные гелеобразные филлеры на основе гиалуроновой кислоты, которые могут быть различной плотности. Гели эффективно заполняют возрастные и мимические морщины изнутри, способны восполнить недостающий объем скул, губ или подбородка, позволяют скорректировать контур лица.')
+                        .col-6.mt-2
+                            +preview-content('Ботулонотерапия', 'Представляет собой инъекции ботулотоксина типа А - очищенного и разбавленного белка, способного временно блокировать нервно-мышечную передачу импульсов. Уколы направлены на устранение морщин, а также лечение ряда заболеваний, таких как гипергидроз, блефароспазм, мигрень, бруксизм. В ботулинотерапии применяются следующие препараты: Botox, Dyspot, Xeomin.')
+                        .col-6.mt-2
+                            +preview-content('Контурная пластика','Здесь используются специальные гелеобразные филлеры на основе гиалуроновой кислоты, которые могут быть различной плотности. Гели эффективно заполняют возрастные и мимические морщины изнутри, способны восполнить недостающий объем скул, губ или подбородка, позволяют скорректировать контур лица.')
+        //- Форма
+        section.cta.container
+            .row
+                .col-3
+                    a.cta__arrow.scroll(href="#top")
+                .col-9
+                    p.h1-lead.mb-3 Подберем индивидуальное 
+                        span.text-italic решение 
+                        | вашей проблемы
+                    form.form.form_inline(action="")
+                        .p-relative.form_inline__group
+                            //- span.form-validation Укажите номер телефона
+                            input.form_inline__input.form__input.form__input--full.phone(type="tel" placeholder="Телефон* ")
+                        button.form_inline__btn.btn.btn_default(type="") Записаться
+                        .form_inline__agree.form__agree.form__agree_inverse.checkbox
+                            input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+                            label.checkbox__label(for="agreeInline") согласен с обработкой 
+                                a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+        //- Tabs
+        section.container.pb-5
+            ul.tabs-nav.tabs-nav_list.justify-content-between#contentTabs
+                li.tabs-nav__item
+                    a.tabs-nav__link(href="#type1" data-toggle="tab") Виды мезотерапевтических манипуляций
+                li.tabs-nav__item
+                    a.tabs-nav__link(href="#type2" data-toggle="tab") Цены на процедуру «Мезотерапия»
+                li.tabs-nav__item.active
+                    a.tabs-nav__link(href="#type3" data-toggle="tab") Специалисты клиники
+            .tab-content
+                .tab-pane.fade#type1
+                    .row.pt-1
+                        +link-col('Биоревитализация')(href="#")
+                        +link-col-label('Ботулонотерапия', 'new')(href="#")
+                        +link-col('Ботулонотерапия ботокс')(href="#")
+                        +link-col('Ботулонотерапия диспорт')(href="#")
+                        +link-col('PRP-плазмотерапия')(href="#")
+                        +link-col-label('Плацентарная терапия «лаеннек»', 'best')(href="#")
+                .tab-pane.fade#type2
+                    .table-responsive
+                        table.table
+                            thead.table__head
+                                tr
+                                    th.table__title наименование инъекционной процедуры
+                                    th.table__title количество
+                                    th.table__title цена, руб.
+                            tbody.table__content
+                                tr
+                                    td.table__item Значение 1
+                                    td.table__item 10 мг
+                                    td.table__item Значение 3
+                                tr
+                                    td.table__item Значение 4
+                                    td.table__item 15 мг
+                                    td.table__item Значение 6
+                                tr
+                                    td.table__item Значение 1
+                                    td.table__item 1 сеанс
+                                    td.table__item Значение 3
+                                tr
+                                    td.table__item Значение 4
+                                    td.table__item 1-4 сеанса
+                                    td.table__item Значение 6
+                .tab-pane.active.fade.in#type3
+                    .row.justify-content-between
+                        .col-6
+                            +preview-doctor('Гринченко','Мария Владимировна','дерматолог-косметолог')(src="../demo/no-img.png")
+                        .col-6
+                            +preview-doctor('Кросковицкая','Алёна Ивановна','дерматолог-косметолог')(src="../demo/person-prev-1.png")
+        //- Sales
+        aside.container.bg-sales.pb-5
+            .row.justify-content-end
+                .col-11
+                    .row
+                        .col-4.preview-sale
+                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
+                                span.label.label_sale free
+                            a.preview-sale__title(href="#") Бесплатная консультация
+                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4.preview-sale
+                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
+                                span.label.label_sale -20%
+                            a.preview-sale__title(href="#") Гармонизация со скидкой
+                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4.preview-sale
+                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
+                            a.preview-sale__title(href="#") Контурная пластика
+                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
         include chunks/footer.pug
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
+
+        //- Tabs
+        script(src="./js/bootstrap-transition.js")
+        script(src="./js/bootstrap-tab.js")
 
         script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")

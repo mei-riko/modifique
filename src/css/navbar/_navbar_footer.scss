@@ -1,0 +1,20 @@
+.navbar_footer{
+    flex-wrap: nowrap;
+    font-size: 13px;
+
+    &__item{
+        color: $light-300;
+        white-space: nowrap;
+        margin-bottom: 6px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__col{
+        padding-right: map-get($map: $spacers, $key: 2);
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+}

@@ -32,6 +32,9 @@
         &.active,
         &--active{
             color: $link-hover-color;
+            .tabs-nav__link{
+                color: $link-hover-color;
+            }
             &:after{
                 opacity: 1;
             }

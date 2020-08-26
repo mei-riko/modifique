@@ -1,0 +1,60 @@
+.preview-doctor{
+    @extend .row;
+    @extend .align-items-center;
+
+    &__photo{
+        @extend .col-5;
+        padding-right: $spacer;
+    
+        &--full{
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    &__content{
+        @extend .col-7;
+
+        &--full{
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    &__name{
+        font-size: 24px;
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bolder;
+        line-height: 1.2;
+        margin-bottom: 0;
+
+        &--full{
+            font-size: 32px;
+        }
+    }
+    &__surname{
+        font-size: 24px;
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bolder;
+        line-height: 1.2;
+        margin-bottom: 0;
+
+        &--full{
+            font-size: 32px;
+        }
+    }
+    &__type{
+        font-size: 14px;
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bolder;
+        font-style: italic;
+        line-height: 1.2;
+        margin: $spacer/2 0;
+    }
+    &__intro{
+        font-size: 14px;
+        margin-bottom: $spacer/2;
+        &.list{
+            margin-bottom: $spacer/2;
+        }
+    }
+}
