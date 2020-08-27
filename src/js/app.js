@@ -84,24 +84,14 @@ $(document).ready(() =>{
   // Слайдер
 	if( $('.slider').length > 0 ){
     // Review Block Col
-    let $slickReview = $('#reviews');
+    let $slickReview = $('.slider_docs');
 		$slickReview.slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
+			slidesToShow: 4,
+			slidesToScroll: 4,
 			arrows      : true,
-			dots        : true,
+			dots        : false,
       autoplay  : false,
       responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            infinite: true,
-            arrows: true,
-            dots: true
-          }
-        },
         {
           breakpoint: 768,
           settings: {
@@ -115,8 +105,8 @@ $(document).ready(() =>{
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 4,
+            slidesToScroll: 4,
             infinite: true,
             arrows: false,
             dots: true

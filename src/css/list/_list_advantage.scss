@@ -1,6 +1,7 @@
 .list_advantage{
     &__item{
         position: relative;
+        padding: $spacer/3 0 $spacer/3 map-get($map: $spacers, $key: 3);
 
         &:before{
             content:'';

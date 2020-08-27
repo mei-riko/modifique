@@ -1,0 +1,65 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Doctors
+
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        include chunks/mixin.pug
+        //- Sales
+        section.container.bg-sales.mt-3.mb-3
+            .row.justify-content-between
+                .col-3.preview-sale.offset-10.mb-3
+                    a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
+                        span.label.label_sale free
+                    a.preview-sale__title(href="#") Бесплатная консультация
+                    p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                .col-3.preview-sale.mb-3
+                    a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
+                        span.label.label_sale -20%
+                    a.preview-sale__title(href="#") Гармонизация со скидкой
+                    p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                .col-3.preview-sale.mb-3
+                    a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
+                    a.preview-sale__title(href="#") Контурная пластика
+                    p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                .col-3.preview-sale.offset-10.mb-3
+                    a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
+                        span.label.label_sale free
+                    a.preview-sale__title(href="#") Бесплатная консультация
+                    p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                .col-3.preview-sale.mb-3
+                    a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
+                        span.label.label_sale -20%
+                    a.preview-sale__title(href="#") Гармонизация со скидкой
+                    p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                .col-3.preview-sale.mb-3
+                    a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
+                    a.preview-sale__title(href="#") Контурная пластика
+                    p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+            .row
+                .col-9.offset-10
+                    ul.pagination
+                        li.pagination__item
+                            a.pagination__link(href="#") 1
+                        li.pagination__item
+                            span.pagination__active 2
+                        li.pagination__item
+                            a.pagination__link(href="#") 3
+        include chunks/footer.pug
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        //- Tabs
+        script(src="./js/bootstrap-transition.js")
+        script(src="./js/bootstrap-tab.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/app.min.js")
