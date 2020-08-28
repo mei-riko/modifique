@@ -12,6 +12,7 @@
 @import "form/form";
 @import "form/form_inline";
 @import "form/checkbox";
+@import "form/select";
 @import "form/error";
 @import "form/jGrowl";
 
@@ -20,7 +21,9 @@
 @import "other/modal";
 @import "other/breadcrumbs";
 @import "other/pagination";
-@import "other/slider";
+
+@import "slider/slider";
+@import "slider/slick";
 
 @import "navbar/navbar";
 @import "navbar/navbar_header";
@@ -31,10 +34,12 @@
 @import "preview/preview-content";
 @import "preview/preview-doctor";
 @import "preview/preview-sale";
+@import "preview/preview-review";
 
 @import "element/label";
 @import "element/link-item";
 @import "element/toggle-item";
+@import "element/item";
 
 @import "tabs/tab-js";
 @import "tabs/tab-content";

@@ -40,6 +40,19 @@ $(document).ready(() =>{
   $('[data-fancybox]').fancybox({
     autoFocus: false
   });
+
+  // Lazy Load
+  ;(function() {
+      var bLazy = new Blazy({
+        success: function(element){
+          setTimeout(function(){
+            var parent = element.parentNode;
+            parent.className = parent.className.replace(/\bloading\b/,'');
+          }, 200);
+        }
+      });
+  })();
+ 
   // Отмена стандартного поведения ссылки
   $('a[data-trigger="click"]').click(function(e){
     e.preventDefault();
@@ -83,9 +96,9 @@ $(document).ready(() =>{
   }
   // Слайдер
 	if( $('.slider').length > 0 ){
-    // Review Block Col
-    let $slickReview = $('.slider_docs');
-		$slickReview.slick({
+    // Review Docs Col
+    let $slickDocs = $('.slider_docs');
+		$slickDocs.slick({
 			slidesToShow: 4,
 			slidesToScroll: 4,
 			arrows      : true,
@@ -114,7 +127,48 @@ $(document).ready(() =>{
         }
       ]
     });
+    // Review Page Screenshoot
+    $(".slider__review").each(function(){
+      $(this).slick({
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        arrows      : true,
+        dots        : false,
+        autoplay  : false
+      });
+    });
+    $(".slider__review-list").each(function(){
+      $(this).slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        arrows      : true,
+        dots        : false,
+        autoplay  : false
+      });
+    });
   }
+  // Счетчики для табов с отзывами
+  let currentSlide = [];
+  let sumSlide = [];
+
+  $(".slider .review").each(function( i ){
+    currentSlide[i] = $(this).slick("slickCurrentSlide") + 1;
+    sumSlide[i] = $(this).slick("getSlick").slideCount;
+
+    if ( Math.round( sumSlide[i] / 5 ) != 1 && Math.round( sumSlide[i] / 5 ) != 0){
+      $(this).parent().find(".slider_count__here").text( Math.round( currentSlide[i] / 5 ) + 1 );
+      $(this).parent().find(".slider_count__sum").text( Math.round( sumSlide[i] / 5 ) );
+    } else{
+      $(this).parent().find(".slider_count__container").hide();
+    }
+  });
+
+  //- Смена цифры в слайдере
+  $(".slider .review").on("afterChange", function(event, slick, currentSlide, nextSlide){
+    let currentChange = $(this).slick("slickCurrentSlide") + 1;
+    $(this).parent().find(".slider_count__here").text( Math.round( currentChange / 5 ) + 1 );
+  });
+
 	// Mobile Navbar
   $(".navbar-toggle#nav").on("click", function(e){
 		e.preventDefault();

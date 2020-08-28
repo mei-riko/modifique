@@ -1,0 +1,37 @@
+.slider{
+    &__item{
+        margin: 0 $spacer/3;
+    }
+
+    &_docs{
+        padding: 0 $spacer;
+    }
+    &_count{
+        position: relative;
+        padding-top: map-get($map: $spacers, $key: 3);
+
+        &__container{
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding-left: $spacer;
+            padding-right: $spacer;
+            width: 3*$spacer;
+            line-height: $spacer;
+            text-align: center;
+        }
+
+        .slick-arrow.slick-prev{
+            top: -30px;
+            left: 10px;
+            width: $spacer;
+            height: $spacer;
+        }
+        .slick-arrow.slick-next{
+            top: -30px;
+            left: 50px;
+            width: $spacer;
+            height: $spacer;
+        }
+    }
+}

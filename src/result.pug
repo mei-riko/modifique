@@ -1,0 +1,66 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Result
+
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        //- Content
+        section.container.pt-1
+            .row
+                .col-7
+                    h1.h2 Результаты «До/После»
+                    p Врачи клиники Modifique - профессионалы своего дела. Мы предлагаем эффективные процедуры с результатом, который заметен сразу. Ознакомьтесь с примерами наших работ по интересующему вас направлениям.        
+                    select.select.select--full
+                        option(value="Комплексное омоложение") Комплексное омоложение
+                        option(value="Ботолутерапия") Ботолутерапия
+            //- До и после
+            .row.mt-1
+                .col-4.mt-2
+                    .item.item_blazy.loading(data-fancybox="images" href="../demo/collage-1.png")
+                        img.b-lazy.img-fluid(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-1.png" alt="" title="")
+                .col-4.mt-2
+                    .item.item_blazy.loading(data-fancybox="images" href="../demo/collage-2.png")
+                        img.b-lazy.img-fluid(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-2.png" alt="" title="")
+                .col-4.mt-2
+                    .item.item_blazy.loading(data-fancybox="images" href="../demo/collage-3.png")
+                        img.b-lazy.img-fluid(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-3.png" alt="" title="")
+                .col-4.mt-2
+                    .item.item_blazy.loading(data-fancybox="images" href="../demo/collage-2.png")
+                        img.b-lazy.img-fluid(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-2.png" alt="" title="")
+                .col-4.mt-2
+                    .item.item_blazy.loading(data-fancybox="images" href="../demo/collage-3.png")
+                        img.b-lazy.img-fluid(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-3.png" alt="" title="")
+        //- Форма
+        section.cta.container
+            .row
+                .col-3
+                    a.cta__arrow.scroll(href="#top")
+                .col-9
+                    p.h1-lead.mb-3 Подберем индивидуальное 
+                        span.text-italic решение 
+                        | вашей проблемы
+                    form.form.form_inline(action="")
+                        .p-relative.form_inline__group
+                            //- span.form-validation Укажите номер телефона
+                            input.form_inline__input.form__input.form__input--full.phone(type="tel" placeholder="Телефон* ")
+                        button.form_inline__btn.btn.btn_default(type="") Записаться
+                        .form_inline__agree.form__agree.form__agree_inverse.checkbox
+                            input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+                            label.checkbox__label(for="agreeInline") согласен с обработкой 
+                                a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+        include chunks/footer.pug
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/blazy.min.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/app.min.js")

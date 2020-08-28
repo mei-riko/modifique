@@ -1,0 +1,138 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Review
+
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        //- Content
+        section.container.pt-1.pb-3
+            .row
+                .col-6
+                    h1.h3 Отзывы о&nbsp;врачах и&nbsp;процедурах&nbsp;клиники
+                    p Мы отвечаем за качество проводимых процедур и всегда ориентируемся на отзывы 
+                        | наших клиентов. Обратная связь помогает нам развиваться и становиться лучше. 
+                        | Мы сердечно благодарим всех, кто поддерживает нас. 
+        //- Tabs
+        section.container.pb-5
+            ul.tabs-nav.tabs-nav_list.justify-content-between#contentTabs
+                li.tabs-nav__item.active
+                    a.tabs-nav__link(href="#type1" data-toggle="tab") Актуальное из Instagram
+                li.tabs-nav__item
+                    a.tabs-nav__link(href="#type2" data-toggle="tab") Актуальное из WhatsApp
+                li.tabs-nav__item
+                    a.tabs-nav__link(href="#type3" data-toggle="tab") Отзывы с нашего сайта
+            .tab-content
+                .tab-pane.active.fade.in#type1
+                    .slider.slider_count
+                        .slider_count__container
+                            span.slider_count__here
+                            span /
+                            span.slider_count__sum
+                        .slider__review.review#instagram
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-inst.png")
+                                p.mt-1.text-grey #мезотерапия
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-inst.png")
+                                p.mt-1.text-grey #ботокс
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-inst.png")
+                                p.mt-1.text-grey #ботулотерапия
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-inst.png")
+                                p.mt-1.text-grey #инъекции
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-inst.png")
+                                p.mt-1.text-grey #мезотерапия
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-inst.png")
+                                p.mt-1.text-grey #ботокс
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-inst.png")
+                                p.mt-1.text-grey #ботулотерапия
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-inst.png")
+                                p.mt-1.text-grey #инъекции
+                .tab-pane.fade#type2
+                    .slider.slider_count
+                        .slider_count__container
+                            span.slider_count__here
+                            span /
+                            span.slider_count__sum
+                        .slider__review.review#wa
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-wa.png")
+                                p.mt-1.text-grey #мезотерапия
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-wa.png")
+                                p.mt-1.text-grey #ботокс
+                            .slider__item
+                                img.img-fluid(src="../demo/demo-wa.png")
+                                p.mt-1.text-grey #ботулотерапия
+                .tab-pane.fade#type3
+                    .slider.slider_count
+                        .slider_count__container
+                            span.slider_count__here
+                            span /
+                            span.slider_count__sum
+                        .slider__review-list.review#web
+                            .slider__item
+                                .preview-review
+                                    p.preview-review__content Хожу к Юлии. Милая, доброжелательная девушка. Составили план на основе анамнеза и детских фотографий. эффект потрясающий, впереди 4 процедуры.
+                                    .preview-review__info
+                                        .preview-review__image.preview-review__image--no-img
+                                        .preview-review__name Инна
+                                        .preview-review__date 21.02.2020
+                                p.mt-1.text-grey #мезотерапия
+                            .slider__item
+                                .preview-review
+                                    p.preview-review__content Хочу сказать большое спасибо мастеру Марие за мои прекрасные брови! Осталась очень довольна результатом. Все инструменты были в стерильных ...
+                                    .preview-review__info
+                                        .preview-review__image(style="background-image:url('../demo/sale-1.png')")
+                                        .preview-review__name Вероника
+                                        .preview-review__date 01.12.2020
+                            .slider__item
+                                .preview-review
+                                    p.preview-review__content Хочу сказать большое спасибо мастеру Марие за мои прекрасные брови! Осталась очень довольна результатом. Все инструменты были в стерильных ...
+                                    .preview-review__info
+                                        .preview-review__image(style="background-image:url('../demo/sale-1.png')")
+                                        .preview-review__name Александра
+                                        .preview-review__date 21.02.2020
+        //- Форма
+        section.pb-5.container
+            .row
+                .col-2
+                    a.cta__arrow.scroll(href="#top")
+                .col-6
+                    p.h3.mb-2 Оставьте отзыв и получите  
+                        span.text-italic 5% скидку 
+                        | на следующую процедуру
+                    .btn-group
+                        .btn-group__item
+                            a.btn.btn_secondary(href="#") Отзыв в WhatsApp
+                        .btn-group__item
+                            a.btn.btn_secondary(href="#") Отзыв в Instagram
+                        .btn-group__item
+                            a.btn.btn_secondary(href="#") Отзыв через сайт
+        include chunks/footer.pug
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        script(src="./js/slick.min.js")
+
+        //- Tabs
+        script(src="./js/bootstrap-transition.js")
+        script(src="./js/bootstrap-tab.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/app.min.js")

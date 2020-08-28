@@ -1,21 +1,12 @@
 .slider{
-    &__item{
-        margin: 0 $spacer/3;
-
-        &.slick-slide{
-            height: auto;
+    .slick-slide{
+        height: auto;
+        outline: none;
+        &:hover,
+        &:focus{
             outline: none;
-            &:hover,
-            &:focus{
-                outline: none;
-            }
         }
     }
-
-    &_docs{
-        padding: 0 $spacer;
-    }
-
     .slick-arrow{
         background-color: inherit;
         width: 40px;

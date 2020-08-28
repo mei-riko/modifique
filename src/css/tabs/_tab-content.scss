@@ -1,11 +1,16 @@
 .tab-content {
     .active {
-        display: block;
+        overflow: visible;
+        height: auto;
+        // display: block;
     }
 }
 
 .tab-pane{
-    display: none;
+    overflow: hidden;
+    height: 0;
+    // display: none;
+
     &_scroll{
         overflow-x: auto;
     }
