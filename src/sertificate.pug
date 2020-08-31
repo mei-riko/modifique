@@ -1,0 +1,76 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Sertificate
+
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700;0,400;1,400&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        section.container.sertificate.pb-3
+            .row.align-items-center
+                .col-4
+                    .sertificate__preview
+                .col-8
+                    .content-right
+                        h1.h2.mb-2 Подарочный 
+                            span.text-italic сертификат
+                        ul.list.list_advantage.list_col
+                            li.list_advantage__item.list_col__item отправляется на e-mail сразу после оплаты
+                            li.list_advantage__item.list_col__item срок действия 6 месяцев после оплаты
+                            li.list_advantage__item.list_col__item активируется при предъявлении в клинике
+                            li.list_advantage__item.list_col__item не подлежит обмену и возврату
+                        p.h6.mt-4 Создайте свой сертификат:
+                        form.sertificate__constructor
+                            .sertificate__price
+                                p.sertificate__title Выберите сумму:
+                                .radio.sertificate__radio.text-bold
+                                    input.radio__input#radio1(type="radio" name="radio" checked="checked")
+                                    label.radio__label(for="radio1") 5 000 p.
+                                .radio.sertificate__radio.text-bold
+                                    input.radio__input#radio2(type="radio" name="radio")
+                                    label.radio__label(for="radio2") 10 000 p.
+                                        span.sertificate__radio-sale SALE!<br/>К оплате 9 000 р.
+                                .radio.sertificate__radio.text-bold
+                                    input.radio__input#radio3(type="radio" name="radio")
+                                    label.radio__label(for="radio3") 20 000 p.
+                                .radio.sertificate__radio.text-bold
+                                    input.radio__input#radio4(type="radio" name="radio")
+                                    label.radio__label(for="radio4") 30 000 p.
+                            .sertificate__color
+                                p.sertificate__title Выберите цвет фона:
+                                .sertificate__color-row
+                                    label.sertificate__color-col.sertificate__color-col--active(for="color1" data-color="grey")
+                                        input.sertificate__color-input#color1(type="radio" name="color" checked="checked")
+                                    label.sertificate__color-col(for="color2" data-color="pink")
+                                        input.sertificate__color-input#color2(type="radio" name="color")
+                                    label.sertificate__color-col(for="color3" data-color="blue")
+                                        input.sertificate__color-input#color3(type="radio" name="color")
+                                    label.sertificate__color-col(for="color4" data-color="green")
+                                        input.sertificate__color-input#color4(type="radio" name="color")
+                            .sertificate__type
+                                .checkbox.sertificate__checkbox
+                                    input.checkbox__input#online(type="checkbox" name="type" checked="checked")
+                                    label.checkbox__label(for="online") только электронный сертификат
+                                .checkbox.sertificate__checkbox
+                                    input.checkbox__input#offline(type="checkbox" name="type")
+                                    label.checkbox__label(for="offline") бумажный сертификат
+                                .sertificate__checkbox.sertificate__checkbox--inside.sertificate__checkbox--disable
+                                    .radio
+                                        input.radio__input#typeInside1(type="radio" name="typeInside" disabled)
+                                        label.radio__label(for="typeInside1") самовывоз
+                                    .radio
+                                        input.radio__input#typeInside2(type="radio" name="typeInside" disabled)
+                                        label.radio__label(for="typeInside2") доставка в пределах КАД (+500 р.)
+                                button.btn.btn_default(type="submit") Купить сертификат
+        include chunks/footer.pug
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/app.min.js")

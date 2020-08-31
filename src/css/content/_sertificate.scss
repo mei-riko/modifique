@@ -1,0 +1,152 @@
+.sertificate{
+    &__preview{
+        display: block;
+        width: 100%;
+        height: 580px;
+
+        background: url('../icon/sertificate-bg.svg') no-repeat center / 110%;
+        background-color: #e6e7e9;
+
+        &--grey{
+            background-color: #e6e7e9;
+        }
+        &--pink{
+            background-color: #ffdffc;
+        }
+        &--blue{
+            background-color: #ffdffc;
+        }
+        &--green{
+            background-color: #dffff0;
+        }
+    }
+    &__title{
+        font-size: 12px;
+        font-weight: $font-weight-base;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    &__radio{
+        font-family: $font-family-serif;
+        font-style: italic;
+        margin-bottom: 15px;
+
+        &-sale{
+            display: block;
+            font-size: 12px;
+            line-height: 14px;
+            color: $red;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__checkbox{
+        font-size: 13px;
+        font-family: $font-family-serif;
+        font-style: italic;
+        margin-bottom: 20px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        &--inside{
+            transform: translateY(-5px);
+            padding-left: $spacer;
+            .radio + .radio{
+                margin-top: $spacer/3;
+            }
+        }
+        &--disable{
+            opacity: .5;
+        }
+    }
+    // Constructor Sertificate
+    &__constructor{
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid $border-color;
+    }
+    // Change Price
+    &__price{
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: $spacer;
+        border-right: 1px solid $border-color;
+    }
+    // Change Color
+    &__color{
+        flex: 0 0 225px;
+        max-width: 225px;
+        padding: $spacer;
+    }
+    &__color-row{
+        display: flex;
+        flex-wrap: wrap;
+
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    &__color-col{
+        position: relative;
+
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        margin: 0 10px;
+
+        cursor: pointer;
+        
+        &:before{
+            content:'';
+            display: block;
+
+            background-color: $light-100;
+
+            width: 100%;
+            padding-bottom: 100%;
+
+            // position: absolute;
+            // left: 10px;
+            // top: 10px;
+        }
+        &:nth-child(1), &:nth-child(2){
+            margin-bottom: 20px;
+        }
+        // Цвета фона
+        &[data-color=grey]{
+            &:before{
+                background-color: #e6e7e9;
+            }
+        }
+        &[data-color=pink]{
+            &:before{
+                background-color: #ffdffc;
+            }
+        }
+        &[data-color=blue]{
+            &:before{
+                background-color: #dfe2ff;
+            }
+        }
+        &[data-color=green]{
+            &:before{
+                background-color: #dffff0;
+            }
+        }
+
+        // Активный элемент
+        &--active{
+            border: 1px solid $black;
+        }
+    }
+    &__color-input{
+        display: none;
+    }
+    // Change Type
+    &__type{
+        flex: 0 0 calc(75% - 225px);
+        max-width: calc(75% - 225px);
+        padding: $spacer;
+    }
+}

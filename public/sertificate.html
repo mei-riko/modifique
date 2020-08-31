@@ -4,8 +4,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Text Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&amp;family=Raleway:wght@300;400;700;800&amp;display=swap" rel="stylesheet"/>
+    <title>Sertificate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700;0,400;1,400&amp;family=Raleway:wght@300;400;700;800&amp;display=swap" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
@@ -56,6 +56,84 @@
         </div>
       </div>
     </header>
+    <section class="container sertificate pb-3">
+      <div class="row align-items-center">
+        <div class="col-4">
+          <div class="sertificate__preview"></div>
+        </div>
+        <div class="col-8">
+          <div class="content-right">
+            <h1 class="h2 mb-2">Подарочный <span class="text-italic">сертификат</span></h1>
+            <ul class="list list_advantage list_col">
+              <li class="list_advantage__item list_col__item">отправляется на e-mail сразу после оплаты</li>
+              <li class="list_advantage__item list_col__item">срок действия 6 месяцев после оплаты</li>
+              <li class="list_advantage__item list_col__item">активируется при предъявлении в клинике</li>
+              <li class="list_advantage__item list_col__item">не подлежит обмену и возврату</li>
+            </ul>
+            <p class="h6 mt-4">Создайте свой сертификат:</p>
+            <form class="sertificate__constructor">
+              <div class="sertificate__price">
+                <p class="sertificate__title">Выберите сумму:</p>
+                <div class="radio sertificate__radio text-bold">
+                  <input class="radio__input" id="radio1" type="radio" name="radio" checked="checked"/>
+                  <label class="radio__label" for="radio1">5 000 p.</label>
+                </div>
+                <div class="radio sertificate__radio text-bold">
+                  <input class="radio__input" id="radio2" type="radio" name="radio"/>
+                  <label class="radio__label" for="radio2">10 000 p.<span class="sertificate__radio-sale">SALE!<br/>К оплате 9 000 р.</span></label>
+                </div>
+                <div class="radio sertificate__radio text-bold">
+                  <input class="radio__input" id="radio3" type="radio" name="radio"/>
+                  <label class="radio__label" for="radio3">20 000 p.</label>
+                </div>
+                <div class="radio sertificate__radio text-bold">
+                  <input class="radio__input" id="radio4" type="radio" name="radio"/>
+                  <label class="radio__label" for="radio4">30 000 p.</label>
+                </div>
+              </div>
+              <div class="sertificate__color">
+                <p class="sertificate__title">Выберите цвет фона:</p>
+                <div class="sertificate__color-row">
+                  <label class="sertificate__color-col sertificate__color-col--active" for="color1" data-color="grey">
+                    <input class="sertificate__color-input" id="color1" type="radio" name="color" checked="checked"/>
+                  </label>
+                  <label class="sertificate__color-col" for="color2" data-color="pink">
+                    <input class="sertificate__color-input" id="color2" type="radio" name="color"/>
+                  </label>
+                  <label class="sertificate__color-col" for="color3" data-color="blue">
+                    <input class="sertificate__color-input" id="color3" type="radio" name="color"/>
+                  </label>
+                  <label class="sertificate__color-col" for="color4" data-color="green">
+                    <input class="sertificate__color-input" id="color4" type="radio" name="color"/>
+                  </label>
+                </div>
+              </div>
+              <div class="sertificate__type">
+                <div class="checkbox sertificate__checkbox">
+                  <input class="checkbox__input" id="online" type="checkbox" name="type" checked="checked"/>
+                  <label class="checkbox__label" for="online">только электронный сертификат</label>
+                </div>
+                <div class="checkbox sertificate__checkbox">
+                  <input class="checkbox__input" id="offline" type="checkbox" name="type"/>
+                  <label class="checkbox__label" for="offline">бумажный сертификат</label>
+                </div>
+                <div class="sertificate__checkbox sertificate__checkbox--inside sertificate__checkbox--disable">
+                  <div class="radio">
+                    <input class="radio__input" id="typeInside1" type="radio" name="typeInside" disabled="disabled"/>
+                    <label class="radio__label" for="typeInside1">самовывоз</label>
+                  </div>
+                  <div class="radio">
+                    <input class="radio__input" id="typeInside2" type="radio" name="typeInside" disabled="disabled"/>
+                    <label class="radio__label" for="typeInside2">доставка в пределах КАД (+500 р.)</label>
+                  </div>
+                </div>
+                <button class="btn btn_default" type="submit">Купить сертификат</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer pt-5 pb-2">
       <div class="container">
         <div class="row pb-5">

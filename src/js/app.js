@@ -41,18 +41,19 @@ $(document).ready(() =>{
     autoFocus: false
   });
 
-  // Lazy Load
-  ;(function() {
-      var bLazy = new Blazy({
-        success: function(element){
-          setTimeout(function(){
-            var parent = element.parentNode;
-            parent.className = parent.className.replace(/\bloading\b/,'');
-          }, 200);
-        }
-      });
-  })();
- 
+  if( $('.b-lazy').length > 0 ){
+    // Lazy Load
+    ;(function() {
+        var bLazy = new Blazy({
+          success: function(element){
+            setTimeout(function(){
+              var parent = element.parentNode;
+              parent.className = parent.className.replace(/\bloading\b/,'');
+            }, 200);
+          }
+        });
+    })();
+  }
   // Отмена стандартного поведения ссылки
   $('a[data-trigger="click"]').click(function(e){
     e.preventDefault();

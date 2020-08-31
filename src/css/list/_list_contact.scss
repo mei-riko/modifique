@@ -1,0 +1,23 @@
+.list_contact{
+    &__title{
+        text-transform: uppercase;
+        font-weight: $font-weight-light;
+        font-size: 13px;
+
+        display: block;
+    }
+    &__link{
+        font-weight: $font-weight-bolder;
+        font-family: $font-family-serif;
+        font-size: 18px;
+    }
+    &__metro{
+        position: relative;
+        display: block;
+
+        padding-left: $spacer;
+        background-size: 24px;
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+}
