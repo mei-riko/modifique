@@ -1,0 +1,15 @@
+.preview-interiors{
+    position: relative;
+    width: 100%;
+    height: 220px;
+
+    margin-bottom: $spacer;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_full{
+        height: 470px;
+    }
+}

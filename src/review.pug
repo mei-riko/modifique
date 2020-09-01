@@ -37,28 +37,28 @@ html(lang="ru")
                             span.slider_count__sum
                         .slider__review.review#instagram
                             .slider__item
-                                img.img-fluid(src="../demo/demo-inst.png")
+                                img.img-fluid.img-border(src="../demo/demo-inst.png")
                                 p.mt-1.text-grey #мезотерапия
                             .slider__item
-                                img.img-fluid(src="../demo/demo-inst.png")
+                                img.img-fluid.img-border(src="../demo/demo-inst.png")
                                 p.mt-1.text-grey #ботокс
                             .slider__item
-                                img.img-fluid(src="../demo/demo-inst.png")
+                                img.img-fluid.img-border(src="../demo/demo-inst.png")
                                 p.mt-1.text-grey #ботулотерапия
                             .slider__item
-                                img.img-fluid(src="../demo/demo-inst.png")
+                                img.img-fluid.img-border(src="../demo/demo-inst.png")
                                 p.mt-1.text-grey #инъекции
                             .slider__item
-                                img.img-fluid(src="../demo/demo-inst.png")
+                                img.img-fluid.img-border(src="../demo/demo-inst.png")
                                 p.mt-1.text-grey #мезотерапия
                             .slider__item
-                                img.img-fluid(src="../demo/demo-inst.png")
+                                img.img-fluid.img-border(src="../demo/demo-inst.png")
                                 p.mt-1.text-grey #ботокс
                             .slider__item
-                                img.img-fluid(src="../demo/demo-inst.png")
+                                img.img-fluid.img-border(src="../demo/demo-inst.png")
                                 p.mt-1.text-grey #ботулотерапия
                             .slider__item
-                                img.img-fluid(src="../demo/demo-inst.png")
+                                img.img-fluid.img-border(src="../demo/demo-inst.png")
                                 p.mt-1.text-grey #инъекции
                 .tab-pane.fade#type2
                     .slider.slider_count
@@ -68,13 +68,13 @@ html(lang="ru")
                             span.slider_count__sum
                         .slider__review.review#wa
                             .slider__item
-                                img.img-fluid(src="../demo/demo-wa.png")
+                                img.img-fluid.img-border(src="../demo/demo-wa.png")
                                 p.mt-1.text-grey #мезотерапия
                             .slider__item
-                                img.img-fluid(src="../demo/demo-wa.png")
+                                img.img-fluid.img-border(src="../demo/demo-wa.png")
                                 p.mt-1.text-grey #ботокс
                             .slider__item
-                                img.img-fluid(src="../demo/demo-wa.png")
+                                img.img-fluid.img-border(src="../demo/demo-wa.png")
                                 p.mt-1.text-grey #ботулотерапия
                 .tab-pane.fade#type3
                     .slider.slider_count
@@ -84,7 +84,14 @@ html(lang="ru")
                             span.slider_count__sum
                         .slider__review-list.review#web
                             .slider__item
-                                .preview-review
+                                .preview-review(data-fancybox="review1" data-src="#review")
+                                    p.preview-review__content Хочу сказать большое спасибо мастеру Марие за мои прекрасные брови! Осталась очень довольна результатом. Все инструменты были в стерильных ...
+                                    .preview-review__info
+                                        .preview-review__image(style="background-image:url('../demo/sale-1.png')")
+                                        .preview-review__name Вероника
+                                        .preview-review__date 01.12.2020
+                            .slider__item
+                                .preview-review(data-fancybox="review2" data-src="#review")
                                     p.preview-review__content Хожу к Юлии. Милая, доброжелательная девушка. Составили план на основе анамнеза и детских фотографий. эффект потрясающий, впереди 4 процедуры.
                                     .preview-review__info
                                         .preview-review__image.preview-review__image--no-img
@@ -122,6 +129,15 @@ html(lang="ru")
                         .btn-group__item
                             a.btn.btn_secondary(href="#") Отзыв через сайт
         include chunks/footer.pug
+
+        .modal.modal_review#review
+            .preview-review.modal_review__preview
+                .preview-review__info
+                    .preview-review__image(style="background-image:url('../demo/sale-1.png')")
+                    .preview-review__name Вероника
+                    .preview-review__date 01.12.2020
+            .modal_review__content
+                p Хочу сказать большое спасибо мастеру Марие за мои прекрасные брови! Осталась очень довольна результатом. Все инструменты были в стерильных ...
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")

@@ -6,6 +6,7 @@
 
         background: url('../icon/sertificate-bg.svg') no-repeat center / 110%;
         background-color: #e6e7e9;
+        transition: .4s;
 
         &--grey{
             background-color: #e6e7e9;
@@ -14,10 +15,10 @@
             background-color: #ffdffc;
         }
         &--blue{
-            background-color: #ffdffc;
+            background-color: #dfe2ff;
         }
         &--green{
-            background-color: #dffff0;
+            background-color: #e3f7e9;
         }
     }
     &__title{
@@ -131,7 +132,7 @@
         }
         &[data-color=green]{
             &:before{
-                background-color: #dffff0;
+                background-color: #e3f7e9;
             }
         }
 

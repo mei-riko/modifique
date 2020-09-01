@@ -2,7 +2,6 @@
     .active {
         overflow: visible;
         height: auto;
-        // display: block;
     }
 }
 
@@ -13,18 +12,23 @@
 
     &_scroll{
         overflow-x: auto;
+        &.active{
+            overflow-x: auto;
+        }
     }
     &__row{
         display: flex;
         flex-wrap: nowrap;
     }
     &__col-full{
-        flex: 0 0 59%;
-        max-width: 59%;
+        @extend .col-7;
+        // flex: 0 0 59%;
+        // max-width: 59%;
     }
     &__col{
-        flex: 0 0 41.6667%;
-        max-width: 41.6667%;
+        @extend .col-5;
+        // flex: 0 0 41.6667%;
+        // max-width: 41.6667%;
     }
 }
 

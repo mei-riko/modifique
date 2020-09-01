@@ -40,7 +40,7 @@ $(document).ready(() =>{
   $('[data-fancybox]').fancybox({
     autoFocus: false
   });
-
+  // Lazy Load Image
   if( $('.b-lazy').length > 0 ){
     // Lazy Load
     ;(function() {
@@ -163,13 +163,29 @@ $(document).ready(() =>{
       $(this).parent().find(".slider_count__container").hide();
     }
   });
-
-  //- Смена цифры в слайдере
+  // Смена цифры в слайдере
   $(".slider .review").on("afterChange", function(event, slick, currentSlide, nextSlide){
     let currentChange = $(this).slick("slickCurrentSlide") + 1;
     $(this).parent().find(".slider_count__here").text( Math.round( currentChange / 5 ) + 1 );
   });
-
+  // Constructor Sertificate
+  // Change Color
+  $("#constrictor .sertificate__color-input").on("change", function(e){
+    $(".sertificate__color-col.sertificate__color-col--active").removeClass("sertificate__color-col--active");
+    $(this).parent().addClass("sertificate__color-col--active");
+    let color = $(this).parent().data("color");
+    $(".sertificate__preview").attr("class", "sertificate__preview sertificate__preview--" + color);
+  });
+  // Change Type & Delivery
+  $("#constrictor .sertificate__type #offline").on("change", function(e){
+    if( $(this).prop("checked") == true){
+      $(".sertificate__checkbox#delivery").removeClass("sertificate__checkbox--disable")
+    }else{
+      $(".sertificate__checkbox#delivery").addClass("sertificate__checkbox--disable")
+    }
+  });
+  // Change Order Link
+  $("#constrictor .sertificate__color-input").on("change", function(e){});
 	// Mobile Navbar
   $(".navbar-toggle#nav").on("click", function(e){
 		e.preventDefault();

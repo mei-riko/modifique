@@ -31,4 +31,16 @@
         font-size: 14px;
         @extend .text-grey;
     }
+
+    &_line{
+        max-width: 370px;
+    }
+    &_middle{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &_last{
+        margin-left: auto;
+        margin-right: 0;
+    }
 }

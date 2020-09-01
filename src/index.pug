@@ -10,7 +10,116 @@ html(lang="ru")
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-
+        section.slider
+        //- Sales
+        aside.container.bg-sales
+            .row.justify-content-end
+                .col-11
+                    .row
+                        .col-4
+                            .preview-sale.preview-sale_line.preview-sale_first
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
+                                    span.label.label_sale free
+                                a.preview-sale__title(href="#") Бесплатная консультация
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4
+                            .preview-sale.preview-sale_line.preview-sale_middle
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
+                                    span.label.label_sale -20%
+                                a.preview-sale__title(href="#") Гармонизация со скидкой
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4
+                            .preview-sale.preview-sale_line.preview-sale_last
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
+                                a.preview-sale__title(href="#") Контурная пластика
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+        //- CTA
+        section.cta.container
+            .row
+                .col-2.col-xl-3
+                    a.cta__arrow.scroll(href="#top")
+                .col-9
+                    p.h1-lead.mb-3 Эксклюзивные  
+                        span.text-italic скидки 
+                        | каждый месяц. Подпишитесь, чтобы быть в курсе
+                    form.form.form_inline(action="")
+                        .p-relative.form_inline__group
+                            //- span.form-validation.error Укажите номер телефона
+                            input.form_inline__input.form__input.form__input--full.phone(type="tel" placeholder="Телефон* ")
+                        button.form_inline__btn.btn.btn_default(type="") Получать скидки
+                        .form_inline__agree.form__agree.form__agree_inverse.checkbox
+                            input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+                            label.checkbox__label(for="agreeInline") согласен с обработкой 
+                                a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+        //- Services
+        //- Doctors
+        section.container.bg-company
+            .row.align-items-center
+                .col-4
+                    h4.h1-lead.mb-2 Красота 
+                        span.text-italic вне&nbsp;времени
+                    p Все врачи клиники Modifique косметологи-дерматологи и имеют высшее медицинкое образование. Cредний опыт работы специалистов 12 лет.
+                    p Несколько раз в год ежегодно проходят курсы повышения квалификации и в соврешенстве владеют всеми методиками.
+                    .mt-2
+                        a.btn.btn_link(href="review.html") Медицинская лицензия
+                    .mt-1
+                        a.btn.btn_link(href="review.html") Отзывы о клинике
+                    .mt-1
+                        a.btn.btn_link(href="review.html") Работы до / после
+                .col-7
+                    .content-right
+                        .row
+                            .col-4
+                                img.img-fluid(src="../demo/service-1.png" alt="" title="")
+                            .col-4
+                                img.img-fluid(src="../demo/service-2.png" alt="" title="")
+                            .col-4
+                                img.img-fluid(src="../demo/service-3.png" alt="" title="")
+                            .col-4.mt-2
+                                img.img-fluid(src="../demo/service-1.png" alt="" title="")
+                            .col-4.mt-2
+                                img.img-fluid(src="../demo/service-2.png" alt="" title="")
+        //- CTA
+        section.cta.container
+            .row
+                .col-2.col-xl-3
+                    a.cta__arrow.scroll(href="#top")
+                .col-9
+                    p.h1-lead.mb-3 Получите бесплатную  
+                        span.text-italic консультацию  
+                        | от&nbsp;специалиста нашей клиники
+                    form.form.form_inline(action="")
+                        .p-relative.form_inline__group
+                            //- span.form-validation Укажите номер телефона
+                            input.form_inline__input.form__input.form__input--full.phone(type="tel" placeholder="Телефон* ")
+                        button.form_inline__btn.btn.btn_default(type="") Записаться
+                        .form_inline__agree.form__agree.form__agree_inverse.checkbox
+                            input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+                            label.checkbox__label(for="agreeInline") согласен с обработкой 
+                                a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+        //- Interiors
+        .container
+            .row
+                .col-3
+                    .preview-interiors(style="background-image:url('../demo/demo.jpg');")
+                    .preview-interiors(style="background-image:url('../demo/demo.jpg');")
+                .col-6
+                    .preview-interiors.preview-interiors_full(style="background-image:url('../demo/demo.jpg');")
+                .col-3
+                    .preview-interiors(style="background-image:url('../demo/demo.jpg');")
+                    .preview-interiors(style="background-image:url('../demo/demo.jpg');")
+        //- Instagram
+        .instagram
+            .instagram__item
+            .instagram__item
+            .instagram__item
+            .instagram__item
+            .instagram__title Мы в Instagram
+                a.instagram__link(href="") @mymodifique
+            .instagram__item
+            .instagram__item
+            .instagram__item
+            .instagram__item
         include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")

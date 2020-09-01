@@ -24,8 +24,8 @@ html(lang="ru")
                             li.list_advantage__item.list_col__item срок действия 6 месяцев после оплаты
                             li.list_advantage__item.list_col__item активируется при предъявлении в клинике
                             li.list_advantage__item.list_col__item не подлежит обмену и возврату
-                        p.h6.mt-4 Создайте свой сертификат:
-                        form.sertificate__constructor
+                        p.h6.mt-3.mb-2 Создайте свой сертификат:
+                        form.sertificate__constructor#constrictor
                             .sertificate__price
                                 p.sertificate__title Выберите сумму:
                                 .radio.sertificate__radio.text-bold
@@ -59,7 +59,7 @@ html(lang="ru")
                                 .checkbox.sertificate__checkbox
                                     input.checkbox__input#offline(type="checkbox" name="type")
                                     label.checkbox__label(for="offline") бумажный сертификат
-                                .sertificate__checkbox.sertificate__checkbox--inside.sertificate__checkbox--disable
+                                .sertificate__checkbox.sertificate__checkbox--inside.sertificate__checkbox--disable#delivery
                                     .radio
                                         input.radio__input#typeInside1(type="radio" name="typeInside" disabled)
                                         label.radio__label(for="typeInside1") самовывоз

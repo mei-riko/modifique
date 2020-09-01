@@ -8,8 +8,8 @@
     max-width: 100%;
 
     &__group{
-        flex: 0 0 calc(100% - 200px);
-        max-width: calc(100% - 200px);
+        flex: 0 0 calc(100% - 210px);
+        max-width: calc(100% - 210px);
         margin-bottom: 0;
         height: 52px;
     }
@@ -18,9 +18,11 @@
         height: 100%;
     }
     &__btn{
-        flex: 0 0 190px;
-        max-width: 190px;
+        flex: 0 0 200px;
+        max-width: 200px;
         height: 52px;
+        padding-left: $spacer/2;
+        padding-right: $spacer/2;
     }
     &__agree{
         flex: 0 0 100%;
