@@ -97,6 +97,18 @@ $(document).ready(() =>{
   }
   // Слайдер
 	if( $('.slider').length > 0 ){
+    // Index
+    let $slickIndex = $('.slider_index');
+    $slickIndex.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows        : false,
+			dots          : true,
+      autoplay      : true,
+      autoplaySpeed : 4000,
+      appendDots    : '.slider-index__dots',
+      fade          : true
+    });
     // Review Docs Col
     let $slickDocs = $('.slider_docs');
 		$slickDocs.slick({
@@ -148,6 +160,20 @@ $(document).ready(() =>{
       });
     });
   }
+  // Play & Pause Index Slider
+  $('.slider-index .slider-index__button').on('click',function(){
+    if( $(this).hasClass("slider-index__button--pause") ){
+      $(this).removeClass("slider-index__button--pause");
+      $('.slider-index .slider.slider_index').slick('slickPause');
+      $(this).addClass("slider-index__button--play");
+      console.log("1");
+    } else if ( $(this).hasClass("slider-index__button--play") ){
+      $(this).removeClass("slider-index__button--play");
+      $('.slider-index .slider.slider_index').slick('slickPlay');
+      $(this).addClass("slider-index__button--pause");
+      console.log("2");
+    }
+  });
   // Счетчики для табов с отзывами
   let currentSlide = [];
   let sumSlide = [];

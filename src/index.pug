@@ -10,7 +10,18 @@ html(lang="ru")
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-        section.slider
+        //- Slider
+        section.slider-index.container.mb-4
+            .slider.slider_index
+                .slider__item.slider_index__item
+                    .slider_index__image(style="background-image:url(../demo/slider-1.png)")
+                .slider__item.slider_index__item
+                    .slider_index__image(style="background-image:url(../demo/slider-2.png)")
+                .slider__item.slider_index__item
+                    .slider_index__image(style="background-image:url(../demo/slider-3.png)")
+            .slider-index__nav
+                .slider-index__dots
+                .slider-index__button.slider-index__button--pause
         //- Sales
         aside.container.bg-sales
             .row.justify-content-end
@@ -98,28 +109,47 @@ html(lang="ru")
                             label.checkbox__label(for="agreeInline") согласен с обработкой 
                                 a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
         //- Interiors
-        .container
+        .container.mb-4
             .row
                 .col-3
-                    .preview-interiors(style="background-image:url('../demo/demo.jpg');")
-                    .preview-interiors(style="background-image:url('../demo/demo.jpg');")
+                    .preview-interiors(style="background-image:url('../demo/clinic-2.jpg');")
+                    .preview-interiors(style="background-image:url('../demo/clinic-3.jpg');")
                 .col-6
-                    .preview-interiors.preview-interiors_full(style="background-image:url('../demo/demo.jpg');")
+                    .preview-interiors.preview-interiors_full(style="background-image:url('../demo/clinic-1.jpg');")
                 .col-3
-                    .preview-interiors(style="background-image:url('../demo/demo.jpg');")
-                    .preview-interiors(style="background-image:url('../demo/demo.jpg');")
+                    .preview-interiors(style="background-image:url('../demo/clinic-3.jpg');")
+                    .preview-interiors(style="background-image:url('../demo/clinic-2.jpg');")
         //- Instagram
         .instagram
             .instagram__item
+                img.img-fluid(src="../demo/service-1.png")
             .instagram__item
+                img.img-fluid(src="../demo/service-2.png")
             .instagram__item
+                img.img-fluid(src="../demo/service-3.png")
             .instagram__item
-            .instagram__title Мы в Instagram
+                img.img-fluid(src="../demo/service-2.png")
+            .instagram__title Мы в Instagram 
                 a.instagram__link(href="") @mymodifique
             .instagram__item
+                img.img-fluid(src="../demo/service-1.png")
             .instagram__item
+                img.img-fluid(src="../demo/service-2.png")
             .instagram__item
+                img.img-fluid(src="../demo/service-3.png")
             .instagram__item
+                img.img-fluid(src="../demo/service-2.png")
         include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+
+        //- Fancybox
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+        
+        //- Slider
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        script(src="./js/slick.min.js")
+        
         script(src="./js/app.min.js")

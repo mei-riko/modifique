@@ -1,0 +1,32 @@
+.instagram{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title{
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bolder;
+        font-size: 18px;
+
+        text-align: center;
+        color: $white;
+        background: lighten($color: $black, $amount: 5);
+        padding: map-get($map: $spacers, $key: 3) $spacer;
+
+        flex: 0 0 calc(100% - 1200px);
+        max-width: calc(100% - 1200px);
+
+        height: 150px;
+    }
+    &__link{
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bolder;
+        font-style: italic;
+        color: $white;
+    }
+
+    &__item{
+        flex: 0 0 150px;
+        max-width: 150px;
+        height: 150px;
+    }
+}
