@@ -38,8 +38,9 @@ html(lang="ru")
         //- Form
         section.cta.container
             .row
-                .col-3
-                    a.cta__arrow.scroll(href="#top")
+                .col-2
+                    a.cta-arrow.scroll(href="#info")
+                        include chunks/scrollDownSvg.pug
                 .col-8
                     p.h1.mb-3 Узнайте самый эффективный метод решения проблемы  
                         span.text-italic бесплатно.
@@ -53,7 +54,7 @@ html(lang="ru")
                             label.checkbox__label(for="agreeInline") согласен с обработкой 
                                 a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
         //- Content
-        section.container
+        section.container#info
             .row.justify-content-between.align-items-center
                 .col-6
                     img.img-fluid(src="../demo/img.png")
@@ -63,7 +64,9 @@ html(lang="ru")
             .row.justify-content-center.cta
                 a.cta__arrow.cta__arrow_right.scroll(href="#bottom")
                 .col-6
-                    p.lead.text-center Особую эффективность показывает сочетание нескольких процедур. Это позволяет добиться быстрых, стойких и заметных результатов всего за несколько сеансов.
+                    p.lead.text-center Особую эффективность показывает сочетание нескольких процедур. 
+                        | Это&nbsp;позволяет добиться быстрых, стойких и&nbsp;заметных результатов всего 
+                        | за&nbsp;несколько сеансов.
         //- Tabs
         section.container.pb-5
             ul.tabs-nav.tabs-nav_list.justify-content-between#contentTabs

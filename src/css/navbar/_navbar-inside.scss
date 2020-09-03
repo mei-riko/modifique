@@ -1,3 +1,105 @@
 .navbar-inside{
     display: none;
+
+    &__title{
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    &__item{
+        display: block;
+        font-size: 14px;
+        // font-weight: 700;
+        text-transform: none;
+        // letter-spacing: 1px;
+        padding: 0 15px;
+        color: #1d1d1b;
+
+        &:hover, &:focus{
+            text-decoration: none;
+        }
+    }
+    &__row{
+        @extend .row;
+        width: 100%;
+        // margin: 0;
+    }
+    // &__form-title{
+    //     font-family: $font-family-serif;
+    //     font-weight: $font-weight-bolder;
+    //     font-size: 18px;
+    //     line-height: 1.2;
+    //     text-transform: none;
+    //     margin-top: $spacer/2;
+    // }
+    // &__form{
+    //     text-transform: none;
+    // }
+
+    &--level-1{
+        display: none;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        position: absolute;
+        top: 45px;
+        left: 15px;
+
+        height: 45px;
+        width: calc(100% - 30px);
+        max-width: 100%;
+
+        background: #fff;
+
+        .navbar-inside__item-parent{
+            flex-grow: 1;
+            border: 1px solid $border-color;
+
+            .navbar-inside__item{
+                border: none ;
+            }
+            & + .navbar-inside__item{
+                border-left: none;
+            }
+        }
+        .navbar-inside__item{
+            flex-grow: 1;
+            border: 1px solid $border-color;
+            padding: $spacer/3 $spacer/2;
+
+            & + .navbar-inside__item{
+                border-left: none;
+            }
+        }
+    }
+    &--level-2{
+        display: none;
+
+        position: absolute;
+        top: 44px;
+        left: 0;
+
+        width: 100%;
+        max-width: 100%;
+
+        padding: $spacer/2;
+        background: #fff;
+        border: 1px solid $border-color;
+
+        .navbar-inside__title{
+            padding: 8px 0 4px;
+        }
+        .navbar-inside__item{
+            font-size: 12px;
+            padding: 4px 0;
+            .label{
+                margin-left: 4px;
+            }
+        }
+    }
+    &--active{
+        display: flex;
+        z-index: 999;
+    }
 }

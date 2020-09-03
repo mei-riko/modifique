@@ -13,7 +13,7 @@ html(lang="ru")
         include chunks/header.pug
         include chunks/mixin.pug
         //- Header Block
-        section.container
+        section.container#top
             .row.align-items-center.pt-2.pb-1
                 //- Promo photo
                 .col-7
@@ -21,19 +21,28 @@ html(lang="ru")
                         img.img-fluid(src="../demo/page.png" alt="" title="")
                 //- Title
                 .col-5
-                    h1 Мезотерапия
+                    ul.breadcrumbs.breadcrumbs_service
+                        li.breadcrumbs__item.breadcrumbs_service__item
+                            a.breadcrumbs__link.breadcrumbs_service__link(href="service.html") Услуги
+                        li.breadcrumbs__item.breadcrumbs_service__item
+                            a.breadcrumbs__link.breadcrumbs_service__link(href="service.html") Для лица и шеи
+                    h1.mt-1.mb-2 Мезотерапия
                     ul.list.list_information
                         li.list_information__item
                             span.list_information__category Стоимость
+                            span.list_information__dotted
                             span.list_information__value от 1500 руб.
                         li.list_information__item
                             span.list_information__category Продолжительность процедуры
+                            span.list_information__dotted
                             span.list_information__value 30-40 минут
                         li.list_information__item
                             span.list_information__category Среднее количество процедур
+                            span.list_information__dotted
                             span.list_information__value 4-10 штук
                         li.list_information__item
                             span.list_information__category Восстановительный период
+                            span.list_information__dotted
                             span.list_information__value до 2 дней
                     .btn-group.mt-2
                         .btn-group__item
@@ -52,12 +61,13 @@ html(lang="ru")
         //- Преимущества
         section.pt-4.pb-4.container
             .row
-                .col-3
-                    a.cta-arrow.scroll(href="#top")
+                .col-2
+                    a.cta-arrow.scroll(href="#result")
+                        include chunks/scrollDownSvg.pug
                 .col-8
                     h2.h1 Проблемы, которые решает 
                         span.text-italic мезотерапия
-                    p Быстрый омолаживающий и терапевтический эффект со стойким результатом является выбором многих врачей для решения разного рода задач. улучшение состояния кожи, запуск обменных и регенерационных процессов, обеспечение полноценного питания и поступления полезных веществ незаменимы для таких проблем как:
+                    p.mb-3 Быстрый омолаживающий и терапевтический эффект со стойким результатом является выбором многих врачей для решения разного рода задач. улучшение состояния кожи, запуск обменных и регенерационных процессов, обеспечение полноценного питания и поступления полезных веществ незаменимы для таких проблем как:
                     ul.list.list_inline.list_advantage
                         li.list_advantage__item.list_inline__item Омоложение кожи
                         li.list_advantage__item.list_inline__item Глубокое увлажнение и питание
@@ -68,7 +78,7 @@ html(lang="ru")
                         li.list_advantage__item.list_inline__item Исправление формы и объема губ
                         li.list_advantage__item.list_inline__item Избавление от растяжек
         //- Результаты
-        section.container.bg-result
+        section.container.bg-result#result
             .row
                 .col-11
                     //- До и после
@@ -95,8 +105,9 @@ html(lang="ru")
         //- Форма
         section.cta.container
             .row
-                .col-3
-                    a.cta__arrow.scroll(href="#top")
+                .col-2
+                    a.cta-arrow.scroll(href="#top")
+                        include chunks/scrollTopSvg.pug
                 .col-9
                     p.h1-lead.mb-3 Подберем индивидуальное 
                         span.text-italic решение 
@@ -164,20 +175,23 @@ html(lang="ru")
             .row.justify-content-end
                 .col-11
                     .row
-                        .col-4.preview-sale
-                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
-                                span.label.label_sale free
-                            a.preview-sale__title(href="#") Бесплатная консультация
-                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
-                        .col-4.preview-sale
-                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
-                                span.label.label_sale -20%
-                            a.preview-sale__title(href="#") Гармонизация со скидкой
-                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
-                        .col-4.preview-sale
-                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
-                            a.preview-sale__title(href="#") Контурная пластика
-                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4
+                            .preview-sale.preview-sale_line.preview-sale_first
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
+                                    span.label.label_sale free
+                                a.preview-sale__title(href="#") Бесплатная консультация
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4
+                            .preview-sale.preview-sale_line.preview-sale_middles
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
+                                    span.label.label_sale -20%
+                                a.preview-sale__title(href="#") Гармонизация со скидкой
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4
+                            .preview-sale.preview-sale_line.preview-sale_last
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
+                                a.preview-sale__title(href="#") Контурная пластика
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
         include chunks/footer.pug
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')

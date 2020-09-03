@@ -12,7 +12,7 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
         //- Content
-        section.container.pt-1
+        section.container.pt-1#top
             .row
                 .col-7
                     h1.h2 Результаты «До/После»
@@ -40,17 +40,18 @@ html(lang="ru")
         //- Форма
         section.cta.container
             .row
-                .col-3
-                    a.cta__arrow.scroll(href="#top")
+                .col-2
+                    a.cta-arrow.scroll(href="#top")
+                        include chunks/scrollTopSvg.pug
                 .col-9
                     p.h1-lead.mb-3 Подберем индивидуальное 
                         span.text-italic решение 
                         | вашей проблемы
                     form.form.form_inline(action="")
-                        .p-relative.form_inline__group
+                        .p-relative.form_inline__group--small
                             //- span.form-validation Укажите номер телефона
-                            input.form_inline__input.form__input.form__input--full.phone(type="tel" placeholder="Телефон* ")
-                        button.form_inline__btn.btn.btn_default(type="") Записаться
+                            input.form_inline__input-small.form__input.form__input--full.phone(type="tel" placeholder="Телефон* ")
+                        button.form_inline__btn-small.btn.btn_default(type="") Записаться
                         .form_inline__agree.form__agree.form__agree_inverse.checkbox
                             input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
                             label.checkbox__label(for="agreeInline") согласен с обработкой 

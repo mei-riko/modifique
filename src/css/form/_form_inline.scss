@@ -13,6 +13,12 @@
         margin-bottom: 0;
         height: 52px;
     }
+    &__group-small{
+        flex: 0 0 calc(100% - 210px);
+        max-width: calc(100% - 210px);
+        margin-bottom: 0;
+        height: 38px;
+    }
     &__input{
         margin: 0;
         height: 100%;
@@ -23,6 +29,13 @@
         height: 52px;
         padding-left: $spacer/2;
         padding-right: $spacer/2;
+    }
+    &__btn-small{
+        flex: 0 0 200px;
+        max-width: 200px;
+        height: 38px;
+        line-height: 38px;
+        padding: 0 $spacer/3;
     }
     &__agree{
         flex: 0 0 100%;

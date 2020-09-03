@@ -12,7 +12,7 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
         //- Content
-        section.container.pt-1.pb-3
+        section.container.pt-1.pb-3#top
             .row
                 .col-6
                     h1.h3 Отзывы о&nbsp;врачах и&nbsp;процедурах&nbsp;клиники
@@ -116,7 +116,8 @@ html(lang="ru")
         section.pb-5.container
             .row
                 .col-2
-                    a.cta__arrow.scroll(href="#top")
+                    a.cta-arrow.scroll(href="#top")
+                        include chunks/scrollTopSvg.pug
                 .col-6
                     p.h3.mb-2 Оставьте отзыв и получите  
                         span.text-italic 5% скидку 

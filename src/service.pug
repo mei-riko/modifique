@@ -26,6 +26,7 @@ html(lang="ru")
                             img.img-fluid(src="../demo/service-2.png" alt="" title="")
                         .col-4
                             img.img-fluid(src="../demo/service-3.png" alt="" title="")
+        //- Page Link
         nav.container
             .tabs-nav.justify-content-between
                 a.tabs-nav__item.tabs-nav__item--active(href="service-category.html") Для тела и шеи
@@ -64,15 +65,18 @@ html(lang="ru")
                             +link-col-label('Ботулонотерапия', 'new')(href="#")
                             +link-col('Ботулонотерапия ботокс')(href="#")
                             +link-col-label('Плацентарная терапия «лаеннек»', 'best')(href="#")                       
+        //- Preview Sales&News
         section.container.pt-2
             .row
                 +preview('free', 'Бесплатная консультация', 'Консультация косметолога клиники для всех новых клиентов')(src="../demo/sale-1.png")
                 +preview('хит', 'Мезотерапия головы', 'Одна из самых популярных услуг клиники, направленая на увеличение объема волос')(src="../demo/sale-2.png")
                 +preview('news', 'Открытие клиники', 'Ура, карантин позади и мы готовы принимать посетителей с 1 сентября!')(src="../demo/sale-3.png")
+        //- CTA
         section.cta.container
             .row
-                .col-3
-                    a.cta__arrow.scroll(href="#top")
+                .col-2
+                    a.cta-arrow.scroll(href="#top")
+                        include chunks/scrollTopSvg.pug
                 .col-9
                     p.h1-lead.mb-3 Получите бесплатную 
                         span.text-italic консультацию 

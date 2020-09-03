@@ -48,7 +48,8 @@ html(lang="ru")
         section.cta.container
             .row
                 .col-2.col-xl-3
-                    a.cta__arrow.scroll(href="#top")
+                    a.cta-arrow.scroll(href="#services")
+                        include chunks/scrollDownSvg.pug
                 .col-9
                     p.h1-lead.mb-3 Эксклюзивные  
                         span.text-italic скидки 
@@ -63,6 +64,7 @@ html(lang="ru")
                             label.checkbox__label(for="agreeInline") согласен с обработкой 
                                 a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
         //- Services
+        section.container#services
         //- Doctors
         section.container.bg-company
             .row.align-items-center
@@ -94,7 +96,8 @@ html(lang="ru")
         section.cta.container
             .row
                 .col-2.col-xl-3
-                    a.cta__arrow.scroll(href="#top")
+                    a.cta-arrow.scroll(href="#roomtour")
+                        include chunks/roomTourSvg.pug
                 .col-9
                     p.h1-lead.mb-3 Получите бесплатную  
                         span.text-italic консультацию  
@@ -109,7 +112,7 @@ html(lang="ru")
                             label.checkbox__label(for="agreeInline") согласен с обработкой 
                                 a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
         //- Interiors
-        .container.mb-4
+        .container.mb-4#roomtour
             .row
                 .col-3
                     .preview-interiors(style="background-image:url('../demo/clinic-2.jpg');")

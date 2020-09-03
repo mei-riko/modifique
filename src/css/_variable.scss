@@ -3,12 +3,12 @@ $black                : #1d1d1b;
 // $red                  : #f14634;
 $red                  : #f93700;
 
-$light-100            : #f8f3e9;
-$light-200            : #d8cbbc;
-$light-300            : #bab7a4;
+$light-100            : #F3F2F5;
+$light-200            : #EBE6DD;
+$light-300            : #D1CDC5;
 
-$grey                 : #8c8c8c;
-$dark-grey            : #595758;
+$grey                 : #ABA7A1;
+$dark-grey            : #6B6965;
 
 $border-color         : $light-200;
 $body-color           : $black;
@@ -35,7 +35,7 @@ $container-max-widths: (
   md: 740px,
   lg: 960px,
   xl: 1120px,
-  hd: 1400px,
+  hd: 1680px,
 ) !default;
 
 $font-size-base       : 1rem;

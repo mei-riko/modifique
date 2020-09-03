@@ -1,16 +1,42 @@
 .cta{
     position: relative;
     padding: $spacer*4 0;
+}
+.cta-arrow{
+    position: relative;
+    width: 120px;
+    height: 120px;
 
-    &-arrow, &__arrow{
-        width: 120px;
-        height: 120px;
-        background: url("../icon/scroll-element-down.png") no-repeat center / contain;
+    // Inside Element
+    &__arrow{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 34px;
+        height: 34px;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    &__text{
+        animation: circul 25s infinite linear;
+    }
 
-        &_right{
-            position: absolute;
-            top: $spacer*2;
-            right: 0;
-        }
+    // Position
+    &_right{
+        position: absolute;
+        top: $spacer*2;
+        right: 0;
+    }
+}
+@keyframes circul {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(-180deg)
+    }
+
+    100% {
+        transform: rotate(-360deg)
     }
 }

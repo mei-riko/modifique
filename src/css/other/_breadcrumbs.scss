@@ -33,4 +33,31 @@
             }
         }
     }
+
+    &_service{
+        font-weight: $font-weight-light;
+        color: $light-300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &__item{
+            &:after{
+                content:'—';
+
+                width: auto;
+                height: auto;
+                right: -5px;
+
+                background: inherit;
+            }
+            &:last-child{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+        &__link{
+            color: $light-300;
+        }
+    }
 }

@@ -2,7 +2,7 @@ import $ from 'jquery'
 $(document).ready(() =>{
   $(".scroll").click(function() {
     $("html, body").animate({
-       scrollTop: $($(this).attr("href")).offset().top + "px"
+       scrollTop: $($(this).attr("href")).offset().top - 30 + "px"
     }, {
        duration: 500,
        easing: "swing"
@@ -177,7 +177,6 @@ $(document).ready(() =>{
   // Счетчики для табов с отзывами
   let currentSlide = [];
   let sumSlide = [];
-
   $(".slider .review").each(function( i ){
     currentSlide[i] = $(this).slick("slickCurrentSlide") + 1;
     sumSlide[i] = $(this).slick("getSlick").slideCount;
@@ -194,6 +193,7 @@ $(document).ready(() =>{
     let currentChange = $(this).slick("slickCurrentSlide") + 1;
     $(this).parent().find(".slider_count__here").text( Math.round( currentChange / 5 ) + 1 );
   });
+
   // Constructor Sertificate
   // Change Color
   $("#constrictor .sertificate__color-input").on("change", function(e){
@@ -212,7 +212,41 @@ $(document).ready(() =>{
   });
   // Change Order Link
   $("#constrictor .sertificate__color-input").on("change", function(e){});
-	// Mobile Navbar
+  
+  // Desktop Navbar
+  function navbarHover( itemNav ){
+    itemNav.hover(function(){
+      let item = $(this).find(".navbar__item");
+      let nav = item.data("nav");
+      item.addClass("navbar__item--active");
+      $(".navbar-inside#" + nav).addClass("navbar-inside--active");
+    },function(){
+      let item = $(this).find(".navbar__item");
+      let nav = item.data("nav");
+      item.removeClass("navbar__item--active");
+      $(".navbar-inside#" + nav).removeClass("navbar-inside--active");
+    });
+  }
+  function navbarInsideHover( itemNav ){
+    itemNav.hover(function(){
+      let item = $(this).find(".navbar-inside__item");
+      let nav = item.data("nav");
+      item.addClass("navbar-inside__item--active");
+      $(".navbar-inside#" + nav).addClass("navbar-inside--active");
+    },function(){
+      let item = $(this).find(".navbar-inside__item");
+      let nav = item.data("nav");
+      item.removeClass("navbar-inside__item--active");
+      $(".navbar-inside#" + nav).removeClass("navbar-inside--active");
+    });
+  }
+
+  if ( $(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches ){
+    navbarHover( $(".navbar .navbar__item-parent"));
+    navbarInsideHover( $(".navbar .navbar-inside__item-parent"));
+  }
+
+  // Mobile Navbar
   $(".navbar-toggle#nav").on("click", function(e){
 		e.preventDefault();
     let navbar = $(".navbar-collapse");

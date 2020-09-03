@@ -33,9 +33,9 @@
         text-transform: uppercase;
 
         &:hover, &:focus{
-            border: 1px solid $black;
-            background: $light-100;
-            color: $black;
+            border: 1px solid $dark-grey;
+            // background: $light-100;
+            color: $dark-grey;
         }
     }
     &_link{
@@ -51,7 +51,7 @@
             width: 0;
             height: 34px;
             background: url("../icon/arrow-right-light.svg") no-repeat center / 20px;
-            border-bottom: 4px solid $border-color;
+            border-bottom: 1px solid $border-color;
 
             position: absolute;
             right: 0;
@@ -64,7 +64,7 @@
             width: map-get($map: $spacers, $key: 3);
             height: 34px;
             background: url("../icon/arrow-right-light.svg") no-repeat center / 20px;
-            border-bottom: 4px solid $border-color;
+            border-bottom: 1px solid $border-color;
 
             position: absolute;
             left: 0;

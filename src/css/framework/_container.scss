@@ -1,5 +1,5 @@
 .container {
-  max-width: 100%;
+  max-width: calc(100% - 60px);
   width: map-get($container-max-widths, 'hd');
   padding-right: $spacer/2;
   padding-left: $spacer/2;
