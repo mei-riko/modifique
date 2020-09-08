@@ -47,6 +47,7 @@
 // < 576px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
   .container{
+      max-width: calc(100% - 30px);
       width: 100%;
   }
 }

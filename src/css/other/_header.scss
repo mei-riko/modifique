@@ -75,4 +75,13 @@
     }
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'xl')){}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header{
+        &__logo{
+            transform: translateY(3px);
+        }
+        &__phone{
+            display: none;
+        }
+    }
+}

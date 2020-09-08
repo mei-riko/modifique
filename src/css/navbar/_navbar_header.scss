@@ -33,3 +33,35 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .navbar_header{
+        flex-wrap: wrap;
+        margin-top: 0;
+
+        &__item{
+            flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+
+            &:after{
+                display: none;
+            }
+
+            &--parent{
+                &:after{
+                    display: block;
+
+                    width: 24px;
+                    height: $spacer/2;
+                    background: url("../icon/arrow-next.svg") no-repeat center / 10px;
+    
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

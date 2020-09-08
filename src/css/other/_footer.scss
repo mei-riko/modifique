@@ -50,3 +50,33 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .footer{
+        &__info{
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-bottom: 5px;
+        }
+        &__policy{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &__subinfo{
+            padding-top: $spacer/2; 
+        }
+        &__col{
+            padding-right: $spacer/2;
+            margin-bottom: $spacer;
+
+            &--first{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            &--last{
+                margin-bottom: 0;
+                // padding-right: map-get($map: $spacers, $key: 1);
+            }
+        }
+    }
+}
