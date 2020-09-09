@@ -16,5 +16,11 @@
 
             background: url("../icon/plus.svg") no-repeat center / contain;
         }
+
+        &.list_col__item{
+            display: flex;
+            align-items: center;
+            padding-right: $spacer/3;
+        }
     }
 }

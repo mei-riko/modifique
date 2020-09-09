@@ -1,6 +1,9 @@
 .cta{
     position: relative;
-    padding: $spacer*4 0;
+    padding: $spacer*4 $spacer/2;
+    &__title{
+        font-size: 58px;
+    }
 }
 .cta-arrow{
     position: relative;
@@ -25,6 +28,55 @@
         position: absolute;
         top: $spacer*2;
         right: 0;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .cta{
+        padding: $spacer*3 $spacer/2;
+        &__title{
+            font-size: 42px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .cta{
+        padding: $spacer*2 $spacer/2;
+        &__title{
+            font-size: 36px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .cta{
+        &__title{
+            font-size: 28px;
+        }
+    }
+    .cta-arrow{
+        width: 80px;
+        height: 80px;
+        // Inside Element
+        &__arrow{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .cta{
+        &__title{
+            font-size: 20px;
+        }
+    }
+    .cta-arrow{
+        width: 60px;
+        height: 60px;
+        // Inside Element
+        &__arrow{
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 @keyframes circul {

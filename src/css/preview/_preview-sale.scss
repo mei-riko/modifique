@@ -44,3 +44,44 @@
         margin-right: 0;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .preview-sale{
+        &__title{
+            font-size: 20px;
+        }
+
+        &_line{
+            max-width: 100%;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .preview-sale{
+        position: relative;
+        min-height: 100px;
+        
+        &__image{
+            width: 100px;
+
+            position: absolute;
+            left: $spacer/2;
+            top: 0;
+        }
+        &__title{
+            padding-left: 130px;
+            margin-top: 0;
+        }
+        &__content{
+            padding-left: 130px;
+            line-height: 1.2;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview-sale{
+        &__title{
+            font-size: 16px;
+        }
+    }
+}

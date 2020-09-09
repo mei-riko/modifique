@@ -1,4 +1,8 @@
-import $ from 'jquery'
+import $ from 'jquery';
+import './nav.js';
+import './slider.js';
+import './sertificate.js';
+
 $(document).ready(() =>{
   $(".scroll").click(function() {
     $("html, body").animate({
@@ -88,14 +92,10 @@ $(document).ready(() =>{
   });
   // Переключаемые табы, инициализация
   if( $('.tab-js').length > 0 ){
-    $('#contentTabs a').click(function (e) {
+    $('.tab-js a').click(function (e) {
       e.preventDefault();
-      console.log('1');
+      // console.log('1');
       $(this).tab('show');
     })
   }
 });
-
-import './nav.js';
-import './slider.js';
-import './sertificate.js';

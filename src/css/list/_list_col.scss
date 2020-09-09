@@ -7,3 +7,12 @@
         max-width: 50%;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .list_col{
+        &__item{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}

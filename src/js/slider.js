@@ -52,7 +52,30 @@ $(document).ready(() =>{
                 slidesToScroll: 5,
                 arrows      : true,
                 dots        : false,
-                autoplay  : false
+                autoplay  : false,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        }
+                    }
+                ]
             });
         });
         $(".slider__review-list").each(function(){
@@ -61,7 +84,30 @@ $(document).ready(() =>{
                 slidesToScroll: 4,
                 arrows      : true,
                 dots        : false,
-                autoplay  : false
+                autoplay  : false,
+                responsive: [
+                    {
+                        breakpoint: 1480,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
             });
         });
     }
@@ -82,6 +128,7 @@ $(document).ready(() =>{
     // Счетчики для табов с отзывами
     let currentSlide = [];
     let sumSlide = [];
+
     $(".slider .review").each(function( i ){
         currentSlide[i] = $(this).slick("slickCurrentSlide") + 1;
         sumSlide[i] = $(this).slick("getSlick").slideCount;

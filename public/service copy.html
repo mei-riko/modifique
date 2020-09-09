@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Result</title>
+    <title>Service</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&amp;family=Raleway:wght@300;400;700;800&amp;display=swap" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
@@ -58,38 +58,90 @@
         </div>
       </div>
     </header>
-    <section class="container pt-1" id="top">
-      <div class="row">
-        <div class="col-7 col-sm-12 col-md-10 col-lg-9">
-          <h1 class="h2">Результаты «До/После»</h1>
-          <p>Врачи клиники Modifique - профессионалы своего дела. Мы предлагаем эффективные процедуры с результатом, который заметен сразу. Ознакомьтесь с примерами наших работ по интересующему вас направлениям.        </p>
-          <select class="select select--full">
-            <option value="Комплексное омоложение">Комплексное омоложение</option>
-            <option value="Ботолутерапия">Ботолутерапия</option>
-          </select>
+    <section class="container" id="top">
+      <div class="row align-items-center pt-2 pb-4">
+        <div class="col-5">
+          <h1 class="h1-lead">Услуги <span class="text-italic">клиники</span></h1>
+          <p>Доверь нам свою красоту: в клинике работают опытные специалисты своих областей. Перед процедурой проводим бесплатную консультацию.</p>
+        </div>
+        <div class="col-7">
+          <div class="row">
+            <div class="col-4"><img class="img-fluid" src="../demo/service-1.png" alt="" title=""/></div>
+            <div class="col-4"><img class="img-fluid" src="../demo/service-2.png" alt="" title=""/></div>
+            <div class="col-4"><img class="img-fluid" src="../demo/service-3.png" alt="" title=""/></div>
+          </div>
         </div>
       </div>
-      <div class="row mt-1">
-        <div class="col-4 col-sm-6 mt-2">
-          <div class="item item_blazy loading" data-fancybox="images" href="../demo/collage-1.png"><img class="b-lazy img-fluid" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-1.png" alt="" title=""/></div>
+    </section>
+    <nav class="container">
+      <div class="tabs-nav justify-content-between"><a class="tabs-nav__item tabs-nav__item--active" href="service-category.html">Для тела и шеи</a><a class="tabs-nav__item" href="service-category.html">Для тела</a><a class="tabs-nav__item" href="service-category.html">Для интимных зон</a><a class="tabs-nav__item" href="service-category.html">Консультации</a></div>
+      <div class="tabs-nav-content">
+        <ul class="tab-js" id="contentTabs">
+          <li class="tab-js__item tab-js__item_icon active"><a class="tab-js__link" href="#type1" data-toggle="tab">Инъекционная косметология<img class="tab-js__icon" src="../icon/eyeliner.svg"/></a></li>
+          <li class="tab-js__item tab-js__item_icon"><a class="tab-js__link" href="#type2" data-toggle="tab">Уходовые процедуры<img class="tab-js__icon" src="../icon/skin.svg"/></a></li>
+          <li class="tab-js__item tab-js__item_icon"><a class="tab-js__link" href="#type3" data-toggle="tab">Тип решаемой проблемы<img class="tab-js__icon" src="../icon/help.svg"/></a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active fade in" id="type1"> 
+            <div class="row pt-3 pb-2">
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Биоревитализация</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия<span class="label link-item__label">new</span></a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия ботокс</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия диспорт</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">PRP-плазмотерапия</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Плацентарная терапия «лаеннек»<span class="label link-item__label">best</span></a></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="type2"> 
+            <div class="row pt-3 pb-2">
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Биоревитализация</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия<span class="label link-item__label">new</span></a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия ботокс</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия диспорт</a></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="type3">
+            <div class="row pt-3 pb-2">
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Биоревитализация</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия<span class="label link-item__label">new</span></a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Ботулонотерапия ботокс</a></div>
+                  <div class="col-4 mb-1"><a class="link-item" href="#">Плацентарная терапия «лаеннек»<span class="label link-item__label">best</span></a></div>
+            </div>
+          </div>
         </div>
-        <div class="col-4 col-sm-6 mt-2">
-          <div class="item item_blazy loading" data-fancybox="images" href="../demo/collage-2.png"><img class="b-lazy img-fluid" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-2.png" alt="" title=""/></div>
-        </div>
-        <div class="col-4 col-sm-6 mt-2">
-          <div class="item item_blazy loading" data-fancybox="images" href="../demo/collage-3.png"><img class="b-lazy img-fluid" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-3.png" alt="" title=""/></div>
-        </div>
-        <div class="col-4 col-sm-6 mt-2">
-          <div class="item item_blazy loading" data-fancybox="images" href="../demo/collage-2.png"><img class="b-lazy img-fluid" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-2.png" alt="" title=""/></div>
-        </div>
-        <div class="col-4 col-sm-6 mt-2">
-          <div class="item item_blazy loading" data-fancybox="images" href="../demo/collage-3.png"><img class="b-lazy img-fluid" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-3.png" alt="" title=""/></div>
-        </div>
+      </div>
+    </nav>
+    <section class="container pt-2">
+      <div class="row">
+            <div class="col-4 col-xs-12 mb-1">
+              <div class="preview">
+                <div class="preview__image"><span class="label preview__label">free</span><img class="img-fluid" src="../demo/sale-1.png"/></div>
+                <div class="preview__content"><a class="preview__title" href="#">Бесплатная консультация</a>
+                  <p class="text-grey text-small">Консультация косметолога клиники для всех новых клиентов</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-xs-12 mb-1">
+              <div class="preview">
+                <div class="preview__image"><span class="label preview__label">хит</span><img class="img-fluid" src="../demo/sale-2.png"/></div>
+                <div class="preview__content"><a class="preview__title" href="#">Мезотерапия головы</a>
+                  <p class="text-grey text-small">Одна из самых популярных услуг клиники, направленая на увеличение объема волос</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-xs-12 mb-1">
+              <div class="preview">
+                <div class="preview__image"><span class="label preview__label">news</span><img class="img-fluid" src="../demo/sale-3.png"/></div>
+                <div class="preview__content"><a class="preview__title" href="#">Открытие клиники</a>
+                  <p class="text-grey text-small">Ура, карантин позади и мы готовы принимать посетителей с 1 сентября!</p>
+                </div>
+              </div>
+            </div>
       </div>
     </section>
     <section class="cta container">
       <div class="row">
-        <div class="col-2 col-md-3 col-lg-2"><a class="cta-arrow scroll" href="#top"><svg class="cta-arrow__text" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 145 145" style="enable-background:new 0 0 145 145;" xml:space="preserve">
+        <div class="col-2"><a class="cta-arrow scroll" href="#top"><svg class="cta-arrow__text" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 145 145" style="enable-background:new 0 0 145 145;" xml:space="preserve">
 <circle fill="#1D1D1B" cx="62.1" cy="6.3" r="1.5"/>
 <circle fill="#1D1D1B" cx="83.1" cy="138.3" r="1.5"/>
 <g>
@@ -123,13 +175,13 @@
 <path fill="#1D1D1B" d="M36,18.5L34.6,20L18,3L1.5,20L0,18.5L18,0L36,18.5z"/>
 </g>
 </svg></a></div>
-        <div class="col-9 col-md-9 col-lg-10">
-          <h3 class="cta__title mb-3 mb-sm-1">Подберем индивидуальное <span class="text-italic">решение </span>вашей проблемы</h3>
+        <div class="col-9">
+          <p class="h1-lead mb-3">Получите бесплатную <span class="text-italic">консультацию </span>от специалиста нашей клиники.</p>
           <form class="form form_inline" action="">
-            <div class="p-relative form_inline__group-small">
-              <input class="form_inline__input form__input form__input--full phone" type="tel" placeholder="Телефон* "/>
+            <div class="p-relative form_inline__group"><span class="form-validation error">Укажите номер телефона</span>
+              <input class="form_inline__input form__input form__input--full error phone" type="tel" placeholder="Телефон* "/>
             </div>
-            <button class="form_inline__btn-small btn btn_default" type="">Записаться</button>
+            <button class="form_inline__btn btn btn_default" type="">Записаться</button>
             <div class="form_inline__agree form__agree form__agree_inverse checkbox">
               <input class="checkbox__input" id="agreeInline" type="checkbox" name="agreeInline" checked="checked" required="required"/>
               <label class="checkbox__label" for="agreeInline">согласен с обработкой <a class="form__link-inverse" href="/policy.pdf" target="_blank">персональных данных</a></label>
@@ -172,8 +224,10 @@
     </footer>
     <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <script src="./js/jquery.fancybox.min.js"></script>
-    <script src="./js/blazy.min.js"></script>
     <script src="./js/jquery.inputmask.min.js"></script>
+    <!-- Tabs-->
+    <script src="./js/bootstrap-transition.js"></script>
+    <script src="./js/bootstrap-tab.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

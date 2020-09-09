@@ -48,7 +48,7 @@
         align-items: center;
         justify-content: center;
 
-        background-color: $black;
+        background-color: $light-100;
         border-radius: 4px;
 
         flex: 0 0 30px;
@@ -64,7 +64,7 @@
         &__icon{
             width: 14px;
             height: 14px;
-            fill: $white;
+            fill: $black;
         }
 
         &:hover{

@@ -41,6 +41,7 @@
         }
     }
     &__link{
+        white-space: nowrap;
         &:hover, &:focus{
             color: $link-hover-color;
             text-decoration: none;
@@ -49,5 +50,19 @@
     // Style
     &_list{
         list-style: none;
+    }
+}
+.tabs-scroll{
+    margin-bottom: $spacer;
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){ 
+    .tabs-nav{
+        &__item{
+            margin-right: $spacer;
+        }
+    }
+    .tabs-scroll{
+        padding: 0 0 15px;
+        overflow-x: auto;
     }
 }

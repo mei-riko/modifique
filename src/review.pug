@@ -12,24 +12,25 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
         //- Content
-        section.container.pt-1.pb-3#top
+        section.container.pt-1.pb-3.pb-sm-2#top
             .row
-                .col-6
+                .col-6.col-xl-8.col-lg-9.col-sm-12
                     h1.h3 Отзывы о&nbsp;врачах и&nbsp;процедурах&nbsp;клиники
                     p Мы отвечаем за качество проводимых процедур и всегда ориентируемся на отзывы 
                         | наших клиентов. Обратная связь помогает нам развиваться и становиться лучше. 
                         | Мы сердечно благодарим всех, кто поддерживает нас. 
         //- Tabs
-        section.container.pb-5
-            ul.tabs-nav.tabs-nav_list.justify-content-between#contentTabs
-                li.tabs-nav__item.active
-                    a.tabs-nav__link(href="#type1" data-toggle="tab") Актуальное из Instagram
-                li.tabs-nav__item
-                    a.tabs-nav__link(href="#type2" data-toggle="tab") Актуальное из WhatsApp
-                li.tabs-nav__item
-                    a.tabs-nav__link(href="#type3" data-toggle="tab") Отзывы с нашего сайта
+        section.container.pb-5.pb-sm-2
+            .tabs-scroll
+                ul.tabs-nav.tabs-nav_list.justify-content-between
+                    li.tabs-nav__item.active
+                        a.tabs-nav__link(href="#review1" data-toggle="tab") Актуальное из Instagram
+                    li.tabs-nav__item
+                        a.tabs-nav__link(href="#review2" data-toggle="tab") Актуальное из WhatsApp
+                    li.tabs-nav__item
+                        a.tabs-nav__link(href="#review3" data-toggle="tab") Отзывы с нашего сайта
             .tab-content
-                .tab-pane.active.fade.in#type1
+                .tab-pane.active.fade.in#review1
                     .slider.slider_count
                         .slider_count__container
                             span.slider_count__here
@@ -60,7 +61,7 @@ html(lang="ru")
                             .slider__item
                                 img.img-fluid.img-border(src="../demo/demo-inst.png")
                                 p.mt-1.text-grey #инъекции
-                .tab-pane.fade#type2
+                .tab-pane.fade#review2
                     .slider.slider_count
                         .slider_count__container
                             span.slider_count__here
@@ -76,7 +77,7 @@ html(lang="ru")
                             .slider__item
                                 img.img-fluid.img-border(src="../demo/demo-wa.png")
                                 p.mt-1.text-grey #ботулотерапия
-                .tab-pane.fade#type3
+                .tab-pane.fade#review3
                     .slider.slider_count
                         .slider_count__container
                             span.slider_count__here
@@ -113,12 +114,12 @@ html(lang="ru")
                                         .preview-review__name Александра
                                         .preview-review__date 21.02.2020
         //- Форма
-        section.pb-5.container
+        section.container.pb-5.pb-sm-2
             .row
-                .col-2
+                .col-2.col-md-3.col-lg-3
                     a.cta-arrow.scroll(href="#top")
                         include chunks/scrollTopSvg.pug
-                .col-6
+                .col-6.col-xl-8.col-md-9
                     p.h3.mb-2 Оставьте отзыв и получите  
                         span.text-italic 5% скидку 
                         | на следующую процедуру

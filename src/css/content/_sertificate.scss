@@ -151,3 +151,121 @@
         padding: $spacer;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .sertificate{
+        &__preview{
+            height: 420px;
+        }
+        &__title{
+            font-size: 10px;
+        }
+        &__price{
+            flex: 0 0 180px;
+            max-width: 180px;
+            padding: $spacer/2;
+        }
+        &__color{
+            flex: 0 0 180px;
+            max-width: 180px;
+            padding: $spacer/2;
+        }
+        &__type{
+            flex: 0 0 calc(100% - 360px);
+            max-width: calc(100% - 360px);
+            padding: $spacer/2;
+        }
+        &__checkbox{
+            margin-bottom: $spacer/2;
+            &--inside{
+                padding-left: $spacer/2;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .sertificate{
+        &__preview{
+            height: 340px;
+            background-size: cover;
+        }
+        &__title{
+            font-size: 12px;
+        }
+        &__price{
+            flex: 0 0 210px;
+            max-width: 210px;
+            padding: $spacer/2 $spacer;
+        }
+        &__color{
+            flex: 0 0 225px;
+            max-width: 225px;
+            padding: $spacer/2 $spacer;
+        }
+        &__type{
+            flex: 0 0 calc(100% - 435px);
+            max-width: calc(100% - 435px);
+            padding-right: $spacer;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .sertificate{
+        &__title{
+            font-size: 10px;
+        }
+        &__price{
+            flex: 0 0 calc(100% - 200px);
+            max-width: calc(100% - 200px);
+            padding: $spacer/2 $spacer;
+        }
+        &__color{
+            flex: 0 0 200px;
+            max-width: 200px;
+            padding: $spacer/2 $spacer;
+        }
+        &__type{
+            flex: 0 0 100%;
+            max-width: 100%;
+            border-top: 1px solid $border-color;
+            padding: $spacer;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .sertificate{
+        &__preview{
+            height: 200px;
+        }
+        &__price{
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-top: $spacer/2;
+            padding-bottom: $spacer/2;
+            border-right: none;
+            border-bottom: 1px solid $border-color;
+        }
+        &__color{
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-top: $spacer/2;
+            padding-bottom: $spacer/2;
+
+            &-row{
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+            &-col{
+                flex: 0 0 calc(25% - 10px);
+                max-width: calc(25% - 10px);
+                margin: 0 5px;
+                &:nth-child(1), &:nth-child(2){
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__type{
+            padding-top: $spacer/2;
+            padding-bottom: $spacer/2;
+        }
+    }
+}

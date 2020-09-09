@@ -14,7 +14,7 @@ html(lang="ru")
         //- Content
         section.container.pt-1#top
             .row
-                .col-7
+                .col-7.col-sm-12.col-md-10.col-lg-9
                     h1.h2 Результаты «До/После»
                     p Врачи клиники Modifique - профессионалы своего дела. Мы предлагаем эффективные процедуры с результатом, который заметен сразу. Ознакомьтесь с примерами наших работ по интересующему вас направлениям.        
                     select.select.select--full
@@ -22,35 +22,35 @@ html(lang="ru")
                         option(value="Ботолутерапия") Ботолутерапия
             //- До и после
             .row.mt-1
-                .col-4.mt-2
+                .col-4.col-sm-6.mt-2
                     .item.item_blazy.loading(data-fancybox="images" href="../demo/collage-1.png")
                         img.b-lazy.img-fluid(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-1.png" alt="" title="")
-                .col-4.mt-2
+                .col-4.col-sm-6.mt-2
                     .item.item_blazy.loading(data-fancybox="images" href="../demo/collage-2.png")
                         img.b-lazy.img-fluid(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-2.png" alt="" title="")
-                .col-4.mt-2
+                .col-4.col-sm-6.mt-2
                     .item.item_blazy.loading(data-fancybox="images" href="../demo/collage-3.png")
                         img.b-lazy.img-fluid(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-3.png" alt="" title="")
-                .col-4.mt-2
+                .col-4.col-sm-6.mt-2
                     .item.item_blazy.loading(data-fancybox="images" href="../demo/collage-2.png")
                         img.b-lazy.img-fluid(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-2.png" alt="" title="")
-                .col-4.mt-2
+                .col-4.col-sm-6.mt-2
                     .item.item_blazy.loading(data-fancybox="images" href="../demo/collage-3.png")
                         img.b-lazy.img-fluid(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../demo/collage-3.png" alt="" title="")
         //- Форма
         section.cta.container
             .row
-                .col-2
+                .col-2.col-md-3.col-lg-2
                     a.cta-arrow.scroll(href="#top")
                         include chunks/scrollTopSvg.pug
-                .col-9
-                    p.h1-lead.mb-3 Подберем индивидуальное 
+                .col-9.col-md-9.col-lg-10
+                    h3.cta__title.mb-3.mb-sm-1 Подберем индивидуальное 
                         span.text-italic решение 
                         | вашей проблемы
                     form.form.form_inline(action="")
-                        .p-relative.form_inline__group--small
+                        .p-relative.form_inline__group-small
                             //- span.form-validation Укажите номер телефона
-                            input.form_inline__input-small.form__input.form__input--full.phone(type="tel" placeholder="Телефон* ")
+                            input.form_inline__input.form__input.form__input--full.phone(type="tel" placeholder="Телефон* ")
                         button.form_inline__btn-small.btn.btn_default(type="") Записаться
                         .form_inline__agree.form__agree.form__agree_inverse.checkbox
                             input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")

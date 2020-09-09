@@ -42,3 +42,20 @@
         max-width: 100%;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .form_inline{
+        &__group, &__group-small{
+            flex: 0 0 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        &__btn, &__btn-small{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &__input{
+            width: 100%;
+        }
+    }
+}

@@ -100,6 +100,7 @@ table{
 .bg-sales{
     background: url("../icon/sale.svg") no-repeat top left;
     background-size: 7%;
+    background-position-x: 10px;
 }
 
 .p-relative{position: relative;}
@@ -165,6 +166,14 @@ table{
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     html,body {font-size: map-get($font-size, 'lg');}
     
+    .h1-lead,
+    .h1,h1{font-size: 42px;}
+    .h2,h2{font-size: 34px;}
+    .h3,h3{font-size: 28px;}
+    .h4,h4{font-size: 24px;}
+    .h5,h5{font-size: 18px;}
+    .h6,h6{font-size: 16px;}
+
     .d-lg{
         &-flex{display: flex;}
         &-none{display: none;}
@@ -195,11 +204,13 @@ table{
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     html,body {font-size: map-get($font-size, 'sm');}
 
-    .h1,h1{font-size: 32px;}
-    .h2,h2{font-size: 26px;}
-    .h3,h3{font-size: 22px;}
+    .h1-lead,
+    .h1,h1{font-size: 28px;}
+    .h2,h2{font-size: 24px;}
+    .h3,h3{font-size: 20px;}
     .h4,h4{font-size: 18px;}
     .h5,h5{font-size: 16px;}
+    .h6,h6{font-size: map-get($font-size, 'sm');}
     
     .d-sm{
         &-flex{display: flex;}

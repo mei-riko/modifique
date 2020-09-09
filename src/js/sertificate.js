@@ -10,9 +10,15 @@ $(document).ready(() =>{
     // Change Type & Delivery
     $("#constrictor .sertificate__type #offline").on("change", function(e){
         if( $(this).prop("checked") == true){
-            $(".sertificate__checkbox#delivery").removeClass("sertificate__checkbox--disable")
+            $(".sertificate__checkbox#delivery").removeClass("sertificate__checkbox--disable");
+            $(".sertificate__checkbox#delivery .radio .radio__input").each(function(){
+                $(this).prop("disabled", false);
+            });
         }else{
-            $(".sertificate__checkbox#delivery").addClass("sertificate__checkbox--disable")
+            $(".sertificate__checkbox#delivery").addClass("sertificate__checkbox--disable");
+            $(".sertificate__checkbox#delivery .radio .radio__input").each(function(){
+                $(this).prop("disabled", true);
+            });
         }
     });
     // Change Order Link

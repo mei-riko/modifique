@@ -13,46 +13,52 @@ html(lang="ru")
         include chunks/header.pug
         include chunks/mixin.pug
         //- Sales
-        section.container.bg-sales.mt-3.mb-3
+        section.container.bg-sales.mt-2.mb-2.mt-sm-1.mb-sm-1
             .row.justify-content-end
                 .col-11
                     .row
-                        .col-4.preview-sale.mb-3
-                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
-                                span.label.label_sale free
-                            a.preview-sale__title(href="#") Бесплатная консультация
-                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
-                        .col-4.preview-sale.mb-3
-                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
-                                span.label.label_sale -20%
-                            a.preview-sale__title(href="#") Гармонизация со скидкой
-                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
-                        .col-4.preview-sale.mb-3
-                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
-                            a.preview-sale__title(href="#") Контурная пластика
-                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
-                        .col-4.preview-sale.mb-3
-                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
-                                span.label.label_sale free
-                            a.preview-sale__title(href="#") Бесплатная консультация
-                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
-                        .col-4.preview-sale.mb-3
-                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
-                                span.label.label_sale -20%
-                            a.preview-sale__title(href="#") Гармонизация со скидкой
-                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
-                        .col-4.preview-sale.mb-3
-                            a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
-                            a.preview-sale__title(href="#") Контурная пластика
-                            p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4.col-sm-12.mb-3.mb-sm-2
+                            .preview-sale.preview-sale_line
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
+                                    span.label.label_sale free
+                                a.preview-sale__title(href="#") Бесплатная консультация
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4.col-sm-12.mb-3.mb-sm-2
+                            .preview-sale.preview-sale_line
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
+                                    span.label.label_sale -20%
+                                a.preview-sale__title(href="#") Гармонизация со скидкой
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4.col-sm-12.mb-3.mb-sm-2
+                            .preview-sale.preview-sale_line
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
+                                a.preview-sale__title(href="#") Контурная пластика
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4.col-sm-12.mb-3.mb-sm-2
+                            .preview-sale.preview-sale_line
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
+                                    span.label.label_sale free
+                                a.preview-sale__title(href="#") Бесплатная консультация
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4.col-sm-12.mb-3.mb-sm-2
+                            .preview-sale.preview-sale_line
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
+                                    span.label.label_sale -20%
+                                a.preview-sale__title(href="#") Гармонизация со скидкой
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
+                        .col-4.col-sm-12.mb-3.mb-sm-2
+                            .preview-sale.preview-sale_line
+                                a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
+                                a.preview-sale__title(href="#") Контурная пластика
+                                p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
                         .col-12
-                            ul.pagination
-                                li.pagination__item
-                                    a.pagination__link(href="#") 1
-                                li.pagination__item
-                                    span.pagination__active 2
-                                li.pagination__item
-                                    a.pagination__link(href="#") 3
+                                ul.pagination
+                                    li.pagination__item
+                                        a.pagination__link(href="#") 1
+                                    li.pagination__item
+                                        span.pagination__active 2
+                                    li.pagination__item
+                                        a.pagination__link(href="#") 3
         include chunks/footer.pug
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
