@@ -13,22 +13,22 @@ html(lang="ru")
         include chunks/header.pug
         section.container.pb-3
             .row.align-items-center
-                .col-4
-                    h1.h3.mb-3 Контакты
+                .col-4.col-lg-5.col-sm-12.mb-sm-1.mb-xs-3
+                    h1.h3.mb-3.mb-sm-2 Контакты
                     ul.list.list_contact
-                        li.list__item.mb-2
+                        li.list__item.list_contact__item.mb-2.mb-sm-1
                             span.list_contact__title Запись на прием
                             a.list_contact__link(href="tel:8 812 123 45 67") 8 812 123 45 67
-                        li.list__item.mb-2
+                        li.list__item.list_contact__item.mb-2.mb-sm-1
                             span.list_contact__title Отзывы и предложения
                             a.list_contact__link(href="mailto:review@modifique.ru") review@modifique.ru
-                        li.list__item.mb-2
+                        li.list__item.list_contact__item.mb-2.mb-sm-1
                             span.list_contact__title По общим вопросам
                             a.list_contact__link(href="mailto:info@modifique.ru") info@modifique.ru
-                        li.list__item
+                        li.list__item.list_contact__item
                             span.list_contact__metro(style="color:#fcc537;background-image:url(../icon/spb_metro_logo.svg)") Улица Дыбенко
                             span Санкт-Петербург, Московский пр. 135
-                .col-8
+                .col-8.col-lg-7.col-sm-12
                     .map
                         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A742b4d42ec908dcda21b973c9e1ef3a4d1f41908420670e48f70c4e071a784d0&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=true"></script>
         include chunks/footer.pug

@@ -4,6 +4,7 @@ html,body {
     line-height: $line-height;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
+    width: 100%;
 }
 *,
 *::before,
@@ -142,8 +143,8 @@ table{
 .blockquote, blockquote{}
 
 .map{
-    filter: hue-rotate(300deg) grayscale(.5);
-    // filter: grayscale(1);
+    // filter: hue-rotate(300deg) grayscale(.5);
+    filter: grayscale(1);
     height: 460px;
 }
 

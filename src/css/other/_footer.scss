@@ -41,7 +41,8 @@
 
     &__col{
         padding-right: map-get($map: $spacers, $key: 4);
-        &--first{
+        &--first, 
+        &--offset{
             flex: 0 0 420px;
             max-width: 50%;
         }
@@ -51,6 +52,22 @@
     }
 }
 
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .footer{
+        &__col{
+            &--first{
+                flex: 0 0 280px;
+                margin-bottom: $spacer;
+            }
+            &--first-md{
+                flex: 0 0 280px;
+            }
+            &--offset{
+                display: none;
+            }
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .footer{
         &__info{
@@ -72,6 +89,9 @@
             &--first{
                 flex: 0 0 100%;
                 max-width: 100%;
+            }
+            &--first-md{
+                flex: 0 0 0;
             }
             &--last{
                 margin-bottom: 0;

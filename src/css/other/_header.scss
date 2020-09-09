@@ -78,6 +78,7 @@
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .header{
         &__logo{
+            background-position-x: left;
             transform: translateY(3px);
         }
         &__phone{

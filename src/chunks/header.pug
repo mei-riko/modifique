@@ -1,11 +1,11 @@
 header.header
     .container
         .row.align-items-center
-            .col-4.d-sm-none
+            .col-4.d-md-none
                 p.header__name Клиника эстетической медицины
             .col-4.col-sm-6
                 a.header__logo(href="/" title="Клиника эстетической медицины MODIFIQUE")
-            .col-4.col-sm-6.d-flex.justify-content-end
+            .col-4.col-md-8.col-sm-6.d-flex.justify-content-end.align-items-md-center
                 a.header__phone(href="tel:880091023412") 8 800 910 23 412
                 .header__networks
                     a.header__networks-item.header__networks-item_vk(href="")
@@ -17,7 +17,7 @@ header.header
                         <path d="M15.3537 2.45123H0.646312C0.289375 2.45123 0 2.74061 0 3.09755C0 3.45448 0.289375 3.74386 0.646312 3.74386H15.3537C15.7107 3.74386 16 3.45448 16 3.09755C16 2.74061 15.7107 2.45123 15.3537 2.45123Z" fill="#ADADAD"/>
                         <path d="M15.3537 12.2562H0.646312C0.289375 12.2562 0 12.5455 0 12.9025C0 13.2594 0.289375 13.5488 0.646312 13.5488H15.3537C15.7107 13.5488 16 13.2594 16 12.9025C16 12.5455 15.7107 12.2562 15.3537 12.2562Z" fill="#ADADAD"/>
                     </svg>
-            .col-12.d-sm-none
+            .col-12.d-md-none
                 p.header__intro красота вне времени
             .col-12.navbar-collapse
                 span.navbar-collapse__title Меню
@@ -27,14 +27,14 @@ header.header
                         a.navbar__item.navbar_header__item.navbar_header__item--parent.navbar_header__item--active(href="#" data-nav="service") Услуги
                         //- Level 1 Inside Nav
                         .navbar-inside.navbar-inside--level-1#service
-                            span.navbar-collapse__title(data-close="service") Назад
-                            span.navbar-back
+                            span.navbar-collapse__title.navbar-back(data-close="service") Назад
                             .navbar-inside__item-parent
                                 a.navbar-inside__item.navbar-inside__item--parent(href="#" data-nav="type1") Для лица и шеи
                                 //- Level 2 Inside Nav
                                 .navbar-inside.navbar-inside--level-2#type1
+                                    span.navbar-collapse__title.navbar-back(data-close="type1") Назад
                                     .navbar-inside__row
-                                        .navbar-inside__col.col-3
+                                        .navbar-inside__col.col-3.col-md-6.col-xs-12
                                             a.navbar-inside__title(href="#") Инъекционная косметология
                                             a.navbar-inside__item(href="#") Мезотерапия
                                             a.navbar-inside__item(href="#") Биоревитализация
@@ -48,7 +48,7 @@ header.header
                                             //- a.navbar-inside__item(href="#") Инъекционная липосакция (интралипотерапия) Aqualyx  
                                             a.navbar-inside__item(href="#") Интралипотерапия Aqualyx
                                             a.navbar-inside__item(href="#") Ботулонотерапия
-                                        .navbar-inside__col.col-3
+                                        .navbar-inside__col.col-3.col-md-6.col-xs-12
                                             a.navbar-inside__title(href="#") Уходовые процедуры
                                             a.navbar-inside__item(href="#") Альгинальные маски
                                             a.navbar-inside__item(href="#") Пилинги
@@ -66,7 +66,7 @@ header.header
                                             a.navbar-inside__title(href="#") Консультации
                                             //- a.navbar-inside__item(href="#") Консультация дерматолога
                                             //- a.navbar-inside__item(href="#") Консультация косметолога
-                                        .navbar-inside__col.col-3
+                                        .navbar-inside__col.col-3.col-md-6.col-xs-12
                                             a.navbar-inside__title(href="#") Какие проблемы решаем?
                                             a.navbar-inside__item(href="#") Морщины на лбу
                                             a.navbar-inside__item(href="#") "Гусиные лапки"
@@ -79,8 +79,8 @@ header.header
                                             a.navbar-inside__item(href="#") Снижение плотности и упругости кожи
                                             a.navbar-inside__item(href="#") Черные точки
                                             a.navbar-inside__item(href="#") Изменение овала лица
-                                        .navbar-inside__col.col-3
-                                            span.navbar-inside__title &nbsp;
+                                        .navbar-inside__col.col-3.col-md-6.col-xs-12
+                                            span.navbar-inside__title.navbar-inside__title--empty &nbsp;
                                             a.navbar-inside__item(href="#") Выраженная носогубная складка
                                             a.navbar-inside__item(href="#") Нависание верхнего века
                                             a.navbar-inside__item(href="#") Брыли
@@ -91,10 +91,43 @@ header.header
                                             a.navbar-inside__item(href="#") Кольца Венеры/морщины на шее
                             .navbar-inside__item-parent
                                 a.navbar-inside__item.navbar-inside__item--parent(href="#" data-nav="type2") Для тела
+                                //- Level 2 Inside Nav
+                                .navbar-inside.navbar-inside--level-2#type2
+                                    span.navbar-collapse__title.navbar-back(data-close="type2") Назад
+                                    .navbar-inside__row
+                                        .navbar-inside__col.col-3.col-md-6.col-xs-12
+                                            a.navbar-inside__title(href="#") Инъекционная косметология
+                                            a.navbar-inside__item(href="#") Мезотерапия
+                                            a.navbar-inside__item(href="#") Биоревитализация
+                                            a.navbar-inside__item(href="#") Лифтинг мезонитями  
+                                            a.navbar-inside__item(href="#") Плазмолифтинг
+                                            a.navbar-inside__item(href="#") Редермализация  
+                                                span.label.label_small hit 
+                                            a.navbar-inside__item(href="#") Интралипотерапия Aqualyx
+                                        .navbar-inside__col.col-3.col-md-6.col-xs-12
+                                            a.navbar-inside__title(href="#") Массаж тела
+                                            a.navbar-inside__item(href="#") Антицеллюлитный массаж
+                                            a.navbar-inside__item(href="#") Классчиеский массаж
+                                            a.navbar-inside__title(href="#") Уходовые процедуры
+                                            a.navbar-inside__item(href="#") Обертывания
+                                            a.navbar-inside__item(href="#") Пилинги
+                                            a.navbar-inside__item(href="#") Плаценарная терапия
+                                        .navbar-inside__col.col-3.col-md-6.col-xs-12
+                                            a.navbar-inside__title(href="#") Какие проблемы решаем?
+                                            a.navbar-inside__item(href="#") Растяжки/стрии
+                                            a.navbar-inside__item(href="#") Снижение плотности и упругости кожи
+                                            a.navbar-inside__item(href="#") Гиперпигментация
+                                            a.navbar-inside__item(href="#") Новообразования
+                                            a.navbar-inside__item(href="#") Сухость кожи
+                                            a.navbar-inside__item(href="#") Жировые отложения
+                                            a.navbar-inside__item(href="#") Шрамы
+                                        .navbar-inside__col.col-3.col-md-6.col-xs-12
+                                            a.navbar-inside__title(href="#") Удаление новообразований 
+                                            a.navbar-inside__title(href="#") Консультации
                             a.navbar-inside__item(href="#") Акции
                             a.navbar-inside__item(href="#") Прайс-лист
                     a.navbar__item.navbar_header__item(href="#") Сертификаты
                     a.navbar__item.navbar_header__item(href="#") Врачи
-                    a.navbar__item.navbar_header__item(href="#") О клинике
+                    a.navbar__item.navbar_header__item(href="#") Отзывы
                     a.navbar__item.navbar_header__item(href="#") Контакты
                 a.navbar-collapse__phone(href="tel:880091023412") 8 800 910 23 412

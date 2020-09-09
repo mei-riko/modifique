@@ -21,3 +21,22 @@
         background-repeat: no-repeat;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .list_contact{
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item{
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .list_contact{
+        &__item{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
