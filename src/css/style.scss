@@ -46,6 +46,7 @@
 
 @import "tabs/tab-js";
 @import "tabs/tab-content";
+@import "tabs/tab-pane";
 @import "tabs/tabs-nav";
 
 @import "list/list";
@@ -55,10 +56,12 @@
 @import "list/list_information";
 @import "list/list_contact";
 
+@import "sertificate/sertificate";
+
 @import "content/content";
 @import "content/content-inside";
-@import "content/sertificate";
-@import "content/instagram";
-@import "content/price";
-@import "content/table";
-@import "content/cta";
+@import "content/content-instagram";
+
+@import "price/price";
+@import "table/table";
+@import "cta/cta";

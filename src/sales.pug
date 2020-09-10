@@ -13,9 +13,10 @@ html(lang="ru")
         include chunks/header.pug
         include chunks/mixin.pug
         //- Sales
-        section.container.bg-sales.mt-2.mb-2.mt-sm-1.mb-sm-1
+        section.container.bg-sales.mt-2.mb-2.mt-sm-0.mb-sm-1
             .row.justify-content-end
-                .col-11
+                .col-11.col-sm-12
+                    h1.d-none.d-sm-block.mb-sm-2 Акции клиники
                     .row
                         .col-4.col-sm-12.mb-3.mb-sm-2
                             .preview-sale.preview-sale_line

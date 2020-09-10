@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import './nav.js';
 import './slider.js';
+import './price.js';
 import './sertificate.js';
 
 $(document).ready(() =>{
@@ -65,21 +66,6 @@ $(document).ready(() =>{
   $('.toggle-item').on("click", function(e){
     e.preventDefault();
     let toggle = $(this);
-    if( !toggle.hasClass("toggle-item--active")){
-      toggle.addClass("toggle-item--active");
-      toggle.find(".toggle-item__title").addClass("toggle-item__title--active");
-      toggle.find(".toggle-item__content").slideDown();
-		}else{
-			toggle.removeClass("toggle-item--active");
-      toggle.find(".toggle-item__title").removeClass("toggle-item__title--active");
-      toggle.find(".toggle-item__content").slideUp();
-    }
-  });
-  // Навигация по прайс-листу категории
-  $('.price .price__nav-toggle').on("click", function(e){
-    e.preventDefault();
-    let id = $(this).attr("href");
-    let toggle = $('.toggle-item' + id);
     if( !toggle.hasClass("toggle-item--active")){
       toggle.addClass("toggle-item--active");
       toggle.find(".toggle-item__title").addClass("toggle-item__title--active");

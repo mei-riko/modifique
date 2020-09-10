@@ -5,33 +5,6 @@
     }
 }
 
-.tab-pane{
-    overflow: hidden;
-    height: 0;
-    // display: none;
-
-    &_scroll{
-        overflow-x: auto;
-        &.active{
-            overflow-x: auto;
-        }
-    }
-    &__row{
-        display: flex;
-        flex-wrap: nowrap;
-    }
-    &__col-full{
-        @extend .col-7;
-        // flex: 0 0 59%;
-        // max-width: 59%;
-    }
-    &__col{
-        @extend .col-5;
-        // flex: 0 0 41.6667%;
-        // max-width: 41.6667%;
-    }
-}
-
 .fade{
     opacity: 0;
     transition: opacity 0.15s linear;

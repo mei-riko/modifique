@@ -7,9 +7,9 @@
 
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .content-right{
-        padding-left: 0;
+        padding-left: $spacer/2;
     }
     .content-left{
-        padding-right: 0;
+        padding-right: $spacer/2;
     }
 }

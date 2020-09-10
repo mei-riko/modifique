@@ -50,7 +50,6 @@
         &__title{
             font-size: 20px;
         }
-
         &_line{
             max-width: 100%;
         }
@@ -65,7 +64,7 @@
             width: 100px;
 
             position: absolute;
-            left: $spacer/2;
+            left: 0;
             top: 0;
         }
         &__title{

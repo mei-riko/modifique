@@ -130,8 +130,6 @@ html(lang="ru")
                             a.btn.btn_secondary(href="#") Отзыв в Instagram
                         .btn-group__item
                             a.btn.btn_secondary(href="#") Отзыв через сайт
-        include chunks/footer.pug
-
         .modal.modal_review#review
             .preview-review.modal_review__preview
                 .preview-review__info
@@ -140,6 +138,8 @@ html(lang="ru")
                     .preview-review__date 01.12.2020
             .modal_review__content
                 p Хочу сказать большое спасибо мастеру Марие за мои прекрасные брови! Осталась очень довольна результатом. Все инструменты были в стерильных ...
+        include chunks/footer.pug
+
         //- Fancybox
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")

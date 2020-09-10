@@ -15,6 +15,14 @@
         transition: .4s;
 
         opacity: .5;
+
+        &.slick-disabled{
+            opacity: .1;
+            &:hover,
+            &:focus{
+                opacity: .1;
+            }
+        }
     }
     .slick-prev{
         left: 0;

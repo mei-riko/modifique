@@ -22,4 +22,20 @@
         font-weight: $font-weight-bolder;
         margin-bottom: $spacer/5;
     }
+    &__content{
+        width: 260px;
+        max-width: 100%;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .preview{
+        padding-top: 105px;
+        padding-left: 0;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .preview{
+        padding-left: 120px;
+        padding-top: 0;
+    }
 }

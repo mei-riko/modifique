@@ -13,14 +13,14 @@ html(lang="ru")
         include chunks/header.pug
         include chunks/mixin.pug
         //- About
-        section.container.pt-1.pb-3
+        section.container.pt-1.pb-3.pt-sm-0
             .row.align-items-center.preview-doctor
-                .col-3
+                .col-3.col-sm-6
                     img.img-fluid(src="../demo/person-prev-big-2.png")
-                .col-3
+                .col-3.col-sm-6
                     img.img-fluid(src="../demo/person-prev-big.png")
-                .col-6.content-right
-                    h1.h2 Круглова 
+                .col-6.col-sm-12.mt-sm-2.content-right
+                    h1.h2.preview-doctor__title Круглова 
                         span.d-block Анна 
                             span.text-italic Сергеевна
                     p.preview-doctor__type.mt-1.mb-1 #главврач   #дерматолог-косметолог #дерматовенеролог   #лазеротерапевт
@@ -28,77 +28,78 @@ html(lang="ru")
                         li.list_advantage__item 2 высших мед. образования
                         li.list_advantage__item 24 программы повышения квалификации
                         li.list_advantage__item опыт работы более 15 лет
-                    .btn-group.mt-2
-                        .btn-group__item
-                            a.btn.btn_secondary(href="#") Консультация
-                        .btn-group__item
-                            a.btn.btn_default(href="#") Записаться на процедуру
+                    .btn-group.mt-2.mt-lg-1
+                        .btn-group__item.btn-group__item--full-xs
+                            a.btn.btn_secondary.btn--full(href="#") Консультация
+                        .btn-group__item.btn-group__item--full-xs
+                            a.btn.btn_default.btn--full(href="#") Записаться на процедуру
             .row.justify-content-center.pt-5.pb-3
-                .col-6
+                .col-6.col-sm-8.col-xs-12
                     p.lead.text-center Гармонизация лица и профилактика старения — ключ к тому, чтобы в 40 лет выглядеть лучше, чем в 20.
         //- Tabs
-        section.container.pb-5
-            ul.tabs-nav.tabs-nav_list.justify-content-between#contentTabs
-                li.tabs-nav__item.active
-                    a.tabs-nav__link(href="#type1" data-toggle="tab") Образование
-                li.tabs-nav__item
-                    a.tabs-nav__link(href="#type2" data-toggle="tab") Специализации врача
-                li.tabs-nav__item
-                    a.tabs-nav__link(href="#type3" data-toggle="tab") Повышение квалификации
+        section.container.pb-5.pb-sm-3
+            .tabs-scroll
+                ul.tabs-nav.tabs-nav_list.justify-content-between#contentTabs
+                    li.tabs-nav__item.active
+                        a.tabs-nav__link(href="#doctor1" data-toggle="tab") Образование
+                    li.tabs-nav__item
+                        a.tabs-nav__link(href="#doctor2" data-toggle="tab") Специализации врача
+                    li.tabs-nav__item
+                        a.tabs-nav__link(href="#doctor3" data-toggle="tab") Повышение квалификации
             .tab-content
-                .tab-pane.active.fade.in#type1
+                .tab-pane.active.fade.in#doctor1
                     .row
-                        .col-4.mt-1
+                        .col-4.mt-1.col-sm-6.col-xs-12
                             img.img-fluid.mb-2(src="../demo/logo-univ-pavlova.png" alt="" title="" width="160px")
                             p.text-small.text-bold.text-uppercase Высшее медицинское образование
                             p Санкт-Петербургский государственный медицинский университет им. акад. И. П. Павлова (СПбГМУ)
-                        .col-4.mt-1
+                        .col-4.mt-1.col-sm-6.col-xs-12.mt-xs-2
                             img.img-fluid.mb-2(src="../demo/logo-univ-pavlova.png" alt="" title="" width="160px")
                             p.text-small.text-bold.text-uppercase Высшее медицинское образование
                             p Санкт-Петербургский государственный медицинский университет им. акад. И. П. Павлова (СПбГМУ)
-                .tab-pane.fade#type2
-                    .row.mt-4
+                .tab-pane.fade#doctor2
+                    .row.mt-4.mt-sm-0
                         +preview('free', 'Бесплатная консультация', 'Консультация косметолога клиники для всех новых клиентов')(src="../demo/sale-1.png")
                         +preview('хит', 'Мезотерапия головы', 'Одна из самых популярных услуг клиники, направленая на увеличение объема волос')(src="../demo/sale-2.png")
                         +preview('news', 'Открытие клиники', 'Ура, карантин позади и мы готовы принимать посетителей с 1 сентября!')(src="../demo/sale-3.png")
-                .tab-pane.fade#type3
+                .tab-pane.fade#doctor3
                     .row
-                        .col-6
+                        .col-6.col-sm-12.mb-sm-1
                             ul.list.list_advantage
                                 li.list_advantage__item Стажировка по курсу «Дерматология, косметология, пластическая хирургия» в США
                                 li.list_advantage__item Коррекция периорбитальный области и верхней трети лица
                                 li.list_advantage__item Эстетическая коррекция инволюционных изменений кожи с использованием препарата Ботокс
                                 li.list_advantage__item Волюметрические методы коррекции средней трети лица препаратом Juvederm Voluma with Lidocaine
-                        .col-6
+                        .col-6.col-sm-12
                             ul.list.list_advantage
                                 li.list_advantage__item Комплексная эстетическая коррекция лица. Долгосрочные программы ведения пациентов
                                 li.list_advantage__item Конференция Advanced Aesthetic. Продвинутая косметология лица и тела
                                 li.list_advantage__item Конференция «Сочетанное применение профессионального радиочастотного и лазерного оборудования SYNERON CANDELA и инъекционного омоложения по системе MD codes»
-                        .col-2.mt-2
+                        .col-2.mt-2.col-md-5.col-sm-12
                             a.link-item.link-item_modal(href="javascript;" data-src="#show-all" data-fancybox) Полный список
         //- Documents
-        section.pt-3.pb-3.bg-light
+        section.pt-3.pb-3.pt-sm-2.pb-sm-2.bg-light
             .container
                 .row.align-items-center
-                    .col-3
+                    .col-3.col-sm-12.mb-sm-1.text-sm-center
                         h3.h4 Подтверждающие документы
-                    .col-9
+                    .col-9.col-sm-12
                         .slider.slider_docs
-                            .slider__item
+                            .slider__item(data-fancybox="docs" data-src="../demo/диплом-1.png")
                                 img.img-fluid(src="../demo/диплом-1.png")
-                            .slider__item
+                            .slider__item(data-fancybox="docs" data-src="../demo/сертификат-1.png")
                                 img.img-fluid(src="../demo/сертификат-1.png")
-                            .slider__item
+                            .slider__item(data-fancybox="docs" data-src="../demo/диплом-2.png")
                                 img.img-fluid(src="../demo/диплом-2.png")
-                            .slider__item
+                            .slider__item(data-fancybox="docs" data-src="../demo/сертификат-2.png")
                                 img.img-fluid(src="../demo/сертификат-2.png")
-                            .slider__item
+                            .slider__item(data-fancybox="docs" data-src="../demo/диплом-1.png")
                                 img.img-fluid(src="../demo/диплом-1.png")
-                            .slider__item
+                            .slider__item(data-fancybox="docs" data-src="../demo/сертификат-1.png")
                                 img.img-fluid(src="../demo/сертификат-1.png")
-                            .slider__item
+                            .slider__item(data-fancybox="docs" data-src="../demo/диплом-2.png")
                                 img.img-fluid(src="../demo/диплом-2.png")
-                            .slider__item
+                            .slider__item(data-fancybox="docs" data-src="../demo/сертификат-2.png")
                                 img.img-fluid(src="../demo/сертификат-2.png")
         include chunks/footer.pug
 

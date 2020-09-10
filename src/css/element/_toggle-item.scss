@@ -34,4 +34,10 @@
         display: none;
         padding-top: $spacer/2;
     }
+
+    &_price{
+        padding: $spacer/2 0;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
 }

@@ -7,6 +7,7 @@
     font-weight: $font-weight-bolder;
     letter-spacing: 1px;
 
+    text-align: center;
     padding: $spacer/2 $spacer;
     
     transition: all .4s;
@@ -113,5 +114,43 @@
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .btn{
         padding: 10px 20px;
+        &_link{
+            padding-right: 0;
+            padding-left: map-get($map: $spacers, $key: 3);
+            &:hover, &:focus{
+                padding-left: 0;
+                padding-right: map-get($map: $spacers, $key: 3);
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .btn{
+        &--full-sm{
+            width: 100%;
+        }
+    }
+    .btn-group{
+        &__item{
+            &--full-sm{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .btn{
+        &--full-xs{
+            width: 100%;
+        }
+    }
+    .btn-group{
+        &__item{
+            &--full-xs{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
     }
 }

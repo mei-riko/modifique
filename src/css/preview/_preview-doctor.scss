@@ -2,6 +2,8 @@
     @extend .row;
     @extend .align-items-center;
 
+    max-width: calc(100% + 30px);
+
     &__photo{
         @extend .col-5;
         padding-right: $spacer;
@@ -57,6 +59,113 @@
         font-size: 14px;
         margin-bottom: $spacer/2;
         &.list{
+            margin-bottom: $spacer/2;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .preview-doctor{
+        &__photo{
+            padding-right: $spacer/2;
+        }
+        &__name{
+            font-size: 18px;
+            &--full{
+                font-size: 28px;
+            }
+        }
+        &__surname{
+            font-size: 18px;
+            &--full{
+                font-size: 28px;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .preview-doctor{
+        &__photo{        
+            &--full{
+                flex: 0 0 41.66667%;
+                max-width: 41.66667%;
+            }
+        }
+        &__content{
+            &--full{
+                flex: 0 0 58.33333%;
+                max-width: 58.33333%;
+            }
+        }
+        &__name{
+            &--full{
+                font-size: 18px;
+            }
+        }
+        &__surname{
+            &--full{
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .preview-doctor{
+        &__title{
+            font-size: 28px;
+        }
+        &__photo{
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-right: $spacer/2;
+            margin-bottom: $spacer/2;
+
+            &--full{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        &__content{
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            &--full{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        &__name{
+            &--full{
+                font-size: 24px;
+            }
+        }
+        &__surname{
+            &--full{
+                font-size: 24px;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .preview-doctor{
+        &__title{
+            font-size: 24px;
+        }
+        &__type{
+            font-size: 12px;
+        }
+        &__name{
+            font-size: 18px;
+            &--full{
+                font-size: 18px;
+            }
+        }
+        &__surname{
+            font-size: 18px;
+            &--full{
+                font-size: 18px;
+            }
+        }
+        &__intro{
             margin-bottom: $spacer/2;
         }
     }

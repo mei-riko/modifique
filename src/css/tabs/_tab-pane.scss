@@ -1,0 +1,83 @@
+
+.tab-pane{
+    overflow: hidden;
+    height: 0;
+    // display: none;
+
+    &_scroll{
+        overflow-x: auto;
+        &.active{
+            overflow-x: auto;
+        }
+    }
+    &__row{
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: -$spacer/2;
+        margin-right: -$spacer/2;
+    }
+    &__col-full{
+        @extend .col-7;
+        // flex: 0 0 59%;
+        // max-width: 59%;
+    }
+    &__col{
+        @extend .col-5;
+        // flex: 0 0 41.6667%;
+        // max-width: 41.6667%;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .tab-pane{
+        &__col-full{
+            @extend .col-xl-8;
+        }
+        &__col{
+            @extend .col-xl-6;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .tab-pane{
+        &__col-full{
+            @extend .col-lg-6;
+        }
+        &__col{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+
+            flex: 0 0 100%;
+            max-width: calc(100% - 30px);
+
+            &--small{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .tab-pane{
+        &__col-full{
+            flex: 0 0 270px;
+            max-width: 270px;
+        }
+        &__col{
+            flex: 0 0 540px;
+            max-width: 540px;
+
+            &-inside{
+                flex: 0 0 240px;
+                max-width: 240px;
+                margin: 0;
+            }
+
+            &--small{
+                flex: 0 0 270px;
+                max-width: 270px;
+            }
+        }
+    }
+}

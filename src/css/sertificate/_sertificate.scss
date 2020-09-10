@@ -165,13 +165,13 @@
             padding: $spacer/2;
         }
         &__color{
-            flex: 0 0 180px;
-            max-width: 180px;
+            flex: 0 0 170px;
+            max-width: 170px;
             padding: $spacer/2;
         }
         &__type{
-            flex: 0 0 calc(100% - 360px);
-            max-width: calc(100% - 360px);
+            flex: 0 0 calc(100% - 350px);
+            max-width: calc(100% - 350px);
             padding: $spacer/2;
         }
         &__checkbox{
@@ -197,13 +197,14 @@
             padding: $spacer/2 $spacer;
         }
         &__color{
-            flex: 0 0 225px;
-            max-width: 225px;
+            flex: 0 0 210px;
+            max-width: 210px;
             padding: $spacer/2 $spacer;
+            padding-right: $spacer/2;
         }
         &__type{
-            flex: 0 0 calc(100% - 435px);
-            max-width: calc(100% - 435px);
+            flex: 0 0 calc(100% - 420px);
+            max-width: calc(100% - 420px);
             padding-right: $spacer;
         }
     }
