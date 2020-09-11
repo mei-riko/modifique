@@ -1,0 +1,32 @@
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin-left: -5px;
+    margin-right: -5px;
+
+    &__item{
+        padding: 5px 5px 0;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .btn-group{
+        &__item{
+            &--full-sm{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .btn-group{
+        &__item{
+            &--full-xs{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

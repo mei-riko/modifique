@@ -12,16 +12,21 @@
         max-width: calc(100% - 210px);
         margin-bottom: 0;
         height: 52px;
+
+        display: flex;
     }
     &__group-small{
         flex: 0 0 calc(100% - 210px);
         max-width: calc(100% - 210px);
         margin-bottom: 0;
         height: 38px;
+    
+        display: flex;
     }
     &__input{
         margin: 0;
-        height: 100%;
+        height: auto;
+        // height: 100%;
     }
     &__btn{
         flex: 0 0 200px;
@@ -49,6 +54,8 @@
             flex: 0 0 100%;
             max-width: 100%;
             height: auto;
+
+            margin-bottom: $spacer/2;
         }
         &__btn, &__btn-small{
             flex: 0 0 100%;

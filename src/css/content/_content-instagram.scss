@@ -23,10 +23,69 @@
         font-style: italic;
         color: $white;
     }
-
     &__item{
         flex: 0 0 150px;
         max-width: 150px;
         height: 150px;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .content-instagram{
+        &__title{
+            font-size: 16px;
+            flex: 0 0 calc(100% - 960px);
+            max-width: calc(100% - 960px);
+            height: 120px;
+            padding: $spacer;
+        }
+        &__item{
+            flex: 0 0 120px;
+            max-width: 120px;
+            height: 120px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .content-instagram{
+        &__title{
+            font-size: 18px;
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: map-get($map: $spacers, $key: 3) $spacer;
+            height: auto;
+        }
+        &__item{
+            flex: 0 0 25%;
+            max-width: 25%;
+            height: auto;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content-instagram{
+        &__item{
+            flex: 0 0 calc(100%/3);
+            max-width: calc(100%/3);
+        }
+        &__title{
+            flex: 0 0 calc(100%/3);
+            max-width: calc(100%/3);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content-instagram{
+        &__title{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &__item{
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
     }
 }

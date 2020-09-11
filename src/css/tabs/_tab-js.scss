@@ -45,3 +45,13 @@
         transition: .4s;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .tab-js{
+        &__item{
+            margin-bottom: $spacer/3;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

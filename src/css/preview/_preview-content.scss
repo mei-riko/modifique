@@ -6,7 +6,7 @@
     flex-wrap: nowrap;
     align-items: center;
 
-    height: 100%;
+    // height: 100%;
 
     &__title{
         flex: 0 0 35%;
@@ -19,5 +19,38 @@
         max-width: 65%;
 
         font-size: map-get($map: $font-size, $key: 'sm');
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .preview-content{
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+
+        &__title{
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: $spacer/2;
+
+            font-size: 16px;
+        }
+        &__content{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .preview-content{
+        &__title{
+            font-size: 16px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .preview-content{
+        // height: auto;
+        padding-top: $spacer/2;
+        padding-bottom: $spacer/2;
     }
 }

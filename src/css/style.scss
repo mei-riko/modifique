@@ -8,7 +8,9 @@
 @import "framework/framework";
 @import "framework/offset";
 
-@import "form/button";
+@import "btn/btn";
+@import "btn/btn-group";
+
 @import "form/form";
 @import "form/form_inline";
 @import "form/checkbox";
@@ -26,6 +28,7 @@
 @import "slider/slider";
 @import "slider/slider_index";
 @import "slider/slick";
+@import "slider/slider-index";
 
 @import "navbar/navbar";
 @import "navbar/navbar_header";

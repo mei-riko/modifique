@@ -13,3 +13,27 @@
         height: 470px;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .preview-interiors{
+        height: 140px;
+        &_full{
+            height: 310px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .preview-interiors{
+        height: 90px;
+        &_full{
+            height: 210px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .preview-interiors{
+        height: 180px;
+        &_full{
+            height: 180px;
+        }
+    }
+}

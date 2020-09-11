@@ -5,13 +5,13 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Basic Page
 
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet")
         link(href='./css/style.css', rel='stylesheet')
-
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
         //- Slider
-        section.slider-index.container.mb-4
+        section.slider-index.container.mb-4.mb-md-2
             .slider.slider_index
                 .slider__item.slider_index__item
                     .slider_index__image(style="background-image:url(../demo/slider-1.png)")
@@ -25,21 +25,21 @@ html(lang="ru")
         //- Sales
         aside.container.bg-sales
             .row.justify-content-end
-                .col-11
+                .col-11.col-sm-12
                     .row
-                        .col-4
+                        .col-4.col-sm-12.mb-sm-2
                             .preview-sale.preview-sale_line.preview-sale_first
                                 a.preview-sale__image(href="#" style="background-image:url(../demo/service-1.png);")
                                     span.label.label_sale free
                                 a.preview-sale__title(href="#") Бесплатная консультация
                                 p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
-                        .col-4
+                        .col-4.col-sm-12.mb-sm-2
                             .preview-sale.preview-sale_line.preview-sale_middle
                                 a.preview-sale__image(href="#" style="background-image:url(../demo/service-2.png);")
                                     span.label.label_sale -20%
                                 a.preview-sale__title(href="#") Гармонизация со скидкой
                                 p.preview-sale__content Консультация косметолога клиники для&nbsp;всех&nbsp;новых клиентов
-                        .col-4
+                        .col-4.col-sm-12
                             .preview-sale.preview-sale_line.preview-sale_last
                                 a.preview-sale__image(href="#" style="background-image:url(../demo/service-3.png);")
                                 a.preview-sale__title(href="#") Контурная пластика
@@ -47,11 +47,11 @@ html(lang="ru")
         //- CTA
         section.cta.container
             .row
-                .col-2.col-xl-3
+                .col-2.col-xl-3.col-lg-2.col-md-3
                     a.cta-arrow.scroll(href="#services")
                         include chunks/scrollDownSvg.pug
-                .col-9
-                    p.h1-lead.mb-3 Эксклюзивные  
+                .col-9.col-lg-10.col-md-9
+                    h3.cta__title.mb-3.mb-sm-2 Эксклюзивные  
                         span.text-italic скидки 
                         | каждый месяц. Подпишитесь, чтобы быть в курсе
                     form.form.form_inline(action="")
@@ -67,9 +67,9 @@ html(lang="ru")
         section.container#services
         //- Doctors
         section.container.bg-company
-            .row.align-items-center
-                .col-4
-                    h4.h1-lead.mb-2 Красота 
+            .row.align-items-center.align-items-xl-start.align-items-md-center
+                .col-4.col-xl-5.col-lg-7.col-md-10.col-sm-12.mb-lg-2
+                    h4.h1-lead.mb-2.mb-sm-1 Красота 
                         span.text-italic вне&nbsp;времени
                     p Все врачи клиники Modifique косметологи-дерматологи и имеют высшее медицинкое образование. Cредний опыт работы специалистов 12 лет.
                     p Несколько раз в год ежегодно проходят курсы повышения квалификации и в соврешенстве владеют всеми методиками.
@@ -79,27 +79,27 @@ html(lang="ru")
                         a.btn.btn_link(href="review.html") Отзывы о клинике
                     .mt-1
                         a.btn.btn_link(href="review.html") Работы до / после
-                .col-7
+                .col-7.col-xl-6.col-lg-11.col-md-10.col-sm-12
                     .content-right
                         .row
-                            .col-4
+                            .col-4.col-xs-6
                                 img.img-fluid(src="../demo/service-1.png" alt="" title="")
-                            .col-4
+                            .col-4.col-xs-6
                                 img.img-fluid(src="../demo/service-2.png" alt="" title="")
-                            .col-4
+                            .col-4.col-xs-6.mt-xs-2
                                 img.img-fluid(src="../demo/service-3.png" alt="" title="")
-                            .col-4.mt-2
+                            .col-4.col-xs-6.mt-2
                                 img.img-fluid(src="../demo/service-1.png" alt="" title="")
-                            .col-4.mt-2
+                            .col-4.col-xs-6.mt-2
                                 img.img-fluid(src="../demo/service-2.png" alt="" title="")
         //- CTA
         section.cta.container
             .row
-                .col-2.col-xl-3
+                .col-2.col-xl-3.col-lg-2.col-md-3
                     a.cta-arrow.scroll(href="#roomtour")
                         include chunks/roomTourSvg.pug
-                .col-9
-                    p.h1-lead.mb-3 Получите бесплатную  
+                .col-9.col-lg-10.col-md-9
+                    h4.cta__title.mb-3.mb-sm-2 Получите бесплатную  
                         span.text-italic консультацию  
                         | от&nbsp;специалиста нашей клиники
                     form.form.form_inline(action="")
@@ -112,14 +112,14 @@ html(lang="ru")
                             label.checkbox__label(for="agreeInline") согласен с обработкой 
                                 a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
         //- Interiors
-        .container.mb-4#roomtour
+        .container.mb-4.mb-md-2#roomtour
             .row
-                .col-3
+                .col-3.col-sm-12
                     .preview-interiors(style="background-image:url('../demo/clinic-2.jpg');")
                     .preview-interiors(style="background-image:url('../demo/clinic-3.jpg');")
-                .col-6
+                .col-6.col-sm-12
                     .preview-interiors.preview-interiors_full(style="background-image:url('../demo/clinic-1.jpg');")
-                .col-3
+                .col-3.col-sm-12
                     .preview-interiors(style="background-image:url('../demo/clinic-3.jpg');")
                     .preview-interiors(style="background-image:url('../demo/clinic-2.jpg');")
         //- Instagram

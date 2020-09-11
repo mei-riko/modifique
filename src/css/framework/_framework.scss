@@ -88,7 +88,7 @@ table{
 
 .bg-black{background-color: $black;}
 .bg-white{background-color: $white;}
-.bg-light{background-color: $light-100;}
+.bg-light{background-color: lighten($color: $light-100, $amount: 2);}
 .bg-company{
     background: url("../icon/modifique.svg") no-repeat top right;
     background-size: 7%;
@@ -152,6 +152,9 @@ table{
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     html,body {font-size: map-get($font-size, 'xl');}
 
+    .h1-lead,.h1,h1{font-size: 44px;}
+    .h2,h2{font-size: 38px;}
+
     .d-xl{
         &-flex{display: flex;}
         &-none{display: none;}
@@ -212,9 +215,8 @@ table{
     .h5,h5{font-size: 16px;}
     .h6,h6{font-size: map-get($font-size, 'sm');}
 
-    .bg-sales{
-        background-image: none;
-    }
+    .bg-company,
+    .bg-sales{background-image: none;}
     
     .d-sm{
         &-flex{display: flex;}

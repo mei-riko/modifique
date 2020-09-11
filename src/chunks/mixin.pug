@@ -8,21 +8,21 @@ mixin preview(label, title, content)
                 a.preview__title(href="#")= title
                 p.text-grey.text-small= content
 mixin link-col(title)
-    .col-4.mb-1
+    .col-4.col-md-6.col-xs-12.mb-1
         a.link-item(href!=attributes.href)= title
 mixin link-col-label(title, label)
-    .col-4.mb-1
+    .col-4.col-md-6.col-xs-12.mb-1
         a.link-item(href!=attributes.href)= title
             span.label.link-item__label= label
 mixin link-col-small(title)
-    .col-3.mb-1
+    .col-3.col-xs-12.col-md-6.col-lg-4.mb-1
         a.link-item(href!=attributes.href)= title
 mixin link-col-small-label(title, label)
-    .col-3.mb-1
+    .col-3.col-xs-12.col-md-6.col-lg-4.mb-1
         a.link-item(href!=attributes.href)= title
             span.label.link-item__label= label
 mixin link-modal-col(title)
-    .col-2.mt-1
+    .col-2.col-xs-12.col-sm-6.col-xl-4.mt-1
         a.link-item.link-item_modal(href!=attributes.href)= title
 mixin preview-content(title, content)
     .preview-content

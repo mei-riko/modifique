@@ -51,7 +51,34 @@
         }
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .footer{
+        &__col{
+            margin-bottom: $spacer;
+            &--first-xl{
+                flex: 0 0 420px;
+                max-width: 50%;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .footer{
+        &__col{
+            padding-right: map-get($map: $spacers, $key: 3);
+            margin-bottom: $spacer;
 
+            &--first,
+            &--first-lg,
+            &--offset{
+                flex: 0 0 340px;
+            }
+            &--offset{
+                display: none;
+            }
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .footer{
         &__col{
@@ -59,11 +86,11 @@
                 flex: 0 0 280px;
                 margin-bottom: $spacer;
             }
+            &--first-lg{
+                flex: 0;
+            }
             &--first-md{
                 flex: 0 0 280px;
-            }
-            &--offset{
-                display: none;
             }
         }
     }
@@ -84,7 +111,6 @@
         }
         &__col{
             padding-right: $spacer/2;
-            margin-bottom: $spacer;
 
             &--first{
                 flex: 0 0 100%;

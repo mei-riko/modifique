@@ -14,12 +14,12 @@ html(lang="ru")
         include chunks/mixin.pug
         section.container
             //- Title
-            .row.align-items-center.pt-2.pb-2
-                .col-5
+            .row.align-items-center.pt-2.pb-4.pb-lg-2.pt-sm-0.pb-sm-1
+                .col-5.col-md-12
                     h1.h1-lead Инъекционная  
                         span.text-italic косметология
                     p Доверь нам свою красоту: в клинике работают опытные специалисты своих областей. Перед процедурой проводим бесплатную консультацию.
-                .col-7
+                .col-7.col-md-12.pt-md-2
                     .row
                         .col-4
                             img.img-fluid(src="../demo/service-1.png" alt="" title="")
@@ -38,11 +38,11 @@ html(lang="ru")
         //- Form
         section.cta.container
             .row
-                .col-2
+                .col-2.col-md-3.col-lg-2
                     a.cta-arrow.scroll(href="#info")
                         include chunks/scrollDownSvg.pug
-                .col-8
-                    p.h1.mb-3 Узнайте самый эффективный метод решения проблемы  
+                .col-9.col-md-9.col-lg-10
+                    h4.cta__title.mb-3.mb-sm-2 Узнайте самый эффективный метод решения проблемы  
                         span.text-italic бесплатно.
                     form.form.form_inline(action="")
                         .p-relative.form_inline__group
@@ -56,28 +56,30 @@ html(lang="ru")
         //- Content
         section.container#info
             .row.justify-content-between.align-items-center
-                .col-6
+                .col-6.col-md-12.mb-md-2
                     img.img-fluid(src="../demo/img.png")
-                .col-6.content-right
-                    h2.h1 Инъекционная косметология
-                    p — эффективные и малоинвазивные методы омоложения и коррекции различных эстетических недостатков кожи лица и тела, которые также называют «уколами красоты». Процедуры позволяют за минимальный срок избавиться даже от самых глубоких морщин, возрастной «сетки» на коже, улучшить структуру кожных покровов, нормализовать кровообращение и многое другое.
+                .col-6.col-md-12
+                    .content-right
+                        h2.h1 Инъекционная косметология
+                        p — эффективные и малоинвазивные методы омоложения и коррекции различных эстетических недостатков кожи лица и тела, которые также называют «уколами красоты». Процедуры позволяют за минимальный срок избавиться даже от самых глубоких морщин, возрастной «сетки» на коже, улучшить структуру кожных покровов, нормализовать кровообращение и многое другое.
             .row.justify-content-center.cta
                 a.cta__arrow.cta__arrow_right.scroll(href="#bottom")
-                .col-6
+                .col-6.col-xl-7.col-md-9.col-sm-10.col-xs-12
                     p.lead.text-center Особую эффективность показывает сочетание нескольких процедур. 
                         | Это&nbsp;позволяет добиться быстрых, стойких и&nbsp;заметных результатов всего 
                         | за&nbsp;несколько сеансов.
         //- Tabs
-        section.container.pb-5
-            ul.tabs-nav.tabs-nav_list.justify-content-between#contentTabs
-                li.tabs-nav__item.active
-                    a.tabs-nav__link(href="#type1" data-toggle="tab") Эффект от «уколов красоты»
-                li.tabs-nav__item
-                    a.tabs-nav__link(href="#type2" data-toggle="tab") Преимущества инъекций
-                li.tabs-nav__item
-                    a.tabs-nav__link(href="#type3" data-toggle="tab") Основные методики
+        section.container.pb-5.pb-lg-3
+            .tabs-scroll
+                ul.tabs-nav.tabs-nav_list.justify-content-between#contentTabs
+                    li.tabs-nav__item
+                        a.tabs-nav__link(href="#service1" data-toggle="tab") Эффект от «уколов красоты»
+                    li.tabs-nav__item
+                        a.tabs-nav__link(href="#service2" data-toggle="tab") Преимущества инъекций
+                    li.tabs-nav__item.active
+                        a.tabs-nav__link(href="#service3" data-toggle="tab") Основные методики
             .tab-content
-                .tab-pane.active.fade.in#type1
+                .tab-pane.fade#service1
                     ul.list.list_inline.list_advantage
                         li.list_advantage__item.list_inline__item Омоложение кожи
                         li.list_advantage__item.list_inline__item Глубокое увлажнение и питание
@@ -87,40 +89,40 @@ html(lang="ru")
                         li.list_advantage__item.list_inline__item Устранение носогубных складок
                         li.list_advantage__item.list_inline__item Исправление формы и объема губ
                         li.list_advantage__item.list_inline__item Избавление от растяжек
-                .tab-pane.fade#type2
+                .tab-pane.fade#service2
                     ul.list.list_inline.list_advantage
                         li.list_advantage__item.list_inline__item Омоложение кожи
                         li.list_advantage__item.list_inline__item Глубокое увлажнение и питание
                         li.list_advantage__item.list_inline__item Устранение птоза
                         li.list_advantage__item.list_inline__item Удаление и коррекция морщин
                         li.list_advantage__item.list_inline__item Избавление от целлюлита
-                .tab-pane.fade#type3
+                .tab-pane.active.fade.in#service3
                     .row
-                        .col-6.mt-1
+                        .col-6.col-md-12.mt-1.d-flex
                             +preview-content('Ботулонотерапия', 'Представляет собой инъекции ботулотоксина типа А - очищенного и разбавленного белка, способного временно блокировать нервно-мышечную передачу импульсов. Уколы направлены на устранение морщин, а также лечение ряда заболеваний, таких как гипергидроз, блефароспазм, мигрень, бруксизм. В ботулинотерапии применяются следующие препараты: Botox, Dyspot, Xeomin.')
-                        .col-6.mt-1
+                        .col-6.col-md-12.mt-1.d-flex
                             +preview-content('Контурная пластика','Здесь используются специальные гелеобразные филлеры на основе гиалуроновой кислоты, которые могут быть различной плотности. Гели эффективно заполняют возрастные и мимические морщины изнутри, способны восполнить недостающий объем скул, губ или подбородка, позволяют скорректировать контур лица.')
         //- Doctors
-        section.container.pb-5.bg-company
+        section.container.pb-5.pb-lg-3.bg-company
             .row.align-items-center
-                .col-4
-                    h4.h1.mb-2 Cпециалисты 
+                .col-4.col-xl-5.col-lg-7.col-md-10.col-sm-12.mb-lg-2
+                    h4.h1.mb-2.mb-sm-1 Cпециалисты 
                         span.text-italic центра
                     p Все врачи клиники Modifique косметологи-дерматологи и имеют высшее медицинкое образование. Cредний опыт работы специалистов 12 лет.
                     p Несколько раз в год ежегодно проходят курсы повышения квалификации и в соврешенстве владеют всеми методиками.
                     a.btn.btn_link(href="review.html") Отзывы о клинике
-                .col-7
+                .col-7.col-xl-6.col-lg-11.col-md-10.col-sm-12
                     .content-right
                         .row
-                            .col-4
+                            .col-4.col-xs-6
                                 img.img-fluid(src="../demo/service-1.png" alt="" title="")
-                            .col-4
+                            .col-4.col-xs-6
                                 img.img-fluid(src="../demo/service-2.png" alt="" title="")
-                            .col-4
+                            .col-4.col-xs-6.mt-xs-2
                                 img.img-fluid(src="../demo/service-3.png" alt="" title="")
-                            .col-4.mt-2
+                            .col-4.col-xs-6.mt-2
                                 img.img-fluid(src="../demo/service-1.png" alt="" title="")
-                            .col-4.mt-2
+                            .col-4.col-xs-6.mt-2
                                 img.img-fluid(src="../demo/service-2.png" alt="" title="")
         //- Pricelist
         section.bg-light.pt-3.pb-3

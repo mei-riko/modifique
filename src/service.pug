@@ -13,12 +13,12 @@ html(lang="ru")
         include chunks/header.pug
         include chunks/mixin.pug
         section.container#top
-            .row.align-items-center.pt-2.pb-4
-                .col-5
+            .row.align-items-center.pt-2.pb-4.pt-sm-0
+                .col-5.col-md-12
                     h1.h1-lead Услуги 
                         span.text-italic клиники
                     p Доверь нам свою красоту: в клинике работают опытные специалисты своих областей. Перед процедурой проводим бесплатную консультацию.
-                .col-7
+                .col-7.col-md-12.pt-md-2
                     .row
                         .col-4
                             img.img-fluid(src="../demo/service-1.png" alt="" title="")
@@ -28,39 +28,40 @@ html(lang="ru")
                             img.img-fluid(src="../demo/service-3.png" alt="" title="")
         //- Page Link
         nav.container
-            .tabs-nav.justify-content-between
-                a.tabs-nav__item.tabs-nav__item--active(href="service-category.html") Для тела и шеи
-                a.tabs-nav__item(href="service-category.html") Для тела
-                a.tabs-nav__item(href="service-category.html") Для интимных зон
-                a.tabs-nav__item(href="service-category.html") Консультации
+            .tabs-scroll
+                .tabs-nav.justify-content-between
+                    a.tabs-nav__item.tabs-nav__item--active(href="service-category.html") Для тела и шеи
+                    a.tabs-nav__item(href="service-category.html") Для тела
+                    a.tabs-nav__item(href="service-category.html") Для интимных зон
+                    a.tabs-nav__item(href="service-category.html") Консультации
             .tabs-nav-content
                 ul.tab-js#contentTabs
                     li.tab-js__item.tab-js__item_icon.active
-                        a.tab-js__link(href="#type1" data-toggle="tab") Инъекционная косметология
+                        a.tab-js__link(href="#services1" data-toggle="tab") Инъекционная косметология
                             img.tab-js__icon(src="../icon/eyeliner.svg")
                     li.tab-js__item.tab-js__item_icon
-                        a.tab-js__link(href="#type2" data-toggle="tab") Уходовые процедуры
+                        a.tab-js__link(href="#services2" data-toggle="tab") Уходовые процедуры
                             img.tab-js__icon(src="../icon/skin.svg")
                     li.tab-js__item.tab-js__item_icon
-                        a.tab-js__link(href="#type3" data-toggle="tab") Тип решаемой проблемы
+                        a.tab-js__link(href="#services3" data-toggle="tab") Тип решаемой проблемы
                             img.tab-js__icon(src="../icon/help.svg")
                 .tab-content
-                    .tab-pane.active.fade.in#type1 
-                        .row.pt-3.pb-2
+                    .tab-pane.active.fade.in#services1 
+                        .row.pt-3.pb-2.pt-sm-2
                             +link-col('Биоревитализация')(href="#")
                             +link-col-label('Ботулонотерапия', 'new')(href="#")
                             +link-col('Ботулонотерапия ботокс')(href="#")
                             +link-col('Ботулонотерапия диспорт')(href="#")
                             +link-col('PRP-плазмотерапия')(href="#")
                             +link-col-label('Плацентарная терапия «лаеннек»', 'best')(href="#")
-                    .tab-pane.fade#type2 
-                        .row.pt-3.pb-2
+                    .tab-pane.fade#services2 
+                        .row.pt-3.pb-2.pt-sm-2
                             +link-col('Биоревитализация')(href="#")
                             +link-col-label('Ботулонотерапия', 'new')(href="#")
                             +link-col('Ботулонотерапия ботокс')(href="#")
                             +link-col('Ботулонотерапия диспорт')(href="#")
-                    .tab-pane.fade#type3
-                        .row.pt-3.pb-2
+                    .tab-pane.fade#services3
+                        .row.pt-3.pb-2.pt-sm-2
                             +link-col('Биоревитализация')(href="#")
                             +link-col-label('Ботулонотерапия', 'new')(href="#")
                             +link-col('Ботулонотерапия ботокс')(href="#")
@@ -74,13 +75,13 @@ html(lang="ru")
         //- CTA
         section.cta.container
             .row
-                .col-2
+                .col-2.col-md-3.col-lg-2
                     a.cta-arrow.scroll(href="#top")
                         include chunks/scrollTopSvg.pug
-                .col-9
-                    p.h1-lead.mb-3 Получите бесплатную 
+                .col-9.col-md-9.col-lg-10
+                    h3.cta__title.mb-3.mb-sm-2 Получите бесплатную 
                         span.text-italic консультацию 
-                        | от специалиста нашей клиники.
+                        | от&nbsp;специалиста нашей клиники.
                     form.form.form_inline(action="")
                         .p-relative.form_inline__group
                             span.form-validation.error Укажите номер телефона

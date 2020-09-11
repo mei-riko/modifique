@@ -14,59 +14,38 @@
         margin-bottom: $spacer/2;
     }
 }
-
-.slider-index{
-    &__nav{
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    &__dots{
-        position: relative;
-        .slick-dots{
-            position: unset;
-            li{
-                width: auto;
-                height: auto;
-                transform: scale(0.7);
-
-                button{
-                    display: block;
-                    padding: 0;
-                    background: url("../icon/dot.svg") no-repeat center / 10px;
-                    width: 12px;
-                    height: 12px;
-                    opacity: .5;
-                    transition: .4s;
-
-                    &:before{
-                        display: none;
-                    }
-                }
-
-                &.slick-active{
-                    transform: scale(1);
-                    button{
-                        opacity: 1;
-                    }
-                }
-            }
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .slider_index{
+        &__image{
+            height: 420px;
         }
     }
-    &__button{
-        width: 20px;
-        height: 20px;
-        margin-left: $spacer/3;
-
-        cursor: pointer;
-        // transition: .4s;
-
-        &--pause{
-            background: url("../icon/pause.svg") no-repeat center / 10px;
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .slider_index{
+        &__image{
+            height: 360px;
         }
-        &--play{
-            background: url("../icon/play.svg") no-repeat center / 10px;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .slider_index{
+        &__image{
+            height: 300px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .slider_index{
+        &__image{
+            height: 280px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .slider_index{
+        &__image{
+            height: 240px;
         }
     }
 }

@@ -8,3 +8,21 @@
         margin-right: 45px;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .list_inline{
+        &__item{
+            flex: 0 0 50%;
+            max-width: calc(50% - 15px);
+            margin-right: $spacer/2;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .list_inline{
+        &__item{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
