@@ -4301,8 +4301,14 @@ table td {
     height: 0;
     margin-top: -22px;
   }
+  .navbar-inside__title--active {
+    color: #f93700;
+  }
   .navbar-inside__item {
     font-size: 14px;
+  }
+  .navbar-inside__item--active {
+    color: #f93700;
   }
   .navbar-inside--level-1 .navbar-inside__item {
     padding: 10px 0;

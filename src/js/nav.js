@@ -3,23 +3,27 @@ $(document).ready(() =>{
     // Mobile Navbar
     function navbarMobileClick( itemNav ){
         itemNav.on("click", function(e){
-            e.preventDefault();
-            let id = $(this).data("nav");
-            let navbar = $(".navbar-inside#" + id);
-            if( !navbar.hasClass("navbar-inside--active")){
-                // $(".navbar-inside.navbar-inside--active").removeClass("navbar-inside--active");
-                navbar.addClass("navbar-inside--active");
+            if( $(".navbar").hasClass("navbar--mobile") ){
+                e.preventDefault();
+                let id = $(this).data("nav");
+                let navbar = $(".navbar-inside#" + id);
+                if( !navbar.hasClass("navbar-inside--active")){
+                    // $(".navbar-inside.navbar-inside--active").removeClass("navbar-inside--active");
+                    navbar.addClass("navbar-inside--active");
+                }
             }
         });
     }
     function navbarMobileInsideClick( itemNav ){
         itemNav.on("click", function(e){
-            e.preventDefault();
-            let id = $(this).data("nav");
-            let navbar = $(".navbar-inside#" + id);
-            if( !navbar.hasClass("navbar-inside--active")){
-                // console.log( navbar );
-                navbar.addClass("navbar-inside--active");
+            if( $(".navbar").hasClass("navbar--mobile") ){
+                e.preventDefault();
+                let id = $(this).data("nav");
+                let navbar = $(".navbar-inside#" + id);
+                if( !navbar.hasClass("navbar-inside--active")){
+                    // console.log( navbar );
+                    navbar.addClass("navbar-inside--active");
+                }
             }
         });
     }
