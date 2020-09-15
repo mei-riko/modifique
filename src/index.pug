@@ -64,7 +64,30 @@ html(lang="ru")
                             label.checkbox__label(for="agreeInline") согласен с обработкой 
                                 a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
         //- Services
-        section.container#services
+        section.container.content-service.mb-4.mb-sm-3
+            .row
+                .col-6.col-md-12.col-xl-5
+                    .content-service__image
+                        .content-service__image-item.content-service__image-item--first(style="background-image: url('../demo/demo.jpg');")
+                        .d-sm-none.content-service__image-item.content-service__image-item--last(style="background-image: url('../demo/img.png');")
+                .col-6.col-md-12.col-xl-7
+                    .content-service__content.p-sticky
+                        h2 Процедуры 
+                            span.text-italic клиники
+                        p.content-service__intro Cамые востребованные процедуры этого сезона:
+                        .row
+                            .col-6.col-xs-12
+                                ul.list.list_numeric#service-nav
+                                    li.list_numeric__item.content-service__nav(data-img-1="../demo/img.png" data-img-2="../demo/demo.jpg" data-link="service-1.html" data-content="Можно не только увеличить узкие губы, но и исправить косметические дефекты.") Корреляция губ
+                                    li.list_numeric__item.content-service__nav.content-service__nav--active(data-img-1="../demo/demo.jpg" data-img-2="../demo/img.png" data-link="service-2.html" data-content="Эксклюзивные скидки каждый месяц. Подпишитесь, чтобы быть в курсе") Биоревитализация
+                                    li.list_numeric__item.content-service__nav(data-img-1="../demo/img.png" data-img-2="../demo/demo.jpg" data-link="service-3.html" data-content="1") Кавитация
+                                    li.list_numeric__item.content-service__nav(data-img-1="../demo/demo.jpg" data-img-2="../demo/img.png" data-link="service-4.html" data-content="2") Фотоэпиляция
+                                    li.list_numeric__item.content-service__nav(data-img-1="../demo/img.png" data-img-2="../demo/demo.jpg" data-link="service-5.html" data-content="3") Ботокс ресниц
+                                    li.list_numeric__item.content-service__nav(data-img-1="../demo/demo.jpg" data-img-2="../demo/img.png" data-link="service-6.html" data-content="4") Массаж Гуаша
+                                    li.list_numeric__item.content-service__nav(data-img-1="../demo/img.png" data-img-2="../demo/demo.jpg" data-link="service-7.html" data-content="5") RF-лифтинг
+                            .col-6.col-xs-12.mt-xs-1
+                                p.content-service__quote Можно не только увеличить узкие губы, но и исправить косметические дефекты.
+                                a.btn.btn_link.content-service__link(href="service-category.html") Подробнее
         //- Doctors
         section.container.bg-company
             .row.align-items-center.align-items-xl-start.align-items-md-center

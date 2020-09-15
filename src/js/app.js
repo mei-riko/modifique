@@ -3,6 +3,7 @@ import './nav.js';
 import './slider.js';
 import './price.js';
 import './sertificate.js';
+import './service.js';
 
 $(document).ready(() =>{
   $(".scroll").click(function() {

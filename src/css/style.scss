@@ -53,8 +53,12 @@
 @import "tabs/tabs-nav";
 
 @import "list/list";
+@import "list/list_marker";
+@import "list/list_numeric";
+// Position
 @import "list/list_inline";
 @import "list/list_col";
+// Special
 @import "list/list_advantage";
 @import "list/list_information";
 @import "list/list_contact";
@@ -62,6 +66,7 @@
 @import "sertificate/sertificate";
 
 @import "content/content";
+@import "content/content-service";
 @import "content/content-inside";
 @import "content/content-instagram";
 

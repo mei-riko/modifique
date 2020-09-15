@@ -1,0 +1,13 @@
+.list_numeric{
+    list-style-type: decimal-leading-zero;
+    padding-left: 24px;
+
+    &__item{
+        padding-left: $spacer/3;
+        margin-bottom: $spacer/6;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
