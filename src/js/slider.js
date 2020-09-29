@@ -50,14 +50,14 @@ $(document).ready(() =>{
                 autoplay  : false,
                 responsive: [
                     {
-                        breakpoint: 992,
+                        breakpoint: 993,
                         settings: {
                             slidesToShow: 4,
                             slidesToScroll: 4,
                         }
                     },
                     {
-                        breakpoint: 768,
+                        breakpoint: 769,
                         settings: {
                             slidesToShow: 3,
                             slidesToScroll: 3,
@@ -82,21 +82,21 @@ $(document).ready(() =>{
                 autoplay  : false,
                 responsive: [
                     {
-                        breakpoint: 1480,
+                        breakpoint: 1481,
                         settings: {
                             slidesToShow: 3,
                             slidesToScroll: 3,
                         }
                     },
                     {
-                        breakpoint: 992,
+                        breakpoint: 993,
                         settings: {
                             slidesToShow: 2,
                             slidesToScroll: 2,
                         }
                     },
                     {
-                        breakpoint: 768,
+                        breakpoint: 769,
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1,
@@ -120,23 +120,133 @@ $(document).ready(() =>{
             // console.log("2");
         }
     });
+    
     // Счетчики для табов с отзывами
     let currentSlide = [];
     let sumSlide = [];
 
-    $(".slider .review").each(function( i ){
-        currentSlide[i] = $(this).slick("slickCurrentSlide") + 1;
-        sumSlide[i] = $(this).slick("getSlick").slideCount;
-        if ( Math.round( sumSlide[i] / 5 ) != 1 && Math.round( sumSlide[i] / 5 ) != 0){
-            $(this).parent().find(".slider_count__here").text( Math.round( currentSlide[i] / 5 ) + 1 );
-            $(this).parent().find(".slider_count__sum").text( Math.round( sumSlide[i] / 5 ) );
-        } else{
-            $(this).parent().find(".slider_count__container").hide();
-        }
-    });
+    // Заполнение счетчика
+    function countSlider ( num, item ){
+        item.each(function( i ){
+            currentSlide[i] = $(this).slick("slickCurrentSlide") + 1;
+            sumSlide[i] = $(this).slick("getSlick").slideCount;
+
+            let count = sumSlide[i] / num ;
+
+            if ( Math.ceil( count ) > 1 && Math.round( count ) != 0){
+                $(this).parent().find(".slider_count__here").text( Math.ceil( currentSlide[i] / num ) );
+                $(this).parent().find(".slider_count__sum").text( Math.ceil( count ) );
+            } else{
+                $(this).parent().find(".slider_count__container").hide();
+            }
+
+            console.log( Math.ceil( currentSlide[i] / num ) + " " + Math.ceil( count ));
+        });
+    }
     // Смена цифры в слайдере
-    $(".slider .review").on("afterChange", function(event, slick, currentSlide, nextSlide){
-        let currentChange = $(this).slick("slickCurrentSlide") + 1;
-        $(this).parent().find(".slider_count__here").text( Math.round( currentChange / 5 ) + 1 );
-    });
+    function countChange ( num, item ){
+        item.on("afterChange", function(event, slick, currentSlide, nextSlide){
+            let currentChange = $(this).slick("slickCurrentSlide") + 1;
+            $(this).parent().find(".slider_count__here").text( Math.ceil( currentChange / num ) );
+        });
+    }
+
+    let windowWidth = $(window).width();
+    // console.log( windowWidth );
+    if ( windowWidth > 1480 ){
+        countSlider( 5, $(".slider.slider_count .slider__review.review#instagram"));
+        countSlider( 5, $(".slider.slider_count .slider__review.review#wa"));
+        countSlider( 4, $(".slider.slider_count .slider__review-list.review#web"));
+
+        countChange( 5, $(".slider.slider_count .slider__review.review#instagram"));
+        countChange( 5, $(".slider.slider_count .slider__review.review#wa"));
+        countChange( 4, $(".slider.slider_count .slider__review-list.review#web"));
+    }
+    if ( windowWidth > 992 && windowWidth < 1481){
+        countSlider( 5, $(".slider.slider_count .slider__review.review#instagram"));
+        countSlider( 5, $(".slider.slider_count .slider__review.review#wa"));
+        countSlider( 3, $(".slider.slider_count .slider__review-list.review#web"));
+
+        countChange( 5, $(".slider.slider_count .slider__review.review#instagram"));
+        countChange( 5, $(".slider.slider_count .slider__review.review#wa"));
+        countChange( 3, $(".slider.slider_count .slider__review-list.review#web"));    
+    }
+    if ( windowWidth > 768 &&  windowWidth < 993 ){
+        countSlider( 4, $(".slider.slider_count .slider__review.review#instagram"));
+        countSlider( 4, $(".slider.slider_count .slider__review.review#wa"));
+        countSlider( 2, $(".slider.slider_count .slider__review-list.review#web"));
+
+        countChange( 4, $(".slider.slider_count .slider__review.review#instagram"));
+        countChange( 4, $(".slider.slider_count .slider__review.review#wa"));
+        countChange( 2, $(".slider.slider_count .slider__review-list.review#web"));
+    }
+    if ( windowWidth > 479 &&  windowWidth < 769 ){
+        countSlider( 3, $(".slider.slider_count .slider__review.review#instagram"));
+        countSlider( 3, $(".slider.slider_count .slider__review.review#wa"));
+        countSlider( 1, $(".slider.slider_count .slider__review-list.review#web"));
+
+        countChange( 3, $(".slider.slider_count .slider__review.review#instagram"));
+        countChange( 3, $(".slider.slider_count .slider__review.review#wa"));
+        countChange( 1, $(".slider.slider_count .slider__review-list.review#web"));
+    }
+    if ( windowWidth < 480 ){
+        countSlider( 2, $(".slider.slider_count .slider__review.review#instagram"));
+        countSlider( 2, $(".slider.slider_count .slider__review.review#wa"));
+        countSlider( 1, $(".slider.slider_count .slider__review-list.review#web"));
+
+        countChange( 2, $(".slider.slider_count .slider__review.review#instagram"));
+        countChange( 2, $(".slider.slider_count .slider__review.review#wa"));
+        countChange( 1, $(".slider.slider_count .slider__review-list.review#web"));   
+    }
+    
+// Resize
+$(window).resize(function(){
+    let windowWidth = $(window).width();
+    
+    if ( windowWidth > 1480 ){
+        countSlider( 5, $(".slider.slider_count .slider__review.review#instagram"));
+        countSlider( 5, $(".slider.slider_count .slider__review.review#wa"));
+        countSlider( 4, $(".slider.slider_count .slider__review-list.review#web"));
+
+        countChange( 5, $(".slider.slider_count .slider__review.review#instagram"));
+        countChange( 5, $(".slider.slider_count .slider__review.review#wa"));
+        countChange( 4, $(".slider.slider_count .slider__review-list.review#web"));
+    }
+    if ( windowWidth > 992 && windowWidth < 1481){
+        countSlider( 5, $(".slider.slider_count .slider__review.review#instagram"));
+        countSlider( 5, $(".slider.slider_count .slider__review.review#wa"));
+        countSlider( 3, $(".slider.slider_count .slider__review-list.review#web"));
+
+        countChange( 5, $(".slider.slider_count .slider__review.review#instagram"));
+        countChange( 5, $(".slider.slider_count .slider__review.review#wa"));
+        countChange( 3, $(".slider.slider_count .slider__review-list.review#web"));    
+    }
+    if ( windowWidth > 768 &&  windowWidth < 993 ){
+        countSlider( 4, $(".slider.slider_count .slider__review.review#instagram"));
+        countSlider( 4, $(".slider.slider_count .slider__review.review#wa"));
+        countSlider( 2, $(".slider.slider_count .slider__review-list.review#web"));
+
+        countChange( 4, $(".slider.slider_count .slider__review.review#instagram"));
+        countChange( 4, $(".slider.slider_count .slider__review.review#wa"));
+        countChange( 2, $(".slider.slider_count .slider__review-list.review#web"));
+    }
+    if ( windowWidth > 479 &&  windowWidth < 769 ){
+        countSlider( 3, $(".slider.slider_count .slider__review.review#instagram"));
+        countSlider( 3, $(".slider.slider_count .slider__review.review#wa"));
+        countSlider( 1, $(".slider.slider_count .slider__review-list.review#web"));
+
+        countChange( 3, $(".slider.slider_count .slider__review.review#instagram"));
+        countChange( 3, $(".slider.slider_count .slider__review.review#wa"));
+        countChange( 1, $(".slider.slider_count .slider__review-list.review#web"));
+    }
+    if ( windowWidth < 480 ){
+        countSlider( 2, $(".slider.slider_count .slider__review.review#instagram"));
+        countSlider( 2, $(".slider.slider_count .slider__review.review#wa"));
+        countSlider( 1, $(".slider.slider_count .slider__review-list.review#web"));
+
+        countChange( 2, $(".slider.slider_count .slider__review.review#instagram"));
+        countChange( 2, $(".slider.slider_count .slider__review.review#wa"));
+        countChange( 1, $(".slider.slider_count .slider__review-list.review#web"));   
+    } 
+});
 });

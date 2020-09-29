@@ -31,7 +31,6 @@ $(document).ready(() =>{
         $('.price__nav-list').slideToggle();
         $(this).toggleClass("price__nav-title--active");
     });
-});
 // Resize
 $(window).resize(function(){
     if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
@@ -40,9 +39,5 @@ $(window).resize(function(){
     }else{
         $(".price .price__nav-title").removeClass("price__nav-title--desktop").addClass("price__nav-title--mobile");
     }
-  });
-// else{
-// 	toggle.removeClass("toggle-item--active");
-//   toggle.find(".toggle-item__title").removeClass("toggle-item__title--active");
-//   toggle.find(".toggle-item__content").slideUp();
-// }
+});
+});

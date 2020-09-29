@@ -28,7 +28,27 @@ $(document).ready(() =>{
         });
     }
 
-    // Desktop Navbar   
+    // Desktop Navbar
+    // function navbarHover( itemNav ){
+    //     itemNav.hover(function(){
+    //         let item = $(this).find(".navbar__item");
+    //         let nav = item.data("nav");
+
+    //         if( $(".navbar").hasClass("navbar--desktop") ){
+    //             item.addClass("navbar__item--active");
+    //             $(".navbar-inside#" + nav).addClass("navbar-inside--active");
+    //         }
+    //     },function(){
+    //         let item = $(this).find(".navbar__item");
+    //         let nav = item.data("nav");
+
+    //         if( $(".navbar").hasClass("navbar--desktop") ){
+    //             item.removeClass("navbar__item--active");
+    //             $(".navbar-inside#" + nav).removeClass("navbar-inside--active");
+    //         }
+    //     });
+    // }
+    
     function navbarHover( itemNav ){
         let item = itemNav.find(".navbar__item");
         let nav = item.data("nav");
@@ -72,15 +92,16 @@ $(document).ready(() =>{
         $(".navbar").removeClass("navbar--desktop").addClass("navbar--mobile");
     }
     // Desktop Hover Nav
+    // navbarHover( $(".navbar .navbar__item-parent"));
     var timeout = null;
-    // Задержка скрытия меню 0.5сек
+
     $('.navbar .navbar__item-parent').mouseenter(function(){
         clearTimeout(timeout);
         navbarHover( $(this) );
     });    
     $('.navbar .navbar__item-parent').mouseleave(function(){
         clearTimeout(timeout);
-        timeout = setTimeout( navbarUnHover , 500);
+        timeout = setTimeout( navbarUnHover , 5000);
     });
     navbarInsideHover( $(".navbar .navbar-inside .navbar-inside__item-parent"));
     
