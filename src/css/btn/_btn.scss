@@ -16,87 +16,6 @@
         text-decoration: none;
     }
 
-    &_default{
-        border: 1px solid $black;
-        background: $black;
-        color: $white;
-        text-transform: uppercase;
-
-        &:hover{
-            background: lighten($color: $black, $amount: 6);
-            color: $white;
-        }
-        &:focus{
-            background: lighten($color: $black, $amount: 10);
-            color: $white;
-        }
-    }
-    &_secondary{
-        border: 1px solid $black;
-        background: inherit;
-        color: $black;
-        text-transform: uppercase;
-
-        &:hover, &:focus{
-            border: 1px solid $dark-grey;
-            background: $light-100;
-            color: $black;
-        }
-    }
-    &_link{
-        position: relative;
-        text-transform: uppercase;
-
-        padding-left: map-get($map: $spacers, $key: 3);
-        padding-right: 0;
-
-        &:before{
-            content:'';
-            display: block;
-            width: 0;
-            height: 34px;
-            background: url("../icon/arrow-right-light.svg") no-repeat center / 20px;
-            border-bottom: 1px solid $border-color;
-
-            position: absolute;
-            right: 0;
-            top: calc(50% - 15px);
-            transition: all .2s;
-        }
-        &:after{
-            content:'';
-            display: block;
-            width: map-get($map: $spacers, $key: 3);
-            height: 34px;
-            background: url("../icon/arrow-right-light.svg") no-repeat center / 20px;
-            border-bottom: 1px solid $border-color;
-
-            position: absolute;
-            left: 0;
-            top: calc(50% - 15px);
-            transition: all .2s;
-        }
-        &:hover, &:focus{
-            color: $black;
-
-            padding-left: 0;
-            padding-right: map-get($map: $spacers, $key: 3);
-    
-            &:before{
-                width: map-get($map: $spacers, $key: 3);
-            }
-            &:after{
-                width: 0;
-            }
-        }
-    }
-    &_link-inverse{
-        color: $light-300;
-        &:hover, &:focus{
-            color: $light-300;
-        }
-    }
-
     &--full{
         width: 100%;
     }
@@ -104,14 +23,6 @@
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .btn{
         padding: 10px 20px;
-        &_link{
-            padding-right: 0;
-            padding-left: map-get($map: $spacers, $key: 3);
-            &:hover, &:focus{
-                padding-left: 0;
-                padding-right: map-get($map: $spacers, $key: 3);
-            }
-        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){

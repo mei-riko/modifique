@@ -1,8 +1,8 @@
 .toggle-item{
-    padding: $spacer/2;
     border-bottom: 1px solid $light-300;
 
     &__title{
+        padding: $spacer/2;
         padding-right: $spacer;
         margin-bottom: 0;
 
@@ -24,6 +24,10 @@
             transition: .4s;
         }
 
+        &_price{
+            padding: $spacer/2 0;
+        }
+
         &--active{
             &:after{
                 transform: rotate(180deg);
@@ -32,11 +36,7 @@
     }
     &__content{
         display: none;
-        padding-top: $spacer/2;
-    }
-
-    &_price{
-        padding: $spacer/2 0;
+        padding-bottom: $spacer/2;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){

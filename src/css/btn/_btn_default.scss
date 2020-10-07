@@ -1,0 +1,15 @@
+.btn_default{
+    border: 1px solid $black;
+    background: $black;
+    color: $white;
+    text-transform: uppercase;
+
+    &:hover{
+        background: lighten($color: $black, $amount: 6);
+        color: $white;
+    }
+    &:focus{
+        background: lighten($color: $black, $amount: 10);
+        color: $white;
+    }
+}

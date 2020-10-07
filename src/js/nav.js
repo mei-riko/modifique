@@ -86,7 +86,7 @@ $(document).ready(() =>{
     
     // Mobile Ckick Nav
     navbarMobileClick( $(".navbar .navbar__item-parent .navbar__item") );
-    navbarMobileInsideClick( $(".navbar .navbar-inside .navbar-inside__item-parent .navbar-inside__item") );
+    navbarMobileInsideClick( $(".navbar .navbar-inside .navbar-inside__item-parent .navbar-inside__item.navbar-inside__item--parent") );
     
     // Mobile Navbar
     $(".navbar-toggle#nav").on("click", function(e){
@@ -110,6 +110,7 @@ $(document).ready(() =>{
         // e.preventDefault();
         let id = $(this).data("close");
         let navbar = $(".navbar-inside#" + id);
+        // console.log( id + '   ' + navbar)
         navbar.removeClass("navbar-inside--active");
     });
 
@@ -129,14 +130,3 @@ $(document).ready(() =>{
         }
     });
 });
-
-
-// $(document).mouseup(function (e){ // событие клика по веб-документу
-//     let dropdownActive = $(".navbar-collapse.navbar-collapse--active"); // элемент
-//     if (!dropdownActive.is(e.target) // клик был не по блоку
-//         // && dropdownActive.has(e.target).length === 0 // и не по его дочерним элементам
-//         && !$(".navbar-toggle#nav").is(e.target) ) { 
-//             $(".navbar-collapse").removeClass("navbar-collapse--active");
-//             $("body").removeClass("navbar-open");
-//     }
-// });

@@ -11,6 +11,9 @@ html,body {
 *::after {
     box-sizing: inherit;
 }
+.compensate-for-scrollbar {
+    width: auto;
+}
 
 h1, h2, h3, h4, h5, h6,
 .h1-lead, .h1, .h2, .h3, .h4, .h5, .h6{
@@ -94,8 +97,22 @@ table{
     background-size: 7%;
 }
 .bg-result{
-    background: url("../icon/result.svg") no-repeat top right;
-    background-size: 7%;
+    position: relative;
+    overflow: hidden;
+
+    &:after{
+        content: '';
+        display: block;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8%;
+        height: 720px;
+        max-height: 100%;
+        
+        background: url("../icon/result.svg") no-repeat top right / contain;
+    }
 }
 .bg-sales{
     background: url("../icon/sale.svg") no-repeat top left;
@@ -122,6 +139,7 @@ table{
 
 .text-uppercase{text-transform: uppercase;}
 .text-bold,strong,b{font-weight: 700;}
+.text-light{font-weight: 300;}
 
 .text-small,small,.small{font-size: 12px;}
 .text-lead,.lead{font-size: 1.15rem;}
@@ -145,6 +163,8 @@ table{
 
 .map{
     // filter: hue-rotate(300deg) grayscale(.5);
+    background: #fff url("../icon/loader.gif") no-repeat center / 180px;
+    border: 1px solid $border-color;
     filter: grayscale(1);
     height: 460px;
 }

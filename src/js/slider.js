@@ -43,12 +43,13 @@ $(document).ready(() =>{
         // Review Page Screenshoot
         $(".slider__review").each(function(){
             $(this).slick({
-                slidesToShow: 5,
-                slidesToScroll: 5,
-                arrows      : true,
-                dots        : false,
-                autoplay  : false,
-                responsive: [
+                slidesToShow    : 5,
+                slidesToScroll  : 5,
+                arrows          : true,
+                dots            : false,
+                infinite        : false,
+                autoplay        : false,
+                responsive      : [
                     {
                         breakpoint: 993,
                         settings: {
@@ -75,12 +76,13 @@ $(document).ready(() =>{
         });
         $(".slider__review-list").each(function(){
             $(this).slick({
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                arrows      : true,
-                dots        : false,
-                autoplay  : false,
-                responsive: [
+                slidesToShow    : 4,
+                slidesToScroll  : 4,
+                arrows          : true,
+                dots            : false,
+                autoplay        : false,
+                infinite        : false,
+                responsive      : [
                     {
                         breakpoint: 1481,
                         settings: {
@@ -140,7 +142,7 @@ $(document).ready(() =>{
                 $(this).parent().find(".slider_count__container").hide();
             }
 
-            console.log( Math.ceil( currentSlide[i] / num ) + " " + Math.ceil( count ));
+            // console.log( Math.ceil( currentSlide[i] / num ) + " " + Math.ceil( count ));
         });
     }
     // Смена цифры в слайдере

@@ -73,9 +73,9 @@
         }
         &__nav-title{
             position: relative;
-            border: 1px solid $border-color;
             line-height: 18px;
             padding: $spacer/3;
+            border: 1px solid $border-color;
             cursor: pointer;
 
             &:after{
@@ -92,6 +92,7 @@
             }
 
             &--active{
+                margin-bottom: 0;
                 &:after{
                     transform: rotate(180deg);
                 }
@@ -99,7 +100,10 @@
         }
         &__nav-list{
             display: none;
-            padding-bottom: 24px;
+            padding: $spacer/2 $spacer/2 3px;
+            border: 1px solid $border-color;
+            border-top: none;
+            margin-bottom: $spacer;
         }
         &__content{
             flex: 0 0 100%;

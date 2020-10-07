@@ -1,0 +1,17 @@
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content-result{
+        max-width: 100%;
+        overflow-x: auto;
+        &__row{
+            margin-left: -5px;
+            margin-right: -5px;
+
+            width: calc(400% - 40px);
+            padding-bottom: $spacer/2;
+
+            & > .col-xs-3{
+                padding: 0 5px;
+            }
+        }
+    }
+}

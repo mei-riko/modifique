@@ -13,7 +13,7 @@ html(lang="ru")
         include chunks/header.pug
         section.container.sertificate.pt-2.pt-md-0.pb-3
             .row.align-items-center.align-items-lg-start
-                .col-4.col-md-12.mb-md-2
+                .col-4.col-md-12.mb-md-2.d-sm-none
                     .sertificate__preview
                 .col-8.col-md-12
                     .content-right
@@ -25,7 +25,9 @@ html(lang="ru")
                             li.list_advantage__item.list_col__item активируется при предъявлении в клинике
                             li.list_advantage__item.list_col__item не подлежит обмену и возврату
                         p.h6.mt-3.mb-2.mt-lg-2 Создайте свой сертификат:
-                        form.sertificate__constructor#constrictor
+                        .d-none.d-sm-block
+                            .sertificate__preview
+                        form.sertificate__constructor.mt-sm-2#constrictor
                             .sertificate__price
                                 p.sertificate__title Выберите сумму:
                                 .radio.sertificate__radio.text-bold

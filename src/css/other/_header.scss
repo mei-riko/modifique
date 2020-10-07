@@ -74,9 +74,15 @@
         &:after{right:0;}
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .header{
+        margin-bottom: $spacer;
+        border-bottom: 1px solid $border-color;
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .header{
+        padding: $spacer/2 0;
         &__logo{
             background-position-x: left;
             transform: translateY(3px);

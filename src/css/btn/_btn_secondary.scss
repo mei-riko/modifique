@@ -1,0 +1,12 @@
+.btn_secondary{
+    border: 1px solid $black;
+    background: inherit;
+    color: $black;
+    text-transform: uppercase;
+
+    &:hover, &:focus{
+        border: 1px solid $dark-grey;
+        background: $light-100;
+        color: $black;
+    }
+}

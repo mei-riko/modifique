@@ -9,6 +9,10 @@
 @import "framework/offset";
 
 @import "btn/btn";
+@import "btn/btn_default";
+@import "btn/btn_secondary";
+@import "btn/btn_link";
+@import "btn/btn_review";
 @import "btn/btn-group";
 
 @import "form/form";
@@ -67,6 +71,7 @@
 
 @import "content/content";
 @import "content/content-service";
+@import "content/content-result";
 @import "content/content-inside";
 @import "content/content-instagram";
 

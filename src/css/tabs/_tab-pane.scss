@@ -57,7 +57,6 @@
         }
     }
 }
-
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .tab-pane{
         &__col-full{
@@ -77,6 +76,16 @@
             &--small{
                 flex: 0 0 270px;
                 max-width: 270px;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .tab-pane{
+        &_scroll-xs{
+            overflow-x: auto;
+            &.active{
+                overflow-x: auto;
             }
         }
     }

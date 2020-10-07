@@ -16,7 +16,7 @@
             top: 0;
             padding-left: $spacer;
             padding-right: $spacer;
-            width: 3*$spacer;
+            width: 100px;
             line-height: $spacer;
             text-align: center;
         }
@@ -29,7 +29,7 @@
         }
         .slick-arrow.slick-next{
             top: -30px;
-            left: 50px;
+            left: 60px;
             width: $spacer;
             height: $spacer;
         }

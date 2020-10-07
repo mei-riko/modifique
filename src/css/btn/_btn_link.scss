@@ -1,0 +1,63 @@
+.btn_link{
+    position: relative;
+    text-transform: uppercase;
+
+    padding-left: map-get($map: $spacers, $key: 3);
+    padding-right: 0;
+
+    &:before{
+        content:'';
+        display: block;
+        width: 0;
+        height: 34px;
+        background: url("../icon/arrow-right-light.svg") no-repeat center / 20px;
+        border-bottom: 1px solid $border-color;
+
+        position: absolute;
+        right: 0;
+        top: calc(50% - 15px);
+        transition: all .2s;
+    }
+    &:after{
+        content:'';
+        display: block;
+        width: map-get($map: $spacers, $key: 3);
+        height: 34px;
+        background: url("../icon/arrow-right-light.svg") no-repeat center / 20px;
+        border-bottom: 1px solid $border-color;
+
+        position: absolute;
+        left: 0;
+        top: calc(50% - 15px);
+        transition: all .2s;
+    }
+    &:hover, &:focus{
+        color: $black;
+
+        padding-left: 0;
+        padding-right: map-get($map: $spacers, $key: 3);
+
+        &:before{
+            width: map-get($map: $spacers, $key: 3);
+        }
+        &:after{
+            width: 0;
+        }
+    }
+}
+.btn_link-inverse{
+    color: $light-300;
+    &:hover, &:focus{
+        color: $light-300;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .btn_link{
+        padding-right: 0;
+        padding-left: map-get($map: $spacers, $key: 3);
+        &:hover, &:focus{
+            padding-left: 0;
+            padding-right: map-get($map: $spacers, $key: 3);
+        }
+    }
+}

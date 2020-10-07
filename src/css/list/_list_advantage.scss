@@ -1,8 +1,9 @@
 .list_advantage{
     &__item{
         position: relative;
-        padding: $spacer/3 0 $spacer/3 map-get($map: $spacers, $key: 3);
-
+        padding: 20px 0 20px map-get($map: $spacers, $key: 3);
+        min-width: 25%;
+        
         &:before{
             content:'';
             display: block;
@@ -21,6 +22,14 @@
             display: flex;
             align-items: center;
             padding-right: $spacer/3;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .list_advantage{
+        &__item{
+            padding: 10px 0 10px map-get($map: $spacers, $key: 3);
         }
     }
 }

@@ -211,6 +211,9 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .sertificate{
+        &__preview{
+            height: 240px;
+        }
         &__title{
             font-size: 10px;
         }
@@ -243,13 +246,19 @@
             padding-top: $spacer/2;
             padding-bottom: $spacer/2;
             border-right: none;
+            
+            border-top: 1px solid $border-color;
             border-bottom: 1px solid $border-color;
+
+            order: 2;
         }
         &__color{
             flex: 0 0 100%;
             max-width: 100%;
             padding-top: $spacer/2;
             padding-bottom: $spacer/2;
+
+            order: 1;
 
             &-row{
                 margin-left: -5px;
@@ -267,6 +276,8 @@
         &__type{
             padding-top: $spacer/2;
             padding-bottom: $spacer/2;
+        
+            order: 3;
         }
     }
 }
