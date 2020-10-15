@@ -1,0 +1,29 @@
+.modal{
+    display: none;
+
+    background-color: $white;
+    color: $black;
+
+    width: 720px;
+    max-width: 100%;
+    max-height: 80vh;
+
+    &__title {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #F3F2F5;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+
+    &.fancybox-content{
+        padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 3);
+    }
+
+    ul{
+        padding-left: 15px;
+        list-style: square;
+    }
+    ol{
+        padding-left: 15px;
+    }
+}

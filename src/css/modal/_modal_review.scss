@@ -1,0 +1,17 @@
+.modal_review{
+    &.fancybox-content{
+        background-color: $light-100;
+        padding: $spacer/3;
+    }
+    &__preview{
+        background-color: $white;
+        & + .modal_review__content{
+            border-top: none;
+        }
+    }
+    &__content{
+        background-color: $white;
+        border: 1px solid $border-color;
+        padding: $spacer/2 $spacer;
+    }
+}

@@ -25,9 +25,14 @@
 
 @import "other/footer";
 @import "other/header";
-@import "other/modal";
 @import "other/breadcrumbs";
 @import "other/pagination";
+
+@import "modal/modal";
+@import "modal/modal_callback";
+@import "modal/modal_content";
+@import "modal/modal_review";
+
 
 @import "slider/slider";
 @import "slider/slider_index";

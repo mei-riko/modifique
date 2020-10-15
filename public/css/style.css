@@ -2141,6 +2141,44 @@ table td {
   height: 460px;
 }
 
+.preloading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  max-height: 100vh;
+  background: #f3f2f5;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.preloading__text {
+  position: absolute;
+  top: calc(50% - 80px);
+  left: calc(50% - 80px);
+  width: 160px;
+  -webkit-animation: circul 20s infinite linear;
+  animation: circul 20s infinite linear;
+}
+
+.preloading__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80px;
+}
+
+.preloading--ready {
+  opacity: 0;
+}
+
 @media all and (max-width: 1480px) {
   html, body {
     font-size: 16px;
@@ -3500,80 +3538,6 @@ table td {
   }
 }
 
-.modal {
-  display: none;
-  background-color: #ffffff;
-  color: #1d1d1b;
-  width: 720px;
-  max-width: 100%;
-  max-height: 80vh;
-}
-
-.modal.fancybox-content {
-  padding: 30px 45px;
-}
-
-.modal ul {
-  padding-left: 15px;
-  list-style: square;
-}
-
-.modal ol {
-  padding-left: 15px;
-}
-
-.modal_review.fancybox-content {
-  background-color: #F3F2F5;
-  padding: 10px;
-}
-
-.modal_review__preview {
-  background-color: #ffffff;
-}
-
-.modal_review__preview + .modal_review__content {
-  border-top: none;
-}
-
-.modal_review__content {
-  background-color: #ffffff;
-  border: 1px solid #EBE6DD;
-  padding: 15px 30px;
-}
-
-.modal_callback {
-  width: 400px;
-  max-width: 100%;
-}
-
-.modal_content {
-  padding: 15px;
-}
-
-.modal_content.fancybox-content {
-  padding: 15px;
-  background-color: #F3F2F5;
-}
-
-.modal_content .fancybox-button.fancybox-close-small {
-  opacity: 1;
-  background-color: #ffffff;
-  border: 1px solid #EBE6DD;
-}
-
-.modal_content__title {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #F3F2F5;
-  text-transform: uppercase;
-  font-weight: 800;
-}
-
-.modal_content__inside {
-  padding: 30px;
-  background-color: #ffffff;
-  border: 1px solid #EBE6DD;
-}
-
 .breadcrumbs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3681,6 +3645,133 @@ table td {
   border: 1px solid #D1CDC5;
   background-color: #F3F2F5;
   line-height: 28px;
+}
+
+.modal {
+  display: none;
+  background-color: #ffffff;
+  color: #1d1d1b;
+  width: 720px;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+.modal__title {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #F3F2F5;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.modal.fancybox-content {
+  padding: 30px 45px;
+}
+
+.modal ul {
+  padding-left: 15px;
+  list-style: square;
+}
+
+.modal ol {
+  padding-left: 15px;
+}
+
+.modal_callback {
+  width: 400px;
+  max-width: 100%;
+}
+
+.modal {
+  display: none;
+  background-color: #ffffff;
+  color: #1d1d1b;
+  width: 720px;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+.modal.fancybox-content {
+  padding: 30px 45px;
+}
+
+.modal ul {
+  padding-left: 15px;
+  list-style: square;
+}
+
+.modal ol {
+  padding-left: 15px;
+}
+
+.modal_review.fancybox-content {
+  background-color: #F3F2F5;
+  padding: 10px;
+}
+
+.modal_review__preview {
+  background-color: #ffffff;
+}
+
+.modal_review__preview + .modal_review__content {
+  border-top: none;
+}
+
+.modal_review__content {
+  background-color: #ffffff;
+  border: 1px solid #EBE6DD;
+  padding: 15px 30px;
+}
+
+.modal_callback {
+  width: 400px;
+  max-width: 100%;
+}
+
+.modal_content {
+  padding: 15px;
+}
+
+.modal_content.fancybox-content {
+  padding: 15px;
+  background-color: #F3F2F5;
+}
+
+.modal_content .fancybox-button.fancybox-close-small {
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid #EBE6DD;
+}
+
+.modal_content__title {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #F3F2F5;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.modal_content__inside {
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #EBE6DD;
+}
+
+.modal_review.fancybox-content {
+  background-color: #F3F2F5;
+  padding: 10px;
+}
+
+.modal_review__preview {
+  background-color: #ffffff;
+}
+
+.modal_review__preview + .modal_review__content {
+  border-top: none;
+}
+
+.modal_review__content {
+  background-color: #ffffff;
+  border: 1px solid #EBE6DD;
+  padding: 15px 30px;
 }
 
 .slider__item {
