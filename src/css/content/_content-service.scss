@@ -10,9 +10,8 @@
             min-height: 260px;
             margin-bottom: $spacer;
 
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            background: no-repeat center / cover;
+            border: 1px solid $border-color;
 
             &:last-child{
                 margin-bottom: 0;
@@ -121,7 +120,6 @@
         }
     }
 }
-
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content-service{
         &__intro{

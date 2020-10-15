@@ -18,6 +18,10 @@
             background: url("../icon/plus.svg") no-repeat center / contain;
         }
 
+        &_xs-offset{
+            padding: 10px 0 10px map-get($map: $spacers, $key: 3);
+        }
+
         &.list_col__item{
             display: flex;
             align-items: center;

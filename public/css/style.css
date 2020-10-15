@@ -5358,6 +5358,10 @@ table td {
   background: url("../icon/plus.svg") no-repeat center/contain;
 }
 
+.list_advantage__item_xs-offset {
+  padding: 10px 0 10px 45px;
+}
+
 .list_advantage__item.list_col__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5808,9 +5812,8 @@ table td {
   height: calc(50vh - 45px);
   min-height: 260px;
   margin-bottom: 30px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: no-repeat center / cover;
+  border: 1px solid #EBE6DD;
 }
 
 .content-service__image-item:last-child {
