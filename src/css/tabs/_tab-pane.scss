@@ -2,16 +2,12 @@
 .tab-pane{
     overflow: hidden;
     height: 0;
-    // display: none;
-
     &_scroll{
         overflow-x: auto;
 
         &::-webkit-scrollbar { height: 6px; }
-        // &::-webkit-scrollbar-button { background-color: $grey;}
         &::-webkit-scrollbar-track { background: $light-100; }
         &::-webkit-scrollbar-thumb { background: $light-300;}
-        // &::-webkit-scrollbar-corner { }
 
         &.active{
             overflow-x: auto;
@@ -20,8 +16,6 @@
     &__row{
         display: flex;
         flex-wrap: nowrap;
-        // margin-left: -15px;
-        // margin-right: -15px;
     }
     &__col-full{
         @extend .col-7;
@@ -45,19 +39,29 @@
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .tab-pane{
         &__col-full{
-            @extend .col-lg-6;
+            flex: 0 0 540px;
+            max-width: 540px;
+            padding-right: $spacer;
         }
         &__col{
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-between;
 
-            flex: 0 0 100%;
-            max-width: calc(100% - 30px);
+            padding-right: 0;
 
-            &--small{
+            flex: 0 0 1080px;
+            max-width: 1080px;
+
+            &-inside{
                 flex: 0 0 50%;
                 max-width: 50%;
+                padding-right: $spacer;
+            }
+
+            &--small{
+                flex: 0 0 540px;
+                max-width: 540px;
             }
         }
     }
@@ -71,26 +75,11 @@
         &__col{
             flex: 0 0 540px;
             max-width: 540px;
-
-            &-inside{
-                flex: 0 0 240px;
-                max-width: 240px;
-                margin: 0;
-            }
+            padding-right: 0;
 
             &--small{
                 flex: 0 0 270px;
                 max-width: 270px;
-            }
-        }
-    }
-}
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
-    .tab-pane{
-        &_scroll-xs{
-            overflow-x: auto;
-            &.active{
-                overflow-x: auto;
             }
         }
     }
