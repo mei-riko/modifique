@@ -92,9 +92,26 @@ table{
 .bg-black{background-color: $black;}
 .bg-white{background-color: $white;}
 .bg-light{background-color: lighten($color: $light-100, $amount: 2);}
+
 .bg-company{
-    background: url("../icon/modifique.svg") no-repeat top right;
-    background-size: 7%;
+    position: relative;
+    overflow: hidden;
+
+    &:after{
+        content: '';
+        display: block;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8%;
+        height: 460px;
+        max-height: 100%;
+        
+        background: url("../icon/modifique.svg") no-repeat top right / contain;
+    }
+    // background: url("../icon/modifique.svg") no-repeat top right;
+    // background-size: 7%;
 }
 .bg-result{
     position: relative;
@@ -115,9 +132,25 @@ table{
     }
 }
 .bg-sales{
-    background: url("../icon/sale.svg") no-repeat top left;
-    background-size: 7%;
-    background-position-x: 10px;
+    // background: url("../icon/sale.svg") no-repeat top left;
+    // background-size: 7%;
+    // background-position-x: 10px;
+    position: relative;
+    overflow: hidden;
+
+    &:after{
+        content: '';
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8%;
+        height: 280px;
+        max-height: 100%;
+        
+        background: url("../icon/sale.svg") no-repeat top left / contain;
+    }
 }
 
 .p-relative{position: relative;}
@@ -267,7 +300,11 @@ table{
     .h6,h6{font-size: map-get($font-size, 'sm');}
 
     .bg-company,
-    .bg-sales{background-image: none;}
+    .bg-sales{
+        &:after{
+            display: none;
+        }
+    }
     
     .d-sm{
         &-flex{display: flex;}

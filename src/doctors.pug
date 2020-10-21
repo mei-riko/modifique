@@ -38,11 +38,11 @@ html(lang="ru")
                         a.tabs-nav__link(href="#doctors3" data-toggle="tab") Медсестры и ассистенты
                     li.tabs-nav__item
                         a.tabs-nav__link(href="#doctors4" data-toggle="tab") Административный персонал
-            .tab-content
-                .tab-pane.fade.tab-pane_scroll.active.fade.in#doctors1   
+            .tab-content.mt-2
+                .tab-pane.tab-pane_scroll.fade.active.fade.in#doctors1   
                     .tab-pane__row
                         .tab-pane__col-full
-                            .preview-doctor
+                            .preview-doctor.mb-2
                                 .preview-doctor__photo.preview-doctor__photo--full
                                     img.img-fluid(src="../demo/person-prev-big.png")
                                 .preview-doctor__content.preview-doctor__content--full
@@ -65,9 +65,9 @@ html(lang="ru")
                                 +preview-doctor('Гринченко','Мария Владимировна','дерматолог-косметолог')(src="../demo/no-img.png" class="mb-2")
                             .tab-pane__col-inside
                                 +preview-doctor('Кросковицкая','Алёна Ивановна','дерматолог-косметолог')(src="../demo/person-prev-1.png" class="mb-2")
-                        .tab-pane__col.tab-pane__col--small
-                            .tab-pane__col-inside
-                                +preview-doctor('Кросковицкая','Алёна Ивановна','дерматолог-косметолог')(src="../demo/person-prev-1.png" class="mb-2")
+                        //- .tab-pane__col.tab-pane__col--small
+                        //-     .tab-pane__col-inside
+                        //-         +preview-doctor('Кросковицкая','Алёна Ивановна','дерматолог-косметолог')(src="../demo/person-prev-1.png" class="mb-2")
                 .tab-pane.fade#doctors2  
                     p 123 
                 .tab-pane.fade#doctors3
@@ -97,4 +97,9 @@ html(lang="ru")
         script(src="./js/bootstrap-tab.js")
 
         script(src="./js/jquery.inputmask.min.js")
+        
+        //- Fake Scroll
+        link(href='./scrollbar/tinyscrollbar.css', rel='stylesheet')
+        script(src="./scrollbar/jquery.tinyscrollbar.min.js")
+        
         script(src="./js/app.min.js")

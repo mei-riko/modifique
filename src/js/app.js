@@ -85,4 +85,8 @@ $(document).ready(() =>{
       $(this).tab('show');
     })
   }
+  // FakeScroll
+  if( $('.scroll-pane').length > 0 ){
+    // $('.scroll-pane').jScrollPane();
+  }
 });

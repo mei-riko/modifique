@@ -2011,8 +2011,20 @@ table td {
 }
 
 .bg-company {
-  background: url("../icon/modifique.svg") no-repeat top right;
-  background-size: 7%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-company:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8%;
+  height: 460px;
+  max-height: 100%;
+  background: url("../icon/modifique.svg") no-repeat top right/contain;
 }
 
 .bg-result {
@@ -2033,9 +2045,20 @@ table td {
 }
 
 .bg-sales {
-  background: url("../icon/sale.svg") no-repeat top left;
-  background-size: 7%;
-  background-position-x: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-sales:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8%;
+  height: 280px;
+  max-height: 100%;
+  background: url("../icon/sale.svg") no-repeat top left/contain;
 }
 
 .p-relative {
@@ -2303,9 +2326,9 @@ table td {
   .h6, h6 {
     font-size: 14px;
   }
-  .bg-company,
-  .bg-sales {
-    background-image: none;
+  .bg-company:after,
+  .bg-sales:after {
+    display: none;
   }
   .d-sm-flex {
     display: -webkit-box;
@@ -4631,7 +4654,7 @@ table td {
 }
 
 .preview-doctor__photo {
-  padding-right: 30px;
+  padding-right: 15px;
 }
 
 .preview-doctor__photo--full {
@@ -4649,7 +4672,7 @@ table td {
 }
 
 .preview-doctor__name {
-  font-size: 24px;
+  font-size: 22px;
   font-family: "Noto Serif", sans-serif;
   font-weight: 700;
   line-height: 1.2;
@@ -4661,7 +4684,7 @@ table td {
 }
 
 .preview-doctor__surname {
-  font-size: 24px;
+  font-size: 22px;
   font-family: "Noto Serif", sans-serif;
   font-weight: 700;
   line-height: 1.2;
@@ -5187,6 +5210,18 @@ table td {
   overflow-x: auto;
 }
 
+.tab-pane_scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tab-pane_scroll::-webkit-scrollbar-track {
+  background: #F3F2F5;
+}
+
+.tab-pane_scroll::-webkit-scrollbar-thumb {
+  background: #D1CDC5;
+}
+
 .tab-pane_scroll.active {
   overflow-x: auto;
 }
@@ -5197,8 +5232,14 @@ table td {
   display: flex;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  margin-left: -15px;
-  margin-right: -15px;
+}
+
+.tab-pane__col-full {
+  padding-left: 0;
+}
+
+.tab-pane__col {
+  padding-left: 0;
 }
 
 @media all and (max-width: 1200px) {

@@ -6,7 +6,7 @@
 
     &__photo{
         @extend .col-5;
-        padding-right: $spacer;
+        padding-right: $spacer/2;
     
         &--full{
             flex: 0 0 50%;
@@ -23,7 +23,7 @@
         }
     }
     &__name{
-        font-size: 24px;
+        font-size: 22px;
         font-family: $font-family-serif;
         font-weight: $font-weight-bolder;
         line-height: 1.2;
@@ -34,7 +34,7 @@
         }
     }
     &__surname{
-        font-size: 24px;
+        font-size: 22px;
         font-family: $font-family-serif;
         font-weight: $font-weight-bolder;
         line-height: 1.2;
