@@ -18,6 +18,10 @@
 .table-responsive{
     max-width: 100%;
     overflow-x: auto;
+
+    .table{
+        margin-bottom: $spacer/2;
+    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .table{

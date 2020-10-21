@@ -4591,10 +4591,10 @@ table td {
   font-size: 14px;
 }
 
-.preview-content__link:hover, .preview-content__link:focus {
+.preview-content_link:hover, .preview-content_link:focus {
   text-decoration: none;
   color: #1d1d1b;
-  background-color: #F3F2F5;
+  background-color: white;
 }
 
 @media all and (max-width: 1480px) {
@@ -6376,6 +6376,10 @@ table td {
 .table-responsive {
   max-width: 100%;
   overflow-x: auto;
+}
+
+.table-responsive .table {
+  margin-bottom: 15px;
 }
 
 @media all and (max-width: 576px) {

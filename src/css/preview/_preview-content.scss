@@ -22,11 +22,11 @@
 
         font-size: map-get($map: $font-size, $key: 'sm');
     }
-    &__link{
+    &_link{
         &:hover, &:focus{
             text-decoration: none;
 	        color: $black;
-	        background-color:$light-100;
+	        background-color: lighten($color: $light-100, $amount: 5);
         }
     }
 }
