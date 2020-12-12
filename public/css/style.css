@@ -5765,6 +5765,11 @@ table td {
   border: 1px solid #1d1d1b;
 }
 
+.sertificate__color-col--disable {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
 .sertificate__color-input {
   display: none;
 }

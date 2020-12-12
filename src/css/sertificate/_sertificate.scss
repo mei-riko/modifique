@@ -140,6 +140,11 @@
         &--active{
             border: 1px solid $black;
         }
+        // Заблокированный элемент
+        &--disable{
+            opacity: .5;
+            cursor: not-allowed;
+        }
     }
     &__color-input{
         display: none;

@@ -84,7 +84,7 @@ $(document).ready(() =>{
     });
     navbarInsideHover( $(".navbar .navbar-inside .navbar-inside__item-parent"));
     
-    // Mobile Ckick Nav
+    // Mobile Click Nav
     navbarMobileClick( $(".navbar .navbar__item-parent .navbar__item") );
     navbarMobileInsideClick( $(".navbar .navbar-inside .navbar-inside__item-parent .navbar-inside__item.navbar-inside__item--parent") );
     
