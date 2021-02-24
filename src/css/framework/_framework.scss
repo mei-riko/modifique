@@ -158,9 +158,9 @@ table{
 .p-absolute{position: absolute; top: 0; left: 0; z-index: 101;}
 
 .d{
-    &-flex{display: flex;}
-    &-none{display: none;}
-    &-block{display: block;}
+    &-flex{display: flex!important;}
+    &-none{display: none!important;}
+    &-block{display: block!important;}
 }
 
 .text-white{color: $white;}
@@ -240,9 +240,9 @@ table{
     .h2,h2{font-size: 38px;}
 
     .d-xl{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
+        &-flex{display: flex!important;}
+        &-none{display: none!important;}
+        &-block{display: block!important;}
     }
     .text-xl{
         &-left{text-align: left;}
@@ -262,9 +262,9 @@ table{
     .h6,h6{font-size: 16px;}
 
     .d-lg{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
+        &-flex{display: flex!important;}
+        &-none{display: none!important;}
+        &-block{display: block!important;}
     }
 
     .text-lg{
@@ -277,9 +277,9 @@ table{
     html,body {font-size: map-get($font-size, 'md');}
 
     .d-md{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
+        &-flex{display: flex!important;}
+        &-none{display: none!important;}
+        &-block{display: block!important;}
     }
     
     .text-md{
@@ -307,9 +307,9 @@ table{
     }
     
     .d-sm{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
+        &-flex{display: flex!important;}
+        &-none{display: none!important;}
+        &-block{display: block!important;}
     }
 
     .text-sm{

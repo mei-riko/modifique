@@ -27,8 +27,9 @@ $(document).ready(() =>{
         $(".price .price__nav-title").removeClass("price__nav-title--desktop").addClass("price__nav-title--mobile");
     }
     // Показ категорий на мобильном
-    $('.price .price__nav-title.price__nav-title--mobile').on("click", function(e){
-        $('.price__nav-list').slideToggle();
+    $('.price .price__nav-title.price__nav-title--mobile').on("click", function(){
+        // console.log( '1' );
+        $(this).next(".price__nav-list").slideToggle();
         $(this).toggleClass("price__nav-title--active");
     });
 // Resize

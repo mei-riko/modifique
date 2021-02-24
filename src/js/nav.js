@@ -31,9 +31,14 @@ $(document).ready(() =>{
     // Desktop Navbar   
     function navbarHover( itemNav ){
         let item = itemNav.find(".navbar__item");
+        let itemActive = $(".navbar").find(".navbar__item.navbar__item--active");
         let nav = item.data("nav");
+        let navActive = itemActive.data("nav");
 
         if( $(".navbar").hasClass("navbar--desktop") ){
+            itemActive.removeClass("navbar__item--active");
+            $(".navbar-inside#" + navActive).removeClass("navbar-inside--active");
+
             item.addClass("navbar__item--active");
             $(".navbar-inside#" + nav).addClass("navbar-inside--active");
         }

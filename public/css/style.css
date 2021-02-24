@@ -2081,17 +2081,17 @@ table td {
 }
 
 .d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .d-block {
-  display: block;
+  display: block !important;
 }
 
 .text-white {
@@ -2213,15 +2213,15 @@ table td {
     font-size: 38px;
   }
   .d-xl-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .d-xl-none {
-    display: none;
+    display: none !important;
   }
   .d-xl-block {
-    display: block;
+    display: block !important;
   }
   .text-xl-left {
     text-align: left;
@@ -2257,15 +2257,15 @@ table td {
     font-size: 16px;
   }
   .d-lg-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .d-lg-none {
-    display: none;
+    display: none !important;
   }
   .d-lg-block {
-    display: block;
+    display: block !important;
   }
   .text-lg-left {
     text-align: left;
@@ -2283,15 +2283,15 @@ table td {
     font-size: 14px;
   }
   .d-md-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .d-md-none {
-    display: none;
+    display: none !important;
   }
   .d-md-block {
-    display: block;
+    display: block !important;
   }
   .text-md-left {
     text-align: left;
@@ -2331,15 +2331,15 @@ table td {
     display: none;
   }
   .d-sm-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .d-sm-none {
-    display: none;
+    display: none !important;
   }
   .d-sm-block {
-    display: block;
+    display: block !important;
   }
   .text-sm-left {
     text-align: left;

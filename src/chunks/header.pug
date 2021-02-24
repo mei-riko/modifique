@@ -126,6 +126,13 @@ header.header
                                             a.navbar-inside__title(href="#") Консультации
                             a.navbar-inside__item(href="#") Акции
                             a.navbar-inside__item(href="#") Прайс-лист
+                    .navbar__item-parent
+                        a.navbar__item.navbar_header__item.navbar_header__item--parent(href="#" data-nav="product") Товары
+                        //- Level 1 Inside Nav
+                        .navbar-inside.navbar-inside--level-1#product
+                            span.navbar-collapse__title.navbar-back(data-close="product") Назад
+                            a.navbar-inside__item(href="#") Тест 1
+                            a.navbar-inside__item(href="#") Тест 2
                     a.navbar__item.navbar_header__item(href="#") Сертификаты
                     a.navbar__item.navbar_header__item(href="#") Врачи
                     a.navbar__item.navbar_header__item(href="#") Отзывы
