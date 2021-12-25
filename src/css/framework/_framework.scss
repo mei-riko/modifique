@@ -136,7 +136,8 @@ table{
     // background-size: 7%;
     // background-position-x: 10px;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
+    overflow: visible;
 
     &:after{
         content: '';
@@ -173,6 +174,8 @@ table{
 .text-uppercase{text-transform: uppercase;}
 .text-bold,strong,b{font-weight: 700;}
 .text-light{font-weight: 300;}
+
+.text-underline{text-decoration: underline;}
 
 .text-small,small,.small{font-size: 12px;}
 .text-lead,.lead{font-size: 1.15rem;}

@@ -8,4 +8,13 @@
     ol{
         padding-left: 15px;
     }
+
+    &_seo{
+        a.btn{
+            text-decoration: none;
+            &:hover, &:focus{
+                text-decoration: none;
+            }
+        }
+    }
 }

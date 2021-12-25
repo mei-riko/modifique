@@ -39,7 +39,9 @@
                 // background: $grey;
             }
         }
-
+        &.ms2-message-success{
+            color: $white;
+        }
         &.af-message-error {
             background-color: #fef8f8!important;
             .jGrowl-close {

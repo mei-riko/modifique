@@ -194,6 +194,7 @@ label {
 
 button {
   border-radius: 0;
+  background: unset;
 }
 
 button:focus {
@@ -2046,7 +2047,7 @@ table td {
 
 .bg-sales {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .bg-sales:after {
@@ -2066,7 +2067,6 @@ table td {
 }
 
 .p-sticky {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -2124,6 +2124,10 @@ table td {
 
 .text-light {
   font-weight: 300;
+}
+
+.text-underline {
+  text-decoration: underline;
 }
 
 .text-small, small, .small {
@@ -2759,6 +2763,17 @@ table td {
   }
 }
 
+.alert {
+  display: inline-block;
+}
+
+.alert_error {
+  padding: 8px 16px;
+  background: #f93700;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
 .btn {
   border: none;
   outline: none;
@@ -2780,6 +2795,10 @@ table td {
 
 .btn--full {
   width: 100%;
+}
+
+.btn--small {
+  padding: 8px 16px;
 }
 
 @media all and (max-width: 1200px) {
@@ -3290,6 +3309,10 @@ table td {
 
 .jGrowl#jGrowl .jGrowl-notification.af-message-success {
   background-color: #f9fcf7 !important;
+}
+
+.jGrowl#jGrowl .jGrowl-notification.ms2-message-success {
+  color: #ffffff;
 }
 
 .jGrowl#jGrowl .jGrowl-notification.af-message-error {
@@ -5945,6 +5968,14 @@ table td {
 
 .content ol {
   padding-left: 15px;
+}
+
+.content_seo a.btn {
+  text-decoration: none;
+}
+
+.content_seo a.btn:hover, .content_seo a.btn:focus {
+  text-decoration: none;
 }
 
 .content-service__image {
