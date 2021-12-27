@@ -1,16 +1,21 @@
 header.header
     .container
         .row.align-items-center
-            .col-4.d-md-none
+            .col-4.d-md-none.header__col-left
                 p.header__name Клиника эстетической медицины
-            .col-4.col-sm-6
-                a.header__logo(href="/" title="Клиника эстетической медицины MODIFIQUE")
-            .col-4.col-md-8.col-sm-6.d-flex.justify-content-end.align-items-md-center
-                a.header__phone(href="tel:880091023412") 8 800 910 23 412
                 .header__networks
                     a.header__networks-item.header__networks-item_vk(href="")
                     a.header__networks-item.header__networks-item_inst(href="")
                     a.header__networks-item.header__networks-item_tlg(href="")
+                    a.header__networks-item.header__networks-item_wa(href="")
+            .col-4.col-sm-6
+                a.header__logo(href="/" title="Клиника эстетической медицины MODIFIQUE")
+            .col-4.col-md-8.col-sm-6.header__col-right
+                a.header__phone(href="tel:880091023412") 8 800 910 23 412
+                a.header__cart(href="cart.html")
+                    .header__cart-icon
+                    .header__cart-item Корзина
+
                 span.navbar-toggle#nav
                     <svg class="navbar-toggle__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.3537 7.3537H0.646312C0.289375 7.3537 0 7.64304 0 8.00001C0 8.35698 0.289375 8.64633 0.646312 8.64633H15.3537C15.7107 8.64633 16 8.35698 16 8.00001C16 7.64307 15.7107 7.3537 15.3537 7.3537Z" />

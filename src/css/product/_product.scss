@@ -1,0 +1,44 @@
+.product{
+    padding: map-get($map: $spacers, $key: 1);
+    border: 1px solid $border-color;
+
+    display: grid;
+    grid-gap: map-get($map: $spacers, $key: 1);
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr 30px 40px;
+
+    width: 100%;
+
+    &__brand{
+        display: inline-block;
+        font-size: map-get($map: $font-size, $key: xs);
+        line-height: 1;
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bolder;
+        font-style: italic;
+        border: 1px solid $border-color;
+        color: $black;
+        padding: 8px map-get($map: $spacers, $key: 1);
+
+        &:hover{
+            text-decoration: none;
+            border-color: $red;
+        }
+    }
+
+    &__name{
+        margin-bottom: map-get($map: $spacers, $key: 1);
+    }
+    &__intro{
+        font-size: map-get($map: $font-size, $key: sm);
+        color: $grey;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .product{
+        &__name{
+            margin-bottom: 8px;
+        }
+    }
+}

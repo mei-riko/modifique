@@ -2,6 +2,15 @@
     padding: 25px 0;
     max-height: 160px;
 
+    &__col{
+        &-right{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+        }
+    }
+
     &__logo{
         display: block;
         width: 270px;
@@ -14,24 +23,24 @@
     }
     &__name{
         font-size: 10px;
+        line-height: map-get($map: $font-size, $key: xl);
+
         letter-spacing: 1px;
         font-weight: 500;
         color: $light-300;
         text-transform: uppercase;
-    }
-    &__phone{
-        font-size: 14px;
-        margin-right: map-get($spacers, 2);
+
+        margin-bottom: 8px;
     }
     &__networks{
-        display: flex;
-        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(24px, auto));
+        grid-gap: 8px;
 
         &-item{
             display: block;
             width: 24px;
             height: 24px;
-            margin: 0 4px;
             transition: .4s;
 
             &_vk{
@@ -43,10 +52,44 @@
             &_tlg{
                 background: url("../icon/telegram.svg") no-repeat center / contain;
             }
-
+            &_wa {
+                background: url('../icon/wa.svg') no-repeat center/contain;
+            }
             &:hover, &:focus{
                 filter: grayscale(.5);
             }
+        }
+    }
+    &__phone{
+        font-size: map-get($map: $font-size, $key: lg);
+        line-height: map-get($map: $font-size, $key: xl);
+
+        margin-bottom: 8px;
+    }
+    &__cart{
+        display: grid;
+        grid-template-columns: 24px auto;
+        grid-gap: 8px;
+
+        align-items: center;
+
+        &-icon{
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+            // background: $black url("../icon/cart-light.svg") no-repeat center / 18px;
+            background: url("../icon/cart.svg") no-repeat center / 18px;
+        }
+        &-item{
+            font-size: 11px;
+            line-height: map-get($map: $font-size, $key: xl);
+
+            letter-spacing: 1px;
+            font-weight: 700;
+            // color: $light-300;
+            text-transform: uppercase;
+
+            padding-top: 4px;
         }
     }
     &__intro{
@@ -78,6 +121,20 @@
     .header{
         margin-bottom: $spacer;
         border-bottom: 1px solid $border-color;
+
+        &__col-right{
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &__phone{
+            margin-right: map-get($map: $spacers, $key: 2);
+            margin-bottom: 0px;
+        }
+        &__cart{
+            margin-right: map-get($map: $spacers, $key: 1);
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
@@ -89,6 +146,29 @@
         }
         &__phone{
             display: none;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .header{
+        &__cart{
+            display: inline-flex;
+            margin-right: 0;
+            
+            &-icon{
+                width: 30px;
+                height: 30px;
+                background-color: $light-100;
+                transition: $transition-base;
+
+                &:hover{
+                    background-color: $light-200;
+                }
+            }
+            &-item{
+                display: none;
+            }
         }
     }
 }

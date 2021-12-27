@@ -19,10 +19,13 @@ $link-hover-color     : $red !default;
 $link-decoration      : none !default;
 $link-hover-decoration: underline !default;
 
+$transition-base      : 0.3s;
+
 $grid-columns         : 12 !default;
 $grid-gutter-width    : 30px !default;
 
 $grid-breakpoints: (
+  xxs: 480px,
   xs: 576px,
   sm: 768px,
   md: 992px,
@@ -47,7 +50,7 @@ $font-family-base     : "Raleway",    "Helvetica Neue", Arial,  sans-serif, "App
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation Mono",   "Courier New",    monospace !default;
 
 $font-size: (
-  xs: 0,
+  xs: 12px,
   sm: 14px,
   md: 14px,
   lg: 14px,

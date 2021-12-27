@@ -12,11 +12,48 @@
         &:last-child{
             margin-bottom: 0;
         }
+
+        &_vk,
+        &_inst,
+        &_wa,
+        &_tlg{
+            display: flex;
+            align-items: center;
+            padding-left: map-get($map: $spacers, $key: 2);
+            min-height: 24px;
+        }
+        &_vk{
+            background: url("../icon/vk.svg") no-repeat left center / 24px;
+        }
+        &_inst{
+            background: url("../icon/instagram.svg") no-repeat left center / 24px;
+        }
+        &_tlg{
+            background: url("../icon/telegram.svg") no-repeat left center / 24px;
+        }
+        &_wa {
+            background: url('../icon/wa.svg') no-repeat left center/ 24px;
+        }
+        
     }
     &__col{
         padding-right: map-get($map: $spacers, $key: 2);
         &:last-child{
             padding-right: 0;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xxs')){
+    .navbar_footer{
+        flex-wrap: wrap;
+
+        &__col{
+            margin-bottom: 6px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
         }
     }
 }

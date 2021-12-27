@@ -1,6 +1,6 @@
 .label{
     display: inline-block;
-    font-size: 14px;
+    font-size: map-get($map: $font-size, $key: xs);
     line-height: 1;
     font-family: $font-family-serif;
     font-weight: $font-weight-bolder;

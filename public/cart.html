@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Catalog</title>
+    <title>Cart</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&amp;family=Raleway:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
@@ -62,94 +62,68 @@
         </div>
       </div>
     </header>
-    <section class="container pt-2 pb-3 pt-md-0 pb-md-1">
-      <div class="row mb-1">
-            <div class="col-4 col-sm-12 mb-2 price__order">
-              <div class="preview">
-                <div class="preview__image"><span class="label preview__label">free</span><img class="img-fluid" src="../demo/sale-1.png"/></div>
-                <div class="preview__content"><a class="preview__title" href="#">Бесплатная консультация</a>
-                  <p class="text-grey text-small">Консультация косметолога клиники для всех новых клиентов</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-4 col-sm-12 mb-2 price__order">
-              <div class="preview">
-                <div class="preview__image"><span class="label preview__label">хит</span><img class="img-fluid" src="../demo/sale-2.png"/></div>
-                <div class="preview__content"><a class="preview__title" href="#">Мезотерапия головы</a>
-                  <p class="text-grey text-small">Одна из самых популярных услуг клиники, направленая на увеличение объема волос</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-4 col-sm-12 mb-2 price__order">
-              <div class="preview">
-                <div class="preview__image"><span class="label preview__label">news</span><img class="img-fluid" src="../demo/sale-3.png"/></div>
-                <div class="preview__content"><a class="preview__title" href="#">Открытие клиники</a>
-                  <p class="text-grey text-small">Ура, карантин позади и мы готовы принимать посетителей с 1 сентября!</p>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="row catalog">
-        <div class="col-3 col-sm-12 mb-sm-2">
-          <div class="catalog__filter">
-            <p class="catalog__filter-title">Выберите применение</p>
-            <div class="catalog__filter-list">
-              <div class="checkbox mb-1">
-                <input class="checkbox__input" type="checkbox" name="msoption|tags" id="mse2_msoption|tags_0" value="Для лица и шеи"/>
-                <label class="checkbox__label " for="mse2_msoption|tags_0">Для лица и шеи&nbsp;<sup>28</sup></label>
-              </div>
-              <div class="checkbox mb-1">
-                <input class="checkbox__input" type="checkbox" name="msoption|tags" id="mse2_msoption|tags_1" value="Для тела"/>
-                <label class="checkbox__label " for="mse2_msoption|tags_1">Для лица и шеи&nbsp;<sup>28</sup></label>
-              </div>
+    <section class="container pb-3">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/index.html">Главная</a></li>
+        <li class="breadcrumbs__item breadcrumbs__item--active">Корзина</li>
+      </ul>
+      <div class="content cart">
+        <h1 class="h4 mb-2">Оформление заказа</h1>
+        <div class="cart__product">
+          <div class="cart__product-info">
+            <div class="cart__brand">SkinCeuticals</div>
+            <div class="cart__title">'SC A.G.E.INTERRUPTER (Антигликационный антивозрастной крем)</div>
+            <div class="cart__remove">
+              <form class="ms2_form" method="post">
+                <button class="btn btn_remove" type="submit" name="ms2_action" value="cart/remove">Удалить</button>
+              </form>
             </div>
           </div>
-          <div class="catalog__filter">
-            <p class="catalog__filter-title">Выберите производителя</p>
-            <div class="catalog__filter-list">
-              <div class="checkbox mb-1">
-                <input class="checkbox__input" type="checkbox" name="msoption|tags" id="mse2_msoption|tags_2" value="Для лица и шеи"/>
-                <label class="checkbox__label " for="mse2_msoption|tags_2">SkinCeuticals&nbsp;<sup>28</sup></label>
-              </div>
-              <div class="checkbox mb-1">
-                <input class="checkbox__input" type="checkbox" name="msoption|tags" id="mse2_msoption|tags_3" value="Для лица и шеи"/>
-                <label class="checkbox__label " for="mse2_msoption|tags_3">Ultraceuticals&nbsp;<sup>28</sup></label>
-              </div>
-              <div class="checkbox mb-1">
-                <input class="checkbox__input" type="checkbox" name="msoption|tags" id="mse2_msoption|tags_4" value="Для лица и шеи"/>
-                <label class="checkbox__label " for="mse2_msoption|tags_4">ZO SKIN HEALTH by ZEIN OBAGI, MD&nbsp;<sup>28</sup></label>
-              </div>
+          <div class="cart__product-price">
+            <div class="cart__price">14 400 руб.</div>
+          </div>
+          <div class="cart__product-count">
+            <div class="cart__count"> 
+              <form class="ms2_form form" method="post" role="form">
+                <div class="form__group">
+                  <input class="form__input form__input_cart form__input--full" type="number" name="count" value="1"/>
+                  <button class="btn d-none" type="submit" name="ms2_action" value="cart/change">↻</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <div class="col-9 col-sm-12 mb-sm-3">
-          <div class="catalog__head">
-            <div class="catalog__head-title"> <a class="sort active" href="#">Отсортировать по производителю<span></span></a></div>
-            <div class="catalog__head-title"> <a class="sort" href="#">Отсортировать по цене</a></div>
+        <div class="cart__product">
+          <div class="cart__product-info">
+            <div class="cart__brand">SkinCeuticals</div>
+            <div class="cart__title">'SC A.G.E.INTERRUPTER (Антигликационный антивозрастной крем)</div>
+            <div class="cart__remove">
+              <form class="ms2_form" method="post">
+                <button class="btn btn_remove" type="submit" name="ms2_action" value="cart/remove">Удалить</button>
+              </form>
+            </div>
           </div>
-          <div class="row">
-            <div class="col-3 col-xl-4 col-lg-6 col-xs-12 mt-2 mt-xs-1 catalog__product">
-              <div class="product">
-                <div class="product__row"><a class="product__brand" href="#">Ultraceuticals</a></div>
-                <div class="product__row">
-                  <div class="product__name">Ultraceuticals. Ultra A Skin Perfecting Serum Mild </div>
-                  <div class="product__intro">Ультра А сыворотка с ретинолом для чувствительной кожи</div>
+          <div class="cart__product-price">
+            <div class="cart__price">14 400 руб.</div>
+          </div>
+          <div class="cart__product-count">
+            <div class="cart__count"> 
+              <form class="ms2_form form" method="post" role="form">
+                <div class="form__group">
+                  <input class="form__input form__input_cart form__input--full" type="number" name="count" value="1"/>
+                  <button class="btn d-none" type="submit" name="ms2_action" value="cart/change">↻</button>
                 </div>
-                <div class="product__price">7 900 руб.</div>
-                <div class="product__row"><a class="btn btn_secondary btn--small" href="#">В корзину</a></div>
-              </div>
+              </form>
             </div>
-            <div class="col-3 col-xl-4 col-lg-6 col-xs-12 mt-2 mt-xs-1 catalog__product">
-              <div class="product">
-                <div class="product__row"><a class="product__brand" href="#">SkinCeuticals</a></div>
-                <div class="product__row">
-                  <div class="product__name">SC FACE CREAM </div>
-                  <div class="product__intro">Легкий крем для кожи с признаками старения</div>
-                </div>
-                <div class="product__price">11 300 руб.</div>
-                <div class="product__row"><a class="btn btn_secondary btn--small" href="#">В корзину</a></div>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div class="cart__footer">
+          <div class="cart__footer-title mb-0 total">Итого:</div>
+          <div class="cart__footer-price total_cost"><span class="ms2_total_cost">27 700 руб.                </span>
+            <div class="cart__footer-count total_count"><span>Количество: </span><span class="ms2_total_count">2 шт.</span></div>
+            <form method="post">
+              <button class="btn btn_secondary" type="submit" name="ms2_action" value="cart/clean">Очистить корзину</button>
+            </form>
           </div>
         </div>
       </div>

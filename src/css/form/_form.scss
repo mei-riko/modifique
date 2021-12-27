@@ -1,6 +1,9 @@
 .form{
     margin: 0;
 
+    &__label{
+        font-size: 13px;
+    }
     &__input{
         background-color: inherit;
         color: $black;
@@ -20,6 +23,13 @@
         }
         &:focus::placeholder{
             opacity: 0;
+        }
+        // Модификации
+        &_cart{
+            border: 1px solid $border-color;
+            padding: 6px 10px;
+
+            max-width: 160px;
         }
         // Состояние
         &--full{

@@ -1,0 +1,101 @@
+.cart{
+    &__product{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 1);
+        grid-template-columns: 1fr 150px 150px;
+
+        // width: 920px;
+        max-width: 100%;
+
+        margin-bottom: map-get($map: $spacers, $key: 2);
+        padding-bottom: map-get($map: $spacers, $key: 2);
+        border-bottom: 1px solid $border-color;
+    }
+    &__brand{
+        display: inline-block;
+        font-size: map-get($map: $font-size, $key: xs);
+        line-height: 1;
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bolder;
+        font-style: italic;
+        border: 1px solid $border-color;
+        color: $black;
+        padding: 8px map-get($map: $spacers, $key: 1);
+
+        margin-bottom: map-get($map: $spacers, $key: 1);
+    }
+    &__title{
+        margin-bottom: map-get($map: $spacers, $key: 2);
+    }
+    &__price{
+        font-weight: $font-weight-bold;
+    }
+
+    &__footer{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 1);
+        grid-template-columns: 1fr 300px;
+
+        // width: 920px;
+        max-width: 100%;
+
+        &-title{
+            font-weight: bold;
+        }
+        &-price{
+            font-weight: bold;
+            text-align: right;
+        }
+        &-count{
+            font-weight: normal;
+            font-size: map-get($map: $font-size, $key: xs);
+            
+            margin: 8px 0 16px;
+        }
+    }
+    &__btn-row{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 1);
+        grid-template-columns: 200px 200px;
+    }
+}
+.ms2_form{
+    margin-bottom: 0px;
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .cart{
+        &__product{
+            grid-template-columns: 1fr 120px 120px;
+        }
+        &__footer{
+            grid-template-columns: 1fr 240px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .cart{
+        &__product{
+            grid-template-columns: 1fr 100px 100px;
+        }
+        &__footer{
+            grid-template-columns: 1fr 200px;
+        }
+        &__btn-row{
+            grid-template-columns: 180px 180px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .cart{
+        &__product{
+            grid-template-columns: 1fr 100px;
+        }
+        &__footer{
+            grid-template-columns: 1fr 1fr;
+        }
+        &__btn-row{
+            grid-template-columns: 180px;
+        }
+    }
+}

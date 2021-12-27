@@ -5,6 +5,8 @@ import './price.js';
 import './sertificate.js';
 import './service.js';
 
+import './catalog.js';
+
 $(document).ready(() =>{
   $(".scroll").click(function() {
     $("html, body").animate({

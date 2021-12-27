@@ -15,6 +15,8 @@
 @import "btn/btn_secondary";
 @import "btn/btn_link";
 @import "btn/btn_review";
+@import "btn/btn_remove";
+
 @import "btn/btn-group";
 
 @import "form/form";
@@ -82,6 +84,11 @@
 @import "content/content-inside";
 @import "content/content-instagram";
 
+// Catalog & Cart
+@import "catalog/catalog";
+@import "product/product";
+@import "cart/cart";
+@import "cart/cart_order-form";
+
 @import "price/price";
-@import "table/table";
 @import "cta/cta";

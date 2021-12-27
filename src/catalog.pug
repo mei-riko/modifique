@@ -3,7 +3,7 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Pricelist
+        title Catalog
 
         link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Raleway:wght@300;400;500;700;800&display=swap" rel="stylesheet")
         link(href='./css/style.css', rel='stylesheet')
@@ -13,108 +13,66 @@ html(lang="ru")
         include chunks/header.pug
         include chunks/mixin.pug
         section.container.pt-2.pb-3.pt-md-0.pb-md-1
-            .row.price
+            .row.mb-1
                 +preview('free', 'Бесплатная консультация', 'Консультация косметолога клиники для всех новых клиентов')(src="../demo/sale-1.png" class="price__order")
                 +preview('хит', 'Мезотерапия головы', 'Одна из самых популярных услуг клиники, направленая на увеличение объема волос')(src="../demo/sale-2.png" class="price__order")
                 +preview('news', 'Открытие клиники', 'Ура, карантин позади и мы готовы принимать посетителей с 1 сентября!')(src="../demo/sale-3.png" class="price__order")
-                .col.price__nav
-                    p.price__nav-title.text-bold Выберите категорию
-                    .price__nav-list#priceNav
-                        // Category 1
-                        .price__nav-item
-                            a.price__nav-link(href="#" data-trigger="click" data-nav="nav1") Для лица и шеи
-                            .price__nav-content.price__nav-content--active#nav1
-                                // Subcategory 1
-                                a.price__nav-link.price__nav-link--active(href="#" data-trigger="click" data-nav="subnav1") Инъекционная косметология
-                                .price__nav-subcontent.price__nav-subcontent--active#subnav1
-                                    a.price__nav-link.price__nav-toggle(href="#category1") Биоревитализация
-                                    a.price__nav-link.price__nav-toggle(href="#category2") Ботулонотерапия
-                                    a.price__nav-link.price__nav-toggle(href="#category3") Ботулонотерапия ботокс
-                                    a.price__nav-link.price__nav-toggle(href="#category4") Ботулонотерапия диспорт
-                                    a.price__nav-link.price__nav-toggle(href="#category5") PRP-плазмотерапия
-                                    a.price__nav-link.price__nav-toggle(href="#category6") Мезотерапия
-                                    a.price__nav-link.price__nav-toggle(href="#category7") Плазмотерапия/плазмолифтинг
-                                    a.price__nav-link.price__nav-toggle(href="#category8") Контурная и объемная пластика
-                                // Subcategory 2
-                                a.price__nav-link(href="#" data-trigger="click" data-nav="subnav2") Уходовые процедуры
-                                .price__nav-subcontent#subnav2
-                                    a.price__nav-link.price__nav-toggle(href="#category1") Биоревитализация
-                                    a.price__nav-link.price__nav-toggle(href="#category2") Ботулонотерапия
-                                    a.price__nav-link.price__nav-toggle(href="#category3") Ботулонотерапия ботокс
-                                    a.price__nav-link.price__nav-toggle(href="#category4") Ботулонотерапия диспорт
-                        // Category 2
-                        .price__nav-item
-                            a.price__nav-link(href="#" data-trigger="click" data-nav="nav2") Для тела
-                            .price__nav-content#nav2
-                                a.price__nav-link.price__nav-toggle(href="#") Инъекционная косметология
-                                a.price__nav-link.price__nav-toggle(href="#") Уходовые процедуры
-                        // Category 3
-                        .price__nav-item
-                            a.price__nav-link(href="#" data-trigger="click" data-nav="nav3") Для интимных зон
-                            .price__nav-content#nav3
-                                a.price__nav-link.price__nav-toggle(href="#") Инъекционная косметология
-                                a.price__nav-link.price__nav-toggle(href="#") Уходовые процедуры
-                .col.price__content.mb-md-3
-                    h1.h2.mb-2.mb-sm-1 Прайс-лист
-                    .toggle-item.toggle-item--active#category1
-                        p.toggle-item__title.toggle-item__title_price.toggle-item__title--active Биоревитализация
-                        .toggle-item__content(style="display:block;")
-                            .table-responsive
-                                table.table
-                                    thead.table__head
-                                        tr
-                                            th.table__title наименование инъекционной процедуры
-                                            th.table__title услуга
-                                            th.table__title цена, руб.
-                                    tbody.table__content
-                                        tr
-                                            td.table__item Значение 1
-                                            td.table__item 
-                                                a.link-underline.text-small(href="#") Мезотерапия головы
-                                            td.table__item Значение 3
-                                        tr
-                                            td.table__item Значение 4
-                                            td.table__item 
-                                                a.link-underline.text-small(href="#") Мезотерапия головы
-                                            td.table__item Значение 6
-                                        tr
-                                            td.table__item Значение 1
-                                            td.table__item 
-                                                a.link-underline.text-small(href="#") Мезотерапия головы
-                                            td.table__item Значение 3
-                                        tr
-                                            td.table__item Значение 4
-                                            td.table__item 
-                                                a.link-underline.text-small(href="#") Мезотерапия головы
-                                            td.table__item Значение 6
-                    .toggle-item#category2
-                        p.toggle-item__title.toggle-item__title_price Ботулонотерапия
-                        .toggle-item__content
-                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
-                    .toggle-item#category3
-                        p.toggle-item__title.toggle-item__title_price Ботулонотерапия ботокс
-                        .toggle-item__content
-                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
-                    .toggle-item#category4
-                        p.toggle-item__title.toggle-item__title_price Ботулонотерапия диспорт
-                        .toggle-item__content
-                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
-                    .toggle-item#category5
-                        p.toggle-item__title.toggle-item__title_price PRP-плазмотерапия
-                        .toggle-item__content
-                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
-                    .toggle-item#category6
-                        p.toggle-item__title.toggle-item__title_price Мезотерапия
-                        .toggle-item__content
-                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
-                    .toggle-item#category7
-                        p.toggle-item__title.toggle-item__title_price Плазмотерапия/плазмолифтинг
-                        .toggle-item__content
-                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
-                    .toggle-item#category8
-                        p.toggle-item__title.toggle-item__title_price Контурная и объемная пластика
-                        .toggle-item__content
-                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+            .row.catalog
+                .col-3.col-sm-12.mb-sm-2
+                    .catalog__filter
+                        p.catalog__filter-title Выберите применение
+                        .catalog__filter-list
+                            .checkbox.mb-1
+                                input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_0" value="Для лица и шеи")
+                                label(for="mse2_msoption|tags_0" class="checkbox__label ") Для лица и шеи&nbsp;
+                                    sup 28
+                            .checkbox.mb-1
+                                input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_1" value="Для тела")
+                                label(for="mse2_msoption|tags_1" class="checkbox__label ") Для лица и шеи&nbsp;
+                                    sup 28
+                    .catalog__filter
+                        p.catalog__filter-title Выберите производителя
+                        .catalog__filter-list
+                            .checkbox.mb-1
+                                input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_2" value="Для лица и шеи")
+                                label(for="mse2_msoption|tags_2" class="checkbox__label ") SkinCeuticals&nbsp;
+                                    sup 28
+                            .checkbox.mb-1
+                                input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_3" value="Для лица и шеи")
+                                label(for="mse2_msoption|tags_3" class="checkbox__label ") Ultraceuticals&nbsp;
+                                    sup 28
+                            .checkbox.mb-1
+                                input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_4" value="Для лица и шеи")
+                                label(for="mse2_msoption|tags_4" class="checkbox__label ") ZO SKIN HEALTH by ZEIN OBAGI, MD&nbsp;
+                                    sup 28
+                .col-9.col-sm-12.mb-sm-3
+                    .catalog__head
+                        .catalog__head-title 
+                            a.sort.active(href="#") Отсортировать по производителю
+                                span
+                        .catalog__head-title 
+                            a.sort(href="#") Отсортировать по цене
+                    .row
+                        .col-3.col-xl-4.col-lg-6.col-xs-12.mt-2.mt-xs-1.catalog__product
+                            .product
+                                .product__row
+                                    a.product__brand(href="#") Ultraceuticals
+                                .product__row
+                                    .product__name Ultraceuticals. Ultra A Skin Perfecting Serum Mild 
+                                    .product__intro Ультра А сыворотка с ретинолом для чувствительной кожи
+                                .product__price 7 900 руб.
+                                .product__row
+                                    a.btn.btn_secondary.btn--small(href="#") В корзину
+                        .col-3.col-xl-4.col-lg-6.col-xs-12.mt-2.mt-xs-1.catalog__product
+                            .product
+                                .product__row
+                                    a.product__brand(href="#") SkinCeuticals
+                                .product__row
+                                    .product__name SC FACE CREAM 
+                                    .product__intro Легкий крем для кожи с признаками старения
+                                .product__price 11 300 руб.
+                                .product__row
+                                    a.btn.btn_secondary.btn--small(href="#") В корзину
         include chunks/footer.pug
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')

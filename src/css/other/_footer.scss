@@ -4,6 +4,19 @@
     color: $light-300;
     background-color: $black;
 
+    &__nav{
+        &-main{
+            display: grid;
+            grid-template-columns: 400px repeat(4, 1fr);
+            grid-gap: $grid-gutter-width;
+        }
+        &-secondary{
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            grid-gap: $grid-gutter-width;
+        }
+    }
+
     &__title{
         font-size: 13px;
         font-weight: 700;
@@ -20,13 +33,18 @@
             margin-bottom: 0;
         }
     }
-
     &__info{
         font-size: 12px;
         color: $dark-grey;
         padding-bottom: $spacer/2;
+
+        padding-right: $spacer/2;
+        &:last-child{
+            padding-right: 0px;
+        }
     }
-    &__policy{ color: $dark-grey; padding-left: $spacer/2;padding-right: $spacer/2;}
+    // &__policy{ color: $dark-grey; padding-left: $spacer/2;padding-right: $spacer/2;}
+    &__policy{ color: $dark-grey;}
     &__develop-link{ color: $dark-grey; }
 
     &__subinfo{
@@ -39,58 +57,52 @@
         line-height: $line-height-heading;
     }
 
-    &__col{
-        padding-right: map-get($map: $spacers, $key: 4);
-        &--first, 
-        &--offset{
-            flex: 0 0 420px;
-            max-width: 50%;
-        }
-        &--last{
-            padding-right: map-get($map: $spacers, $key: 1);
-        }
-    }
+    // &__col{
+    //     padding-right: map-get($map: $spacers, $key: 4);
+    //     &--first, 
+    //     &--offset{
+    //         flex: 0 0 420px;
+    //         max-width: 50%;
+    //     }
+    //     &--last{
+    //         padding-right: map-get($map: $spacers, $key: 1);
+    //     }
+    // }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     .footer{
-        &__col{
-            margin-bottom: $spacer;
-            &--first-xl{
-                flex: 0 0 420px;
-                max-width: 50%;
+        &__nav{
+            &-main{
+                grid-template-columns: 400px repeat(2, 1fr);
+            }
+            &-secondary{
+                grid-template-columns: 1fr;
+            }
+            &-col{
+                &_contact{
+                    grid-column-start: 2;
+                }
+                &_offset{
+                    display: none;
+                }
             }
         }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .footer{
-        &__col{
-            padding-right: map-get($map: $spacers, $key: 3);
-            margin-bottom: $spacer;
-
-            &--first,
-            &--first-lg,
-            &--offset{
-                flex: 0 0 340px;
-            }
-            &--offset{
-                display: none;
+        &__nav{
+            &-main{
+                grid-template-columns: 300px repeat(2, 1fr);
             }
         }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .footer{
-        &__col{
-            &--first{
-                flex: 0 0 280px;
-                margin-bottom: $spacer;
-            }
-            &--first-lg{
-                flex: 0;
-            }
-            &--first-md{
-                flex: 0 0 280px;
+        &__nav{
+            &-main{
+                grid-template-columns: 240px repeat(2, 1fr);
             }
         }
     }
@@ -109,19 +121,26 @@
         &__subinfo{
             padding-top: $spacer/2; 
         }
-        &__col{
-            padding-right: $spacer/2;
-
-            &--first{
-                flex: 0 0 100%;
-                max-width: 100%;
+        &__nav{
+            &-main{
+                grid-template-columns: repeat(2, 1fr);
             }
-            &--first-md{
-                flex: 0 0 0;
+            &-col{
+                &_menu{
+                    grid-column-start: 1;
+                }
+                &_contact{
+                    grid-column-start: 1;
+                }
             }
-            &--last{
-                margin-bottom: 0;
-                // padding-right: map-get($map: $spacers, $key: 1);
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xxs')){
+    .footer{
+        &__nav{
+            &-main{
+                grid-template-columns: 1fr;
             }
         }
     }

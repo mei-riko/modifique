@@ -1,10 +1,10 @@
 footer.footer.pt-5.pb-2.pt-md-4.pt-xs-2
     .container
-        .row.pb-5.pb-xl-3.pb-sm-2
-            .col.footer__col.footer__col--first
+        .footer__nav-main.pb-5.pb-xl-3.pb-sm-2
+            .footer__nav-col.footer__nav-col_form
                 p.h4.mb-sm-0 Готовы записаться?
                 a.btn.btn_link.btn_link-inverse(href="javascript" data-fancybox data-src="#callback") Оставить заявку
-            .col.footer__col
+            .footer__nav-col.footer__nav-col_menu
                 p.footer__title Меню
                 nav.navbar.navbar_footer
                     .navbar_footer__col
@@ -21,26 +21,33 @@ footer.footer.pt-5.pb-2.pt-md-4.pt-xs-2
                         a.navbar_footer__item(href="#") Контакты
                         a.navbar_footer__item(href="#") Новости
                         a.navbar_footer__item(href="#") Статьи
-            .col.footer__col.footer__col--first-md
+            .footer__nav-col.footer__nav-col_service
                 p.footer__title Виды услуг
                 a.navbar_footer__item(href="#") Для лица и шеи
                 a.navbar_footer__item(href="#") Для тела
-                a.navbar_footer__item(href="#") Для интимных зон
-                a.navbar_footer__item(href="#") Консультация врача
-            .col.footer__col.footer__col--first-xl.footer__col--first-lg
+            .footer__nav-col.footer__nav-col_contact
                 p.footer__title Найти нас
                 p.footer__address Санкт-Петербург, Московский&nbsp;пр.&nbsp;135
-                a.footer__contact.link-underline(href="#" target="_blank") На карте
-            .col.footer__col.footer__col--last
-                p.footer__title Связаться
+                    <br/>
+                    a.footer__contact.link-underline(href="#" target="_blank") На карте
+                p.footer__title.mt-1 Связаться
                 a.footer__contact(href="tel:8 800 910 23 412") 8 800 910 23 412
                 <br/>
                 a.footer__contact(href="mailto:info@modifique.ru") info@modifique.ru
-        .row
-            .col.footer__col.footer__col--offset
-            .col.footer__col.footer__col--last.d-flex.justify-content-between.flex-sm-wrap
-                span.footer__info Все права защищены — 2020  © Modifique
-                a.footer__info.footer__policy(href="/policy.pdf" target="_blank") Политика конфиденциальности
-                span.footer__info Сайт разработан 
-                    a.footer__develop-link(href="https://websoho.ru" target="_blank") SOHO
+            .footer__nav-col.footer__nav-col_network
+                p.footer__title Социальные сети
+                a.navbar_footer__item(href="#") ВКонтакте
+                a.navbar_footer__item(href="#") Instagram
+                a.navbar_footer__item(href="#") Telegram
+                a.navbar_footer__item(href="#") WhatsApp
+        .footer__nav-secondary
+            .footer__nav-col.footer__nav-col_offset
+            .footer__nav-col
+                .d-flex.justify-content-between.flex-md-wrap
+                    span.footer__info Все права защищены — 2020  © Modifique
+                    a.footer__info.footer__policy(href="/policy.pdf" target="_blank") Политика конфиденциальности
+                    a.footer__info(href="#") Доставка
+                    a.footer__info(href="#") Возврат
+                    span.footer__info Сайт разработан 
+                        a.footer__develop-link(href="https://websoho.ru" target="_blank") SOHO
         p.footer__subinfo Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации.  Для получения подробной информации о наличии и актуальной стоимости указанных на сайте услуг обращайтесь, пожалуйста, по телефонам клиник. Приём пациентов в клиниках осуществляется с 18-ти лет.
