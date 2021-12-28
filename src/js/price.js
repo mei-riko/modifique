@@ -27,18 +27,27 @@ $(document).ready(() =>{
         $(".price .price__nav-title").removeClass("price__nav-title--desktop").addClass("price__nav-title--mobile");
     }
     // Показ категорий на мобильном
-    $('.price .price__nav-title.price__nav-title--mobile').on("click", function(){
-        // console.log( '1' );
-        $(this).next(".price__nav-list").slideToggle();
-        $(this).toggleClass("price__nav-title--active");
+    $('.price .price__nav-title').on("click", function(e){
+        e.preventDefault();
+        if ( $(this).hasClass("price__nav-title--desktop") ){ return false;}
+
+        if( !$(this).hasClass("price__nav-title--active") ){
+            $(this).addClass("price__nav-title--active");
+            $(this).closest(".price__nav").find(".price__nav-list").slideDown();
+        }else{
+            $(this).removeClass("price__nav-title--active");
+            $(this).closest(".price__nav").find(".price__nav-list").slideUp();
+        }
     });
+
+});
+
 // Resize
-$(window).resize(function(){
+$(window).on("resize", function(){
     if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
       $(".price .price__nav-title").removeClass("price__nav-title--mobile").addClass("price__nav-title--desktop");
       $('.price__nav-list').removeAttr("style");
     }else{
         $(".price .price__nav-title").removeClass("price__nav-title--desktop").addClass("price__nav-title--mobile");
     }
-});
 });

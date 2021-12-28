@@ -5558,6 +5558,37 @@ table td {
   }
 }
 
+.table {
+  border: 1px solid #D1CDC5;
+  width: 100%;
+}
+
+.table__head {
+  background-color: #F3F2F5;
+}
+
+.table__title {
+  font-size: 12px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.table__content {
+  background-color: #ffffff;
+}
+
+.table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media all and (max-width: 576px) {
+  .table__title {
+    font-size: 10px;
+  }
+}
+
 .list, .pagination {
   list-style: none;
   padding: 0;
